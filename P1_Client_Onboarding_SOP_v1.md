@@ -292,9 +292,9 @@ needed to begin high-quality work immediately in P2.
 |  |  |  |
 |:---|:---|:---|
 | **Dependency** | **Source Phase** | **Impact if Missing** |
-| **Signed Contract** | P0 — Sales & Billing | Cannot begin any onboarding activities without signed contract |
-| **Deposit Payment Confirmed** | P0 — Sales & Billing | Cannot send welcome email or schedule meetings until deposit clears |
-| **Completed Project Brief (Appendix A from P0)** | P0 — Sales & Billing | Cannot review assumptions or prepare design-specific questions without completed brief |
+| **Signed Contract** | P0 — Discovery & Sales | Cannot begin any onboarding activities without signed contract |
+| **Deposit Payment Confirmed** | P0 — Discovery & Sales | Cannot send welcome email or schedule meetings until deposit clears |
+| **Completed Project Brief (Appendix A from P0)** | P0 — Discovery & Sales | Cannot review assumptions or prepare design-specific questions without completed brief |
 | **Internal Team Assignment** | PM (Rinaldo) | Must know who is on the team before onboarding meeting and Slack channel creation |
 
 **REVISION LIMITS & SCOPE CONTROL**

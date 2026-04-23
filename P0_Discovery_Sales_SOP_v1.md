@@ -4,7 +4,7 @@ WEB DEVELOPMENT DEPARTMENT
 
 **PHASE P0**
 
-**SALES & BILLING**
+**DISCOVERY & SALES**
 
 Standard Operating Procedure & Phase Gate Document
 
@@ -205,7 +205,7 @@ until deposit is confirmed.*
 
 **APPENDIX A: PROJECT BRIEF TEMPLATE**
 
-*This template must be fully completed during the Sales & Billing phase.
+*This template must be fully completed during the Discovery & Sales phase.
 All fields are required unless marked \[Optional\]. A completed Project
 Brief is a gate requirement before advancing to P1 - Client Onboarding.*
 

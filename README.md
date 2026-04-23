@@ -6,7 +6,7 @@ Fancy Lab Web Development department's Standard Operating Procedures, organized 
 
 | # | Phase | File |
 |---|---|---|
-| P0 | Sales & Billing | [P0_Sales_Billing_SOP_v1.md](P0_Sales_Billing_SOP_v1.md) |
+| P0 | Discovery & Sales | [P0_Discovery_Sales_SOP_v1.md](P0_Discovery_Sales_SOP_v1.md) |
 | P1 | Client Onboarding | [P1_Client_Onboarding_SOP_v1.md](P1_Client_Onboarding_SOP_v1.md) |
 | P2 | Project Kickoff | [P2_Project_Kickoff_SOP_v1.md](P2_Project_Kickoff_SOP_v1.md) |
 | P3 | Content Strategy & Copywriting | [P3_Content_Strategy_SOP_v1.md](P3_Content_Strategy_SOP_v1.md) |

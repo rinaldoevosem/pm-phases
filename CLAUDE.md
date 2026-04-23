@@ -10,7 +10,7 @@ Not a codebase. It's a set of Standard Operating Procedure documents for Fancy L
 
 The **filenames** are the source of truth for phase numbers. Current lineup:
 
-- `P0_Sales_Billing_SOP_v1.md`
+- `P0_Discovery_Sales_SOP_v1.md`
 - `P1_Client_Onboarding_SOP_v1.md`
 - `P2_Project_Kickoff_SOP_v1.md`
 - `P3_Content_Strategy_SOP_v1.md`

@@ -191,7 +191,7 @@ on deliverables, timeline, and responsibilities.
 | **Completed Client Onboarding** | P1 - Client Onboarding | Cannot set up project without client assets, credentials, and confirmed brief |
 | **Brand Assets in Drive** | P1 - Client Onboarding | Cannot set up Figma project without logos, fonts, and brand guidelines |
 | **Platform Credentials** | P1 - Client Onboarding | Cannot create dev store without domain/hosting access |
-| **Approved Project Brief** | P0 - Sales & Billing | Requirements document is built from the project brief |
+| **Approved Project Brief** | P0 - Discovery & Sales | Requirements document is built from the project brief |
 
 **REVISION LIMITS & SCOPE CONTROL**
 

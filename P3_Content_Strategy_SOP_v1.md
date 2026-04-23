@@ -185,7 +185,7 @@ design and development teams can use without delay or ambiguity.
 | **Dependency** | **Source Phase** | **Impact if Missing** |
 | **Approved Project Requirements** | P2 - Project Kickoff | Cannot create content map without knowing all required pages and features |
 | **Brand Guidelines & Assets** | P1 - Client Onboarding | Need brand voice, tone, and visual direction to write on-brand copy |
-| **SEO & Migration Requirements (from Project Brief)** | P0 - Sales & Billing | Need to know if this is a migration with existing SEO equity to preserve |
+| **SEO & Migration Requirements (from Project Brief)** | P0 - Discovery & Sales | Need to know if this is a migration with existing SEO equity to preserve |
 | **Client-Provided Content** | Client | Some clients provide their own product descriptions, about us copy, or team bios |
 
 **REVISION LIMITS & SCOPE CONTROL**

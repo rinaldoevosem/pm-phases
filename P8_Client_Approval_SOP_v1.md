@@ -187,7 +187,7 @@ formal launch authorization before proceeding to the launch phase.
 | **Dependency** | **Source Phase** | **Impact if Missing** |
 | **QA Sign-Off Report** | P7 - Testing & QA | Cannot present to client without internal QA completion |
 | **Staging Site (functional and tested)** | P6 - Development + P7 - QA | Client needs a stable site to review |
-| **Original Signed Contract (revision limits)** | P0 - Sales & Billing | Need to reference contracted revision rounds |
+| **Original Signed Contract (revision limits)** | P0 - Discovery & Sales | Need to reference contracted revision rounds |
 
 **REVISION LIMITS & SCOPE CONTROL**
 
