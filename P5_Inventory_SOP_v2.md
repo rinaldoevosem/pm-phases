@@ -4,7 +4,7 @@ WEB DEVELOPMENT DEPARTMENT
 
 **PHASE P5**
 
-**INVENTORY MANAGEMENT**
+**INVENTORY**
 
 Standard Operating Procedure & Phase Gate Document
 
@@ -212,9 +212,9 @@ verified for accuracy.
 |  |  |  |
 |:---|:---|:---|
 | **Dependency** | **Source Phase** | **Impact if Missing** |
-| **Approved Design (for product page layout)** | P4 - Branding & Design | Need to know what product fields are displayed and how |
-| **Content Strategy (for product SEO)** | P3 - Content Strategy & Copywriting | Keyword research informs product titles and descriptions |
-| **Platform Setup** | P2 - Project Kickoff | Need dev store configured before product import |
+| **Approved Design (for product page layout)** | P4 - Design | Need to know what product fields are displayed and how |
+| **Project Setup (for product SEO)** | P3 - Project Setup | Keyword research informs product titles and descriptions |
+| **Platform Setup** | P2 - Project Specification | Need dev store configured before product import |
 | **Client Product Data** | Client | Cannot proceed without client-provided product information |
 | **Vendor Feed Access** | Client / Vendor | Required for any catalog sourced from a third-party feed (Nivoda, IDEX, RapNet, vendor ERP, etc.) |
 
@@ -289,7 +289,7 @@ variants, and metafields before development begins.*
 *Prerequisites: P0 brief (product scope), P1 intake (inventory
 management details), and P3 content strategy (collection hierarchy, SEO
 keywords) must be complete. For vendor-fed catalogs, also see Appendix B
-of this document (`P5_Inventory_Management_SOP_v2.md`).*
+of this document (`P5_Inventory_SOP_v2.md`).*
 
 <table>
 <colgroup>

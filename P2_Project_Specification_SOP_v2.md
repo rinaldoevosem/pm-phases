@@ -4,7 +4,7 @@ WEB DEVELOPMENT DEPARTMENT
 
 **PHASE P2**
 
-**PROJECT KICKOFF**
+**PROJECT SPECIFICATION**
 
 Standard Operating Procedure & Phase Gate Document
 
@@ -57,9 +57,9 @@ on deliverables, timeline, and responsibilities.
 
 **Scope Excludes**
 
-> \- Design work (covered in P4 - Branding & Design)
+> \- Design work (covered in P4 - Design)
 >
-> \- Content creation or copywriting (covered in P3 - Content Strategy)
+> \- Content creation or copywriting (covered in P3 - Project Setup)
 >
 > \- Actual development or coding (covered in P6 - Development)
 >
@@ -170,7 +170,7 @@ on deliverables, timeline, and responsibilities.
 > **5. Build Project Roadmap and Milestones**
 >
 > Create a phased project roadmap in ClickUp with clear milestones:
-> Content Strategy completion, Design approval (per page/section),
+> Project Setup completion, Design approval (per page/section),
 > Development sprints, QA rounds, Client Review windows, and Launch
 > date. Assign dates based on the agreed timeline from P0. Include
 > buffer time for revisions.
@@ -287,7 +287,7 @@ associated timeline and cost impact.*
 **PHASE GATE - COMPLETION CHECKLIST**
 
 *ALL items below must be completed before the project can advance to
-P3 - Content Strategy & Copywriting. No design or development work
+P3 - Project Setup. No design or development work
 should begin until the project infrastructure is fully set up and
 requirements are approved.*
 
@@ -315,7 +315,7 @@ requirements are approved.*
 | **Project Name**       |                                     |          |
 | **Approved By**        |                                     |          |
 | **Client Rep**         |                                     |          |
-| **Next Phase**         | P3 - Content Strategy & Copywriting |          |
+| **Next Phase**         | P3 - Project Setup |          |
 | **Notes / Conditions** |                                     |          |
 
 ## Data Enrichment (ClickUp export, 2026-04-22)
@@ -325,11 +325,11 @@ requirements are approved.*
 - **Asya is already central to this phase in practice** — 131 tasks, 53 open; Aida 246 tasks, 123 open. Aida's 123-open load suggests Aida is the upstream bottleneck (P3 + P4); see Part II for the remediation suggestion.
 - **Priority hygiene baseline.** 62.4% of all tasks across the workspace have no priority set. The Step 5.5 priority-at-creation rule plus the missing-priority automation are the v2 remediation; the gate item #11 is the enforcement point.
 
-**APPENDIX A: PROJECT KICKOFF & INFRASTRUCTURE SETUP CHECKLIST**
+**APPENDIX A: PROJECT SPECIFICATION & INFRASTRUCTURE SETUP CHECKLIST**
 
 *This document captures all internal infrastructure setup, technical
 environment configuration, and requirements alignment completed during
-the Project Kickoff phase. It does NOT duplicate the Project Brief (P0)
+the Project Specification phase. It does NOT duplicate the Project Brief (P0)
 or Onboarding Intake (P1) — instead it records the translation of client
 requirements into actionable project infrastructure.*
 
@@ -359,7 +359,7 @@ Custom — Template version: ___</em></td>
 <td><strong>Phase Lists Created</strong></td>
 <td><em>[ ] P2 Kickoff [ ] P3 Content [ ] P4 Design [ ] P5 Inventory [ ]
 P6 Dev [ ] P7 QA [ ] P8 Approval [ ] P9 Launch [ ] P10
-Post-Launch</em></td>
+Post Launch</em></td>
 </tr>
 <tr>
 <td><strong>Custom Fields Configured</strong></td>
@@ -409,7 +409,7 @@ Roadmap</em></td>
 <td><strong>Subfolder Structure</strong></td>
 <td><em>[ ] 00-Brief &amp; Contracts [ ] 01-Onboarding [ ] 02-Content [
 ] 03-Design [ ] 04-Assets [ ] 05-Development [ ] 06-QA [ ] 07-Launch [ ]
-08-Post-Launch</em></td>
+08-Post Launch</em></td>
 </tr>
 <tr>
 <td><strong>P0 Brief Uploaded</strong></td>
@@ -659,4 +659,4 @@ PM Sign-Off:
 
 *Once all sections above are complete, the project infrastructure is
 fully established and the team is aligned. The Phase Gate can be
-evaluated for advancement to P3 — Content Strategy & Copywriting.*
+evaluated for advancement to P3 — Project Setup.*

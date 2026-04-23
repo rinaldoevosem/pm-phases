@@ -12,13 +12,13 @@ The **filenames** are the source of truth for phase numbers. Current lineup:
 
 - `P0_Discovery_Sales_SOP_v2.md`
 - `P1_Client_Onboarding_SOP_v2.md`
-- `P2_Project_Kickoff_SOP_v2.md`
-- `P3_Content_Strategy_SOP_v2.md`
-- `P4_Branding_Design_SOP_v3.md`
-- `P5_Inventory_Management_SOP_v2.md`
+- `P2_Project_Specification_SOP_v2.md`
+- `P3_Project_Setup_SOP_v3.md`
+- `P4_Design_SOP_v3.md`
+- `P5_Inventory_SOP_v2.md`
 - `P6_Development_SOP_v2.md`
 - `P7_Testing_QA_SOP_v4.md`
-- `P8_Client_Approval_SOP_v2.md`
+- `P8_Client_Review_Pre_Launch_SOP_v2.md`
 - `P9_Launch_SOP_v2.md`
 - `P10_Post_Launch_SOP_v2.md`
 
@@ -29,7 +29,7 @@ The `_vN` suffix marks the current version of each SOP (most are v2; P4 is v3; P
 `EVO_SEM_Web_Dev_Phase_Gate_SOPs.md` (Feb 2026, v1.0) is an earlier roll-up and diverges from the individual files in two important ways:
 
 1. **Branding**: it says "EVO SEM". The individual SOPs have since been rebranded to "FANCY LAB".
-2. **Numbering / scope**: it has 10 phases (P0–P9) and no Content Strategy phase. Its P3 is "Inventory Management", so everything from P3 onward is numbered one lower than the current filenames.
+2. **Numbering / scope**: it has 10 phases (P0–P9) and no Project Setup phase. Its P3 is "Inventory Management", so everything from P3 onward is numbered one lower than the current filenames.
 
 When a user asks about a phase by number, map it against the filenames, not this doc. If asked to update or regenerate the consolidated doc, treat the individual SOPs as the source of truth.
 
@@ -51,4 +51,4 @@ Shared tools the SOPs assume are in use: ClickUp (tasks / roadmaps), Figma (desi
 
 - Edit the `.md` files directly. Pandoc's GFM output represents the RACI / Deliverables / Tools blocks as pipe tables — preserve table structure when editing so the phase template stays scannable.
 - When bumping a phase version, rename with the next `_vN` suffix (e.g., `P4_..._v2.md` → `P4_..._v3.md`) rather than overwriting — the version suffix is how the current revision is tracked here.
-- Keep phase numbers stable. Inserting a new phase (as happened with P3 Content Strategy) cascades renames through every downstream file and breaks any external references; flag this cost to the user before doing it.
+- Keep phase numbers stable. Inserting a new phase (as happened with P3 Project Setup) cascades renames through every downstream file and breaks any external references; flag this cost to the user before doing it.

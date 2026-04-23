@@ -8,17 +8,17 @@ Fancy Lab Web Development department's Standard Operating Procedures, organized 
 |---|---|---|
 | P0 | Discovery & Sales | [P0_Discovery_Sales_SOP_v2.md](P0_Discovery_Sales_SOP_v2.md) |
 | P1 | Client Onboarding | [P1_Client_Onboarding_SOP_v2.md](P1_Client_Onboarding_SOP_v2.md) |
-| P2 | Project Kickoff | [P2_Project_Kickoff_SOP_v2.md](P2_Project_Kickoff_SOP_v2.md) |
-| P3 | Content Strategy & Copywriting | [P3_Content_Strategy_SOP_v2.md](P3_Content_Strategy_SOP_v2.md) |
-| P4 | Branding & Design | [P4_Branding_Design_SOP_v3.md](P4_Branding_Design_SOP_v3.md) |
-| P5 | Inventory Management | [P5_Inventory_Management_SOP_v2.md](P5_Inventory_Management_SOP_v2.md) |
+| P2 | Project Specification | [P2_Project_Specification_SOP_v2.md](P2_Project_Specification_SOP_v2.md) |
+| P3 | Project Setup | [P3_Project_Setup_SOP_v3.md](P3_Project_Setup_SOP_v3.md) |
+| P4 | Design | [P4_Design_SOP_v3.md](P4_Design_SOP_v3.md) |
+| P5 | Inventory | [P5_Inventory_SOP_v2.md](P5_Inventory_SOP_v2.md) |
 | P6 | Development | [P6_Development_SOP_v2.md](P6_Development_SOP_v2.md) |
 | P7 | Testing & QA | [P7_Testing_QA_SOP_v4.md](P7_Testing_QA_SOP_v4.md) |
-| P8 | Client Approval | [P8_Client_Approval_SOP_v2.md](P8_Client_Approval_SOP_v2.md) |
+| P8 | Client Review & Pre-Launch | [P8_Client_Review_Pre_Launch_SOP_v2.md](P8_Client_Review_Pre_Launch_SOP_v2.md) |
 | P9 | Launch | [P9_Launch_SOP_v2.md](P9_Launch_SOP_v2.md) |
-| P10 | Post-Launch | [P10_Post_Launch_SOP_v2.md](P10_Post_Launch_SOP_v2.md) |
+| P10 | Post Launch | [P10_Post_Launch_SOP_v2.md](P10_Post_Launch_SOP_v2.md) |
 
-An older rolled-up reference is kept in [EVO_SEM_Web_Dev_Phase_Gate_SOPs.md](EVO_SEM_Web_Dev_Phase_Gate_SOPs.md), but the individual phase files above are the source of truth — the consolidated doc predates the Fancy Lab rebrand and the P3 Content Strategy phase, so its numbering is offset from P3 onward.
+An older rolled-up reference is kept in [EVO_SEM_Web_Dev_Phase_Gate_SOPs.md](EVO_SEM_Web_Dev_Phase_Gate_SOPs.md), but the individual phase files above are the source of truth — the consolidated doc predates the Fancy Lab rebrand and the P3 Project Setup phase, so its numbering is offset from P3 onward.
 
 ## SOP template
 

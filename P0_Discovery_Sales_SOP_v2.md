@@ -53,7 +53,7 @@ onboarding.
 
 **Scope Excludes**
 
-> \- Detailed technical requirements (covered in P2 - Project Kickoff)
+> \- Detailed technical requirements (covered in P2 - Project Specification)
 >
 > \- Design or development work of any kind
 >

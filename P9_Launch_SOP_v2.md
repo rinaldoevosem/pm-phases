@@ -12,7 +12,7 @@ v2.0 \| April 2026 \| Confidential
 
 **REVISION HISTORY**
 
-- v2.0 (April 2026): Removed retention/commercial items from launch scope (`Give client 1 month free of Base Plan`, `Ascend Proposals to Marketing`, `Weekly Support Follow Ups` if previously implied) — these are long-tail subscription/retention work that distort launch-phase metrics. Per `data/analysis/03_sop_gap_and_recommendations.md` §C item 2, they now belong in P10 — Post-Launch (or a future P11 — Ongoing Support if/when written). P10's v2 absorbs them.
+- v2.0 (April 2026): Removed retention/commercial items from launch scope (`Give client 1 month free of Base Plan`, `Ascend Proposals to Marketing`, `Weekly Support Follow Ups` if previously implied) — these are long-tail subscription/retention work that distort launch-phase metrics. Per `data/analysis/03_sop_gap_and_recommendations.md` §C item 2, they now belong in P10 — Post Launch (or a future P11 — Ongoing Support if/when written). P10's v2 absorbs them.
 - v2.0: Added explicit **rollback decision logging** requirement to the Monitoring step and Phase Gate (per `data/analysis/03_sop_gap_and_recommendations.md` §B / §Data Enrichment — no rollback log was visible in the ClickUp data).
 - v2.0: Confirmed RACI: Narine + Ishkhan Responsible, Asya Accountable, Rinaldo Consulted, Harry + Carlos + Client Informed. Validated against ClickUp data (Ishkhan = 196 tasks; Narine heavy in dev comments).
 - v2.0: Appended `## Data Enrichment (ClickUp export, 2026-04-22)` section with the templated-launch-checklist evidence (39× recurrence) and cross-phase leak callout.
@@ -67,17 +67,17 @@ issue resolution.
 >
 > \- Content changes (must be approved before launch)
 >
-> \- Ongoing maintenance (covered in P10 - Post-Launch)
+> \- Ongoing maintenance (covered in P10 - Post Launch)
 >
 > \- Marketing campaign launch or social media announcements
 >
 > \- Email migration or non-website technical changes
 >
-> \- Retention / subscription incentives such as "1 month free of Base Plan" — moved to **P10 — Post-Launch**
+> \- Retention / subscription incentives such as "1 month free of Base Plan" — moved to **P10 — Post Launch**
 >
-> \- Marketing-team handoff actions such as "Ascend Proposals to Marketing" — moved to **P10 — Post-Launch**
+> \- Marketing-team handoff actions such as "Ascend Proposals to Marketing" — moved to **P10 — Post Launch**
 >
-> \- Weekly Support Follow Ups — moved to **P10 — Post-Launch**
+> \- Weekly Support Follow Ups — moved to **P10 — Post Launch**
 
 **WHO - RACI MATRIX**
 
@@ -97,10 +97,10 @@ issue resolution.
 | **Pre-Launch Checklist (completed)** | Google Sheets / ClickUp | Asya |
 | **DNS Configuration Record** | Google Docs | Narine |
 | **SSL Verification Report** | Google Docs | Narine |
-| **Post-Launch Verification Report** | Google Sheets | Asya |
+| **Post Launch Verification Report** | Google Sheets | Asya |
 | **Redirect Verification Report (if migration)** | Google Sheets | Narine |
 | **Launch Notification Email** | Email | Carlos |
-| **Post-Launch Monitoring Log** (incl. rollback decisions, if any) | Google Sheets / ClickUp | Asya |
+| **Post Launch Monitoring Log** (incl. rollback decisions, if any) | Google Sheets / ClickUp | Asya |
 | **Client Knowledge Base / Pastel / Support Email** (one-shot send at launch) | Email / Google Drive | Carlos |
 | **Marketing Success Call scheduled** | Google Calendar / ClickUp | Carlos |
 
@@ -273,7 +273,7 @@ issue resolution.
 |  |  |  |
 |:---|:---|:---|
 | **Dependency** | **Source Phase** | **Impact if Missing** |
-| **Formal Client Sign-Off** | P8 - Client Approval | Cannot launch without written client approval |
+| **Formal Client Sign-Off** | P8 - Client Review & Pre-Launch | Cannot launch without written client approval |
 | **QA Sign-Off (all Critical/High bugs resolved)** | P7 - Testing & QA | Cannot launch with known critical issues |
 | **Domain Access / DNS Credentials** | P1 - Client Onboarding | Cannot configure DNS without registrar access |
 | **Payment Gateway Credentials (live mode)** | Client | Cannot activate live payments without production API keys |
@@ -284,7 +284,7 @@ issue resolution.
 Launch Deployment: One launch included; rescheduled launches due to
 client delays may incur additional coordination fees
 
-Post-Launch Emergency Fixes: Critical fixes within 48 hours included;
+Post Launch Emergency Fixes: Critical fixes within 48 hours included;
 non-critical changes follow post-launch support terms
 
 Redirect Adjustments: Initial redirect implementation included; ongoing
@@ -297,7 +297,7 @@ associated timeline and cost impact.*
 **PHASE GATE - COMPLETION CHECKLIST**
 
 *ALL items below must be completed before the project can advance to
-P10 - Post-Launch. The site must be live, verified, and stable before
+P10 - Post Launch. The site must be live, verified, and stable before
 transitioning to ongoing support.*
 
 |  |  |  |  |
@@ -318,7 +318,7 @@ transitioning to ongoing support.*
 | **13** | Client Knowledge Base / Pastel / Support email sent |  |  |
 | **14** | Marketing Success Call scheduled (call itself happens in P10) |  |  |
 | **15** | 24-48 hour monitoring completed with no critical issues |  |  |
-| **16** | Post-Launch Monitoring Log documented (incl. rollback log if any rollback occurred) |  |  |
+| **16** | Post Launch Monitoring Log documented (incl. rollback log if any rollback occurred) |  |  |
 | **17** | ClickUp launch tasks marked as complete |  |  |
 | **18** | Slack notification posted confirming successful launch |  |  |
 
@@ -335,13 +335,13 @@ recurrence (ongoing-support cadence).*
 | **Project Name**       |                   |          |
 | **Approved By**        |                   |          |
 | **Client Rep**         |                   |          |
-| **Next Phase**         | P10 - Post-Launch |          |
+| **Next Phase**         | P10 - Post Launch |          |
 | **Notes / Conditions** |                   |          |
 
 ## Data Enrichment (ClickUp export, 2026-04-22)
 
 - **Launch is the most templated phase in the data.** Checklist items recurring **39×** across tasks: `Setup Launch Meeting`, `Website Launch Checklist`, `Send Client Knowledge Base / Pastel / Support Email`, `Setup Marketing Success Call`. Read at face value, **at least 39 launches have been run** in the observed window; the SOP reflects actual practice and these items are preserved verbatim in v2's process steps and gate.
-- **Cross-phase leak (corrected in v2).** `Give client 1 month free of Base Plan` is a **commercial hand-off into an ongoing support engagement**, not a launch deliverable. v2 removes it from the launch checklist. Same treatment for `Ascend Proposals to Marketing` (a marketing handoff) and `Weekly Support Follow Ups` (an ongoing-support cadence). All three move to P10 — Post-Launch (or a future P11 — Ongoing Support if/when written) so launch-phase reporting isn't polluted by long-term subscription admin.
+- **Cross-phase leak (corrected in v2).** `Give client 1 month free of Base Plan` is a **commercial hand-off into an ongoing support engagement**, not a launch deliverable. v2 removes it from the launch checklist. Same treatment for `Ascend Proposals to Marketing` (a marketing handoff) and `Weekly Support Follow Ups` (an ongoing-support cadence). All three move to P10 — Post Launch (or a future P11 — Ongoing Support if/when written) so launch-phase reporting isn't polluted by long-term subscription admin.
 - **No visible launch rollback log** in the data. v2 adds: "If launch-day critical issue requires rollback, log the rollback decision + rollback ID in the Monitoring Log." Process step 14, the escalation table, and Phase Gate item #16 all reflect this.
 - **RACI confirmed against the data.** Ishkhan = 196 tasks total (heavy dev presence); Narine appears prominently in dev comments. Asya is the consistent accountable PM. No RACI changes needed.
 
@@ -568,7 +568,7 @@ accessible: [ ]</em></td>
 No chains: [ ]</em></td>
 </tr>
 <tr>
-<td colspan="2"><strong>5. 48-HOUR POST-LAUNCH MONITORING
+<td colspan="2"><strong>5. 48-HOUR POST LAUNCH MONITORING
 PROTOCOL</strong></td>
 </tr>
 <tr>
@@ -602,7 +602,7 @@ Configured: [ ]</em></td>
 alert: ___</em></td>
 </tr>
 <tr>
-<td><strong>Issues Found Post-Launch</strong></td>
+<td><strong>Issues Found Post Launch</strong></td>
 <td><em>List each issue: ID / Severity / Description / Resolution / Time
 to fix: ___</em></td>
 </tr>
@@ -655,7 +655,7 @@ Launch Executed By:
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date:
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-Post-Launch Verification By:
+Post Launch Verification By:
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date:
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
@@ -664,5 +664,5 @@ PM Confirmation:
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 *Once the 48-hour monitoring period is complete with no critical issues,
-this phase gate can be evaluated for advancement to P10 — Post-Launch
+this phase gate can be evaluated for advancement to P10 — Post Launch
 Support & Closure.*

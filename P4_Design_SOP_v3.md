@@ -4,7 +4,7 @@ WEB DEVELOPMENT DEPARTMENT
 
 **PHASE P4**
 
-**BRANDING & DESIGN**
+**DESIGN**
 
 Standard Operating Procedure & Phase Gate Document
 
@@ -319,10 +319,10 @@ assets.
 |  |  |  |
 |:---|:---|:---|
 | **Dependency** | **Source Phase** | **Impact if Missing** |
-| **Approved Content Package** | P3 - Content Strategy & Copywriting | Cannot design page layouts without final copy and content structure |
+| **Approved Content Package** | P3 - Project Setup | Cannot design page layouts without final copy and content structure |
 | **Brand Guidelines & Assets** | P1 - Client Onboarding | Need logos, fonts, colors, and brand direction to design |
-| **Project Requirements Document** | P2 - Project Kickoff | Need to know all pages, features, and functionality to design for |
-| **Image/Media Direction** | P3 - Content Strategy & Copywriting | Need to know image requirements per page for layout design |
+| **Project Requirements Document** | P2 - Project Specification | Need to know all pages, features, and functionality to design for |
+| **Image/Media Direction** | P3 - Project Setup | Need to know image requirements per page for layout design |
 
 **REVISION LIMITS & SCOPE CONTROL**
 
@@ -353,7 +353,7 @@ associated timeline and cost impact.*
 **PHASE GATE - COMPLETION CHECKLIST**
 
 *ALL items below must be completed before the project can advance to
-P5 - Inventory Management (if applicable) or P6 - Development. No
+P5 - Inventory (if applicable) or P6 - Development. No
 development work should begin until designs are fully approved in
 writing by the client.*
 
@@ -388,7 +388,7 @@ writing by the client.*
 | **Project Name** |  |  |
 | **Approved By** |  |  |
 | **Client Rep** |  |  |
-| **Next Phase** | P5 - Inventory Management (if applicable) or P6 - Development |  |
+| **Next Phase** | P5 - Inventory (if applicable) or P6 - Development |  |
 | **Notes / Conditions** |  |  |
 
 ## Data Enrichment (ClickUp export, 2026-04-22)
@@ -422,10 +422,10 @@ preserved verbatim from the analysis pack.*
 brief for the design team. It follows the Fancy Lab design workflow:
 Research Wall → Sitemap → UI Kit → Wireframes → Full Design. It
 synthesizes information from the Project Brief (P0), Onboarding Intake
-(P1), and Content Strategy (P3) into specific design direction,
+(P1), and Project Setup (P3) into specific design direction,
 component requirements, and visual standards.*
 
-*Prerequisites: P3 Content Strategy must be complete — the designer
+*Prerequisites: P3 Project Setup must be complete — the designer
 needs final content strategy, page copy, and image direction before
 beginning the design workflow.*
 
@@ -1155,4 +1155,4 @@ Client Design Sign-Off:
 
 *Once all designs are client-approved and the development handoff
 package is complete, this phase gate can be evaluated for advancement to
-P5 — Inventory Management.*
+P5 — Inventory.*

@@ -4,7 +4,7 @@ WEB DEVELOPMENT DEPARTMENT
 
 **PHASE P8**
 
-**CLIENT APPROVAL**
+**CLIENT REVIEW & PRE-LAUNCH**
 
 Standard Operating Procedure & Phase Gate Document
 
@@ -58,7 +58,7 @@ formal launch authorization before proceeding to the launch phase.
 >
 > \- Additional QA rounds beyond what revisions require
 >
-> \- Training or documentation (covered in P10 - Post-Launch)
+> \- Training or documentation (covered in P10 - Post Launch)
 >
 > \- DNS or hosting changes (covered in P9 - Launch)
 

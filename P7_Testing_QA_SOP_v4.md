@@ -460,10 +460,10 @@ catch preventable issues before they reach QA.
 | **Dependency** | **Source Phase** | **Impact if Missing** |
 | **Feature-Complete Development Build** | P6 - Development | Cannot begin QA on incomplete features |
 | **Pre-QA Developer Self-Review Checklist (completed)** | P6 - Development | QA will not start without completed self-review checklist |
-| **Figma Designs + UI Kit + Token Set (for visual comparison and Compliance Report diff)** | P4 - Branding & Design | Need final designs, UI Kit (color tokens, typography scale, button states), and the Figma variables panel as the canonical token set for the Design-Token Compliance Report |
-| **Aida availability for deviation sign-off** | P4 - Branding & Design | Without Aida available to sign per-deviation rows, the Design-Token Compliance Report cannot close and the phase gate is blocked |
-| **SEO Requirements (for validation)** | P3 - Content Strategy | Need meta data and SEO specs to validate against |
-| **Product Catalog (for e-commerce testing)** | P5 - Inventory Management | Need products imported to test purchase flow |
+| **Figma Designs + UI Kit + Token Set (for visual comparison and Compliance Report diff)** | P4 - Design | Need final designs, UI Kit (color tokens, typography scale, button states), and the Figma variables panel as the canonical token set for the Design-Token Compliance Report |
+| **Aida availability for deviation sign-off** | P4 - Design | Without Aida available to sign per-deviation rows, the Design-Token Compliance Report cannot close and the phase gate is blocked |
+| **SEO Requirements (for validation)** | P3 - Project Setup | Need meta data and SEO specs to validate against |
+| **Product Catalog (for e-commerce testing)** | P5 - Inventory | Need products imported to test purchase flow |
 | **Link Map Document** | P4/P6 - Design/Development | Need link map matching every menu item, CTA, and internal link to its destination URL |
 
 **REVISION LIMITS & SCOPE CONTROL**
@@ -495,7 +495,7 @@ associated timeline and cost impact.*
 **PHASE GATE - COMPLETION CHECKLIST**
 
 *ALL items below must be completed before the project can advance to
-P8 - Client Approval. The site must be thoroughly tested and stable
+P8 - Client Review & Pre-Launch. The site must be thoroughly tested and stable
 before the client reviews it.*
 
 |  |  |  |  |
@@ -537,7 +537,7 @@ before the client reviews it.*
 | **Design Approver (Aida — token deviations)** |   |          |
 | **Approved By (Asya)** |                      |          |
 | **Client Rep**         |                      |          |
-| **Next Phase**         | P8 - Client Approval |          |
+| **Next Phase**         | P8 - Client Review & Pre-Launch |          |
 | **Notes / Conditions** |                      |          |
 
 ## Data Enrichment (ClickUp export, 2026-04-22)
@@ -1358,4 +1358,4 @@ PM Approval for Client Review:
 met, the Design-Token Compliance Report shows zero open deviations (or
 all deviations Aida-signed), the Bug-Fix SLA Log shows zero unaddressed
 breaches, and the QA sign-off is complete, this phase gate can be
-evaluated for advancement to P8 — Client Approval.*
+evaluated for advancement to P8 — Client Review & Pre-Launch.*

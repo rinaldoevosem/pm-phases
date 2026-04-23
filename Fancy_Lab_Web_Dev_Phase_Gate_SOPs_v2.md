@@ -9,8 +9,8 @@ Key differences vs. the v1 consolidated doc:
 | # | Change |
 |---|---|
 | 1 | Branding corrected to **Fancy Lab** throughout (v1 said "EVO SEM") |
-| 2 | Phase numbering aligned to current filenames: **P0–P10** (11 phases; v1 had 10 and was missing Content Strategy) |
-| 3 | New phase **P3 Content Strategy** included; old P3+ shifted down one |
+| 2 | Phase numbering aligned to current filenames: **P0–P10** (11 phases; v1 had 10 and was missing Project Setup) |
+| 3 | New phase **P3 Project Setup** included; old P3+ shifted down one |
 | 4 | Each phase now has a **§ Data Enrichment** section with real counts + examples |
 | 5 | New Part II: **Portfolio Health, Team Load, SOP Gap Analysis, Recommended SOPs** — all grounded in the export |
 
@@ -24,15 +24,15 @@ Key differences vs. the v1 consolidated doc:
 |---|---|---|---|
 | [P0](#p0--discovery--sales) | Discovery & Sales | Harry + Rinaldo | `P0_Discovery_Sales_SOP_v2.md` |
 | [P1](#p1--client-onboarding) | Client Onboarding | Carlos | `P1_Client_Onboarding_SOP_v2.md` |
-| [P2](#p2--project-kickoff) | Project Kickoff | Asya + Aida | `P2_Project_Kickoff_SOP_v2.md` |
-| [P3](#p3--content-strategy--copywriting) | Content Strategy & Copywriting | Aida | `P3_Content_Strategy_SOP_v2.md` |
-| [P4](#p4--branding--design) | Branding & Design | Aida | `P4_Branding_Design_SOP_v3.md` |
-| [P5](#p5--inventory-management) | Inventory Management | Asya | `P5_Inventory_Management_SOP_v2.md` |
+| [P2](#p2--project-specification) | Project Specification | Asya + Aida | `P2_Project_Specification_SOP_v2.md` |
+| [P3](#p3--project-setup) | Project Setup | Aida | `P3_Project_Setup_SOP_v3.md` |
+| [P4](#p4--design) | Design | Aida | `P4_Design_SOP_v3.md` |
+| [P5](#p5--inventory) | Inventory | Asya | `P5_Inventory_SOP_v2.md` |
 | [P6](#p6--development) | Development | Narine + Ishkhan (A: Asya) | `P6_Development_SOP_v2.md` |
 | [P7](#p7--testing--qa) | Testing & QA | Manuk (A: Asya) | `P7_Testing_QA_SOP_v4.md` |
-| [P8](#p8--client-approval) | Client Approval | Carlos (A: Rinaldo) | `P8_Client_Approval_SOP_v2.md` |
+| [P8](#p8--client-review--pre-launch) | Client Review & Pre-Launch | Carlos (A: Rinaldo) | `P8_Client_Review_Pre_Launch_SOP_v2.md` |
 | [P9](#p9--launch) | Launch | Narine + Ishkhan (A: Asya) | `P9_Launch_SOP_v2.md` |
-| [P10](#p10--post-launch) | Post-Launch | Carlos + Asya (A: Rinaldo) | `P10_Post_Launch_SOP_v2.md` |
+| [P10](#p10--post-launch) | Post Launch | Carlos + Asya (A: Rinaldo) | `P10_Post_Launch_SOP_v2.md` |
 
 ---
 
@@ -149,7 +149,7 @@ Full checklist in `P1_Client_Onboarding_SOP_v2.md`. Highlights: welcome email, o
 
 ---
 
-## P2 — Project Kickoff
+## P2 — Project Specification
 
 **Purpose.** Technically initialize a new project — create the project workspace, stand up Figma/Shopify/ClickUp infrastructure, get client sign-off on a requirements document and roadmap.
 
@@ -205,7 +205,7 @@ ClickUp · Figma · Shopify / WordPress / Custom CMS · Google Drive · Google M
 
 ---
 
-## P3 — Content Strategy & Copywriting
+## P3 — Project Setup
 
 **Purpose.** Plan, create, and approve all content (copy, CTAs, meta data, image direction, content map) before design and development.
 
@@ -263,7 +263,7 @@ Google Docs · Sheets · Drive · Ahrefs/SEMrush/Ubersuggest · ClickUp · Slack
 
 ---
 
-## P4 — Branding & Design
+## P4 — Design
 
 **Purpose.** Research, plan, and deliver the full client-approved design package (Research Wall → Sitemap → UI Kit → Wireframes → Desktop/Mobile designs → Dev handoff).
 
@@ -307,7 +307,7 @@ Figma · FigJam · Google Drive · ClickUp · Slack · Google Meet · Email.
 
 ### Phase Gate — Completion Checklist (19 items)
 
-Full list in `P4_Branding_Design_SOP_v3.md`. Highlights: Research Wall + Sitemap + UI Kit (logos, type, color schemes, buttons, layout), wireframes client-approved, desktop designs, mobile designs, section components documented, internal review signed off, **client design approval in writing**, prototype if in scope, assets exported, design handoff doc created, Figma Dev Mode enabled, ClickUp design tasks done, Slack confirm.
+Full list in `P4_Design_SOP_v3.md`. Highlights: Research Wall + Sitemap + UI Kit (logos, type, color schemes, buttons, layout), wireframes client-approved, desktop designs, mobile designs, section components documented, internal review signed off, **client design approval in writing**, prototype if in scope, assets exported, design handoff doc created, Figma Dev Mode enabled, ClickUp design tasks done, Slack confirm.
 
 ### § Data Enrichment
 
@@ -317,7 +317,7 @@ Full list in `P4_Branding_Design_SOP_v3.md`. Highlights: Research Wall + Sitemap
 
 ---
 
-## P5 — Inventory Management
+## P5 — Inventory
 
 **Purpose.** Collect, organize, format, import, and validate the product catalog.
 
@@ -492,7 +492,7 @@ Full list in `P7_Testing_QA_SOP_v4.md`.
 
 ---
 
-## P8 — Client Approval
+## P8 — Client Review & Pre-Launch
 
 **Purpose.** Present the completed website, collect + resolve in-scope client revisions, and obtain formal launch authorization.
 
@@ -566,7 +566,7 @@ Google Meet · ClickUp · PandaDoc / Google Docs · Slack · Email · Loom (opti
 
 ### WHAT — Deliverables
 
-Pre-Launch Checklist · DNS Configuration Record · SSL Verification Report · Post-Launch Verification Report · Redirect Verification Report (if migration) · Launch Notification Email · Post-Launch Monitoring Log.
+Pre-Launch Checklist · DNS Configuration Record · SSL Verification Report · Post Launch Verification Report · Redirect Verification Report (if migration) · Launch Notification Email · Post Launch Monitoring Log.
 
 ### WHERE — Tools
 
@@ -596,7 +596,7 @@ Platform admin · Domain registrar · Google Search Console · Google Analytics 
 
 ---
 
-## P10 — Post-Launch
+## P10 — Post Launch
 
 **Purpose.** Deliver training, resolve post-launch issues, finalize documentation, run an internal retrospective, and either close the project or transition to a maintenance agreement.
 
@@ -621,7 +621,7 @@ Google Meet · Drive · Google Analytics · Google Search Console · ClickUp · 
 
 ### HOW — Process Steps
 
-1. Address Post-Launch Issues
+1. Address Post Launch Issues
 2. Schedule and Conduct Client Training
 3. Create Website Admin Guide
 4. Compile Credentials and Access Document

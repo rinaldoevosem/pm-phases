@@ -4,7 +4,7 @@ WEB DEVELOPMENT DEPARTMENT
 
 **PHASE P10**
 
-**POST-LAUNCH, WARRANTY & ONGOING SUPPORT**
+**POST LAUNCH, WARRANTY & ONGOING SUPPORT**
 
 Standard Operating Procedure & Phase Gate Document
 
@@ -142,7 +142,7 @@ explicit handoff.
 
 **SUB-SECTION A — WARRANTY PERIOD (DAY 0–90)**
 
-> **A.1. Address Post-Launch Issues**
+> **A.1. Address Post Launch Issues**
 >
 > During the first 90 days after launch, monitor for and fix any issues
 > that arise: bugs not caught during QA, browser-specific issues
@@ -335,7 +335,7 @@ Enrichment). Carlos + Asya are Responsible; Rinaldo is Accountable.*
 |  |  |  |  |
 |:---|:---|:---|:---|
 | **Type** | **Frequency** | **Audience** | **Channel** |
-| Post-Launch Check-in | Weekly (first 4 weeks) | Client | Email |
+| Post Launch Check-in | Weekly (first 4 weeks) | Client | Email |
 | Training Session | Once (within first 2 weeks) | Client + PM | Google Meet |
 | 30-Day Analytics Review | Once (at 30 days) | Client + PM | Email + Google Meet (optional) |
 | Warranty-Exit Notification (Day 90) | Once | Client | Email |
@@ -367,7 +367,7 @@ Enrichment). Carlos + Asya are Responsible; Rinaldo is Accountable.*
 |:---|:---|:---|
 | **Dependency** | **Source Phase** | **Impact if Missing** |
 | **Successful Site Launch** | P9 - Launch | Cannot begin post-launch without live site |
-| **Client Sign-Off on Final Site** | P8 - Client Approval | Warranty period begins from launch date |
+| **Client Sign-Off on Final Site** | P8 - Client Review & Pre-Launch | Warranty period begins from launch date |
 | **All Project Documentation** | All Previous Phases | Need complete project history for closure documentation |
 | **Analytics Access** | P1 - Client Onboarding / P6 - Development | Need analytics configured to generate 30-day report |
 | **Maintenance Agreement Decision** | P10 Sub-Section A.9 | Determines SLAs that govern Sub-Section B |
@@ -375,7 +375,7 @@ Enrichment). Carlos + Asya are Responsible; Rinaldo is Accountable.*
 
 **REVISION LIMITS & SCOPE CONTROL**
 
-Post-Launch Bug Fixes: 90-day warranty covers bugs and development
+Post Launch Bug Fixes: 90-day warranty covers bugs and development
 defects from original scope; does not cover client-caused issues, new
 requests, or third-party app/integration regressions outside scope.
 
@@ -476,7 +476,7 @@ issues. All post-launch bugs from monitoring period resolved.*
 </colgroup>
 <tbody>
 <tr>
-<td colspan="2"><strong>1. 90-DAY POST-LAUNCH WARRANTY
+<td colspan="2"><strong>1. 90-DAY POST LAUNCH WARRANTY
 TRACKER</strong></td>
 </tr>
 <tr>

@@ -226,10 +226,10 @@ for QA testing.
 |  |  |  |
 |:---|:---|:---|
 | **Dependency** | **Source Phase** | **Impact if Missing** |
-| **Fully Approved Designs (Desktop + Mobile)** | P4 - Branding & Design | Cannot build without final approved designs |
-| **Approved Content Package** | P3 - Content Strategy & Copywriting | Cannot populate pages without final copy |
-| **Imported Product Catalog** | P5 - Inventory Management | Cannot build product pages without product data |
-| **Dev Store / Staging Environment** | P2 - Project Kickoff | Need platform access to begin development |
+| **Fully Approved Designs (Desktop + Mobile)** | P4 - Design | Cannot build without final approved designs |
+| **Approved Content Package** | P3 - Project Setup | Cannot populate pages without final copy |
+| **Imported Product Catalog** | P5 - Inventory | Cannot build product pages without product data |
+| **Dev Store / Staging Environment** | P2 - Project Specification | Need platform access to begin development |
 | **Third-Party Account Credentials** | P1 - Client Onboarding / Client | Cannot integrate services without API keys and account access |
 | **Vendor Integration Spec (API docs, sandbox creds, rate limits, CSP)** | P1 / Vendor | Cannot begin iframe / third-party integrations without complete intake (see Appendix B) |
 

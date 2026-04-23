@@ -396,7 +396,7 @@ associated timeline and cost impact.*
 **PHASE GATE - COMPLETION CHECKLIST**
 
 *ALL items below must be completed before the project can advance to P2
-— Project Kickoff. Missing client information, unverified credentials,
+— Project Specification. Missing client information, unverified credentials,
 unconfirmed approval authority, or incomplete communication agreements
 will delay kickoff. The client must be informed of any delays caused by
 outstanding items on their side.*
@@ -442,7 +442,7 @@ produces multi-hundred-day stalls in later phases.*
 | **Project Name**       |                      |          |
 | **Approved By**        |                      |          |
 | **Client Rep**         |                      |          |
-| **Next Phase**         | P2 - Project Kickoff |          |
+| **Next Phase**         | P2 - Project Specification |          |
 | **Notes / Conditions** |                      |          |
 
 ## Data Enrichment (ClickUp export, 2026-04-22)
@@ -1030,13 +1030,13 @@ deadline / Not liking the design / Site not converting)</em></td>
 after launch? (Be specific and measurable)</em></td>
 </tr>
 <tr>
-<td><strong>Post-Launch Training Needs</strong></td>
+<td><strong>Post Launch Training Needs</strong></td>
 <td><em>What does the client need to manage independently? (Content
 updates / Product management / Order processing / Blog
 posting)</em></td>
 </tr>
 <tr>
-<td><strong>Post-Launch Support Interest</strong></td>
+<td><strong>Post Launch Support Interest</strong></td>
 <td><em>Is the client interested in a monthly maintenance retainer? Yes
 / No / Discuss later</em></td>
 </tr>
@@ -1112,7 +1112,7 @@ authority has been mapped (named primary + named backup) and confirmed
 by the primary decision-maker via email reply, all communication
 expectations have been documented and agreed upon with the client, the
 ClickUp project list has been opened, and the project is ready to
-advance to P2 — Project Kickoff.
+advance to P2 — Project Specification.
 
 Onboarding Completed By:
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date:
