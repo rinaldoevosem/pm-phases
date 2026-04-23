@@ -10,19 +10,19 @@ Not a codebase. It's a set of Standard Operating Procedure documents for Fancy L
 
 The **filenames** are the source of truth for phase numbers. Current lineup:
 
-- `P0_Discovery_Sales_SOP_v2.md`
-- `P1_Client_Onboarding_SOP_v2.md`
-- `P2_Project_Specification_SOP_v2.md`
-- `P3_Project_Setup_SOP_v3.md`
-- `P4_Design_SOP_v3.md`
-- `P5_Inventory_SOP_v2.md`
-- `P6_Development_SOP_v2.md`
-- `P7_Testing_QA_SOP_v4.md`
-- `P8_Client_Review_Pre_Launch_SOP_v2.md`
-- `P9_Launch_SOP_v2.md`
-- `P10_Post_Launch_SOP_v2.md`
+- `P0_Discovery_Sales_SOP_v3.md`
+- `P1_Client_Onboarding_SOP_v3.md`
+- `P2_Project_Specification_SOP_v3.md`
+- `P3_Project_Setup_SOP_v4.md`
+- `P4_Design_SOP_v4.md`
+- `P5_Inventory_SOP_v3.md`
+- `P6_Development_SOP_v3.md`
+- `P7_Testing_QA_SOP_v5.md`
+- `P8_Client_Review_Pre_Launch_SOP_v3.md`
+- `P9_Launch_SOP_v3.md`
+- `P10_Post_Launch_SOP_v3.md`
 
-The `_vN` suffix marks the current version of each SOP (most are v2; P4 is v3; P7 is v4). All phases were enriched in April 2026 with findings from the ClickUp data analysis in `data/analysis/` — each current file has a Revision History block at the top and a `## Data Enrichment` section after the phase gate.
+The `_vN` suffix marks the current version of each SOP (most are v3; P3/P4 are v4; P7 is v5). All phases were enriched in April 2026 with findings from the ClickUp data analysis in `data/analysis/` — each current file has a Revision History block at the top and a `## Data Enrichment` section after the phase gate.
 
 ## The consolidated reference doc is stale — do not trust it for phase numbers
 
@@ -50,5 +50,5 @@ Shared tools the SOPs assume are in use: ClickUp (tasks / roadmaps), Figma (desi
 ## Editing guidance
 
 - Edit the `.md` files directly. Pandoc's GFM output represents the RACI / Deliverables / Tools blocks as pipe tables — preserve table structure when editing so the phase template stays scannable.
-- When bumping a phase version, rename with the next `_vN` suffix (e.g., `P4_..._v2.md` → `P4_..._v3.md`) rather than overwriting — the version suffix is how the current revision is tracked here.
+- When bumping a phase version, rename with the next `_vN` suffix (e.g., `P4_..._v2.md` → `P4_..._v4.md`) rather than overwriting — the version suffix is how the current revision is tracked here.
 - Keep phase numbers stable. Inserting a new phase (as happened with P3 Project Setup) cascades renames through every downstream file and breaks any external references; flag this cost to the user before doing it.

@@ -22,17 +22,17 @@ Key differences vs. the v1 consolidated doc:
 
 | # | Phase | Owner (R/A) | Canonical file |
 |---|---|---|---|
-| [P0](#p0--discovery--sales) | Discovery & Sales | Harry + Rinaldo | `P0_Discovery_Sales_SOP_v2.md` |
-| [P1](#p1--client-onboarding) | Client Onboarding | Carlos | `P1_Client_Onboarding_SOP_v2.md` |
-| [P2](#p2--project-specification) | Project Specification | Asya + Aida | `P2_Project_Specification_SOP_v2.md` |
-| [P3](#p3--project-setup) | Project Setup | Aida | `P3_Project_Setup_SOP_v3.md` |
-| [P4](#p4--design) | Design | Aida | `P4_Design_SOP_v3.md` |
-| [P5](#p5--inventory) | Inventory | Asya | `P5_Inventory_SOP_v2.md` |
-| [P6](#p6--development) | Development | Narine + Ishkhan (A: Asya) | `P6_Development_SOP_v2.md` |
-| [P7](#p7--testing--qa) | Testing & QA | Manuk (A: Asya) | `P7_Testing_QA_SOP_v4.md` |
-| [P8](#p8--client-review--pre-launch) | Client Review & Pre-Launch | Carlos (A: Rinaldo) | `P8_Client_Review_Pre_Launch_SOP_v2.md` |
-| [P9](#p9--launch) | Launch | Narine + Ishkhan (A: Asya) | `P9_Launch_SOP_v2.md` |
-| [P10](#p10--post-launch) | Post Launch | Carlos + Asya (A: Rinaldo) | `P10_Post_Launch_SOP_v2.md` |
+| [P0](#p0--discovery--sales) | Discovery & Sales | Harry + Rinaldo | `P0_Discovery_Sales_SOP_v3.md` |
+| [P1](#p1--client-onboarding) | Client Onboarding | Carlos | `P1_Client_Onboarding_SOP_v3.md` |
+| [P2](#p2--project-specification) | Project Specification | Asya + Aida | `P2_Project_Specification_SOP_v3.md` |
+| [P3](#p3--project-setup) | Project Setup | Aida | `P3_Project_Setup_SOP_v4.md` |
+| [P4](#p4--design) | Design | Aida | `P4_Design_SOP_v4.md` |
+| [P5](#p5--inventory) | Inventory | Asya | `P5_Inventory_SOP_v3.md` |
+| [P6](#p6--development) | Development | Narine + Ishkhan (A: Asya) | `P6_Development_SOP_v3.md` |
+| [P7](#p7--testing--qa) | Testing & QA | Manuk (A: Asya) | `P7_Testing_QA_SOP_v5.md` |
+| [P8](#p8--client-review--pre-launch) | Client Review & Pre-Launch | Carlos (A: Rinaldo) | `P8_Client_Review_Pre_Launch_SOP_v3.md` |
+| [P9](#p9--launch) | Launch | Narine + Ishkhan (A: Asya) | `P9_Launch_SOP_v3.md` |
+| [P10](#p10--post-launch) | Post Launch | Carlos + Asya (A: Rinaldo) | `P10_Post_Launch_SOP_v3.md` |
 
 ---
 
@@ -88,7 +88,7 @@ Google Meet · Google Drive · PandaDoc · Slack · ClickUp.
 7. Internal team notified via Slack with project details
 8. ClickUp project record created
 9. Task marked as completed in ClickUp
-10. Project Brief Template (Appendix A of `P0_..._v2.md`) fully completed
+10. Project Brief Template (Appendix A of `P0_..._v3.md`) fully completed
 
 ### § Data Enrichment (from ClickUp export)
 
@@ -113,7 +113,7 @@ Google Meet · Google Drive · PandaDoc · Slack · ClickUp.
 | Consulted | Rinaldo | Provides input and approves deliverables |
 | Informed | Harry | Kept up to date on progress |
 
-### WHAT — Deliverables (abridged; full list in `P1_..._v2.md`)
+### WHAT — Deliverables (abridged; full list in `P1_..._v3.md`)
 
 Welcome Email with preparation checklist · Onboarding Presentation Deck · Meeting Recording · Completed Intake Form · Brand Asset Package · Access & Credential Verification Log · Communication Cadence Agreement · Content Readiness Assessment · Existing Site Audit (if migration) · Internal Team Brief · Timeline Confirmation Email.
 
@@ -139,7 +139,7 @@ Google Meet · Google Drive · Google Slides · Google Sheets · Email · Slack 
 
 ### Phase Gate — Completion Checklist (24 items)
 
-Full checklist in `P1_Client_Onboarding_SOP_v2.md`. Highlights: welcome email, onboarding meeting, communication SLAs, approval authority mapping, brand assets verified, domain/hosting/GA/GSC access verified, content readiness assessed, internal Slack channel created, project timeline confirmation email sent, intake form fully completed.
+Full checklist in `P1_Client_Onboarding_SOP_v3.md`. Highlights: welcome email, onboarding meeting, communication SLAs, approval authority mapping, brand assets verified, domain/hosting/GA/GSC access verified, content readiness assessed, internal Slack channel created, project timeline confirmation email sent, intake form fully completed.
 
 ### § Data Enrichment
 
@@ -307,7 +307,7 @@ Figma · FigJam · Google Drive · ClickUp · Slack · Google Meet · Email.
 
 ### Phase Gate — Completion Checklist (19 items)
 
-Full list in `P4_Design_SOP_v3.md`. Highlights: Research Wall + Sitemap + UI Kit (logos, type, color schemes, buttons, layout), wireframes client-approved, desktop designs, mobile designs, section components documented, internal review signed off, **client design approval in writing**, prototype if in scope, assets exported, design handoff doc created, Figma Dev Mode enabled, ClickUp design tasks done, Slack confirm.
+Full list in `P4_Design_SOP_v4.md`. Highlights: Research Wall + Sitemap + UI Kit (logos, type, color schemes, buttons, layout), wireframes client-approved, desktop designs, mobile designs, section components documented, internal review signed off, **client design approval in writing**, prototype if in scope, assets exported, design handoff doc created, Figma Dev Mode enabled, ClickUp design tasks done, Slack confirm.
 
 ### § Data Enrichment
 
@@ -482,11 +482,11 @@ Pastel · ClickUp · Figma · BrowserStack/LambdaTest · PixelPerfect · PageSpe
 
 ### Phase Gate — Completion Checklist (23 items)
 
-Full list in `P7_Testing_QA_SOP_v4.md`.
+Full list in `P7_Testing_QA_SOP_v5.md`.
 
 ### § Data Enrichment
 
-- **QA templating already exists in the data.** 31 tasks contain the checklist items `Create Pastel Dashboard`, `Client training and tutorial on how to use Pastel`, `Product Detail Checklist`, `Product Collection Checklist`, `Header & Navigation Checklist`, `Footer Checklist`, `Homepage Checklist`, `Additional Pages Checklist`, `Shopping Cart and Checkout checklist`, `Transactional E-mails checklist`. These exactly match `P7_Testing_QA_SOP_v4.md`. **P7 is the most faithfully executed SOP in the portfolio** — treat it as the reference model.
+- **QA templating already exists in the data.** 31 tasks contain the checklist items `Create Pastel Dashboard`, `Client training and tutorial on how to use Pastel`, `Product Detail Checklist`, `Product Collection Checklist`, `Header & Navigation Checklist`, `Footer Checklist`, `Homepage Checklist`, `Additional Pages Checklist`, `Shopping Cart and Checkout checklist`, `Transactional E-mails checklist`. These exactly match `P7_Testing_QA_SOP_v5.md`. **P7 is the most faithfully executed SOP in the portfolio** — treat it as the reference model.
 - **Manuk owns QA in practice.** 155 tasks total, 54 open — healthy ratio. The `qa` tag is used on 29 tasks; narrower than expected, suggests QA work is mostly identified by *list position* (inside dev lists) rather than tagged.
 - **Bug-fix cycle (step 19) is the typical stall point.** 42 Review-status tasks on `hawaiilabgrown.com` and 7 Review-status tasks on `ian.club` are effectively "waiting on bug fix to re-QA." Add an SLA: bugs in Review > 5 business days auto-escalate to Asya.
 
@@ -586,7 +586,7 @@ Platform admin · Domain registrar · Google Search Console · Google Analytics 
 10. Send Client Launch Notification
 11. Monitor for 24-48 Hours
 
-### Phase Gate — Completion Checklist (15 items, canonical in `P9_..._v2.md`)
+### Phase Gate — Completion Checklist (15 items, canonical in `P9_..._v3.md`)
 
 ### § Data Enrichment
 
@@ -633,7 +633,7 @@ Google Meet · Drive · Google Analytics · Google Search Console · ClickUp · 
 10. Send Client Satisfaction Survey
 11. Formal Project Closure
 
-### Phase Gate — Completion Checklist (14 items, canonical in `P10_..._v2.md`)
+### Phase Gate — Completion Checklist (14 items, canonical in `P10_..._v3.md`)
 
 ### § Data Enrichment
 
