@@ -8,7 +8,18 @@ WEB DEVELOPMENT DEPARTMENT
 
 Standard Operating Procedure & Phase Gate Document
 
-v1.0 \| February 2026 \| Confidential
+v2.0 \| April 2026 \| Confidential
+
+**REVISION HISTORY**
+
+- v1.0 → v2.0 (April 2026): Folded ClickUp export findings (2026-04-22) into the SOP.
+- Added new Appendix B — **Iframe / Third-Party Integration Micro-SOP** (Nivoda, MyDiamonds, BOSS Logics, custom ring builders, Diamond Search). Per `data/analysis/03_sop_gap_and_recommendations.md` §B (RING BUILDER list 56 tasks, DIAMOND SEARCH 6, `iframe` tag 22) and §D item 3.
+- Reinforced RACI: explicitly named **Ishkhan as dev WIP owner** and **Narine as integration / cross-origin lead**, per gap doc §A and §B (Ishkhan 196 tasks / 122 open; Narine heavy on comments).
+- Added Phase Gate item #13: **all iframe / third-party integrations validated in staging with vendor-signed acceptance**, per gap doc §B and `Fancy_Lab_Web_Dev_Phase_Gate_SOPs_v2.md` lines 428–435.
+- Added new Process Step "0. Duplicate-Ticket Sweep" — sprint planning must check ClickUp for existing open duplicates by SKU / endpoint / vendor before creating a new dev task. Evidence: BOSS Logics integration ticket re-created with 8 comments each, twice (`Fancy_Lab_Web_Dev_Phase_Gate_SOPs_v2.md` line 432).
+- Added an explicit **WIP cap: max 20 concurrent open tasks per developer** to Escalation table (Ishkhan currently runs ~6× over).
+- Added comment-volume escalation rule: any task exceeding **10 comments** routes to Asya for scope review (per spawn brief).
+- Appended `## Data Enrichment (ClickUp export, 2026-04-22)` section after the phase gate sign-off block, ported verbatim from the merged rollup doc.
 
 **PURPOSE & SCOPE**
 
@@ -36,6 +47,8 @@ for QA testing.
 > \- E-commerce functionality (cart, checkout, payments)
 >
 > \- Third-party integrations (analytics, marketing, CRM, etc.)
+>
+> \- Iframe / cross-origin embeds (Ring Builder, Diamond Search, vendor catalogs) — see Appendix B
 >
 > \- Content population from approved content package
 >
@@ -65,10 +78,10 @@ for QA testing.
 |  |  |  |
 |:---|:---|:---|
 | **Role** | **Person(s)** | **Responsibility** |
-| **Responsible** | Narine + Ishkhan | *Performs the work for this phase* |
-| **Accountable** | Asya | *Ultimately answerable for completion* |
-| **Consulted** | Rinaldo + Aida | *Provides input and approves deliverables* |
-| **Informed** | Harry + Carlos | *Kept up to date on progress* |
+| **Responsible** | Narine + Ishkhan | *Performs the work for this phase. Ishkhan owns dev WIP / build throughput (196 total tasks, 122 open per 2026-04-22 export). Narine owns third-party / iframe integration ownership and is the primary author of integration-thread comments.* |
+| **Accountable** | Asya | *Ultimately answerable for completion; receives all comment-volume and WIP escalations.* |
+| **Consulted** | Rinaldo + Aida | *Provides input and approves deliverables (PM scope decisions; design fidelity).* |
+| **Informed** | Harry + Carlos | *Kept up to date on progress.* |
 
 **WHAT - DELIVERABLES**
 
@@ -78,6 +91,7 @@ for QA testing.
 | **Functional Development Site** | Staging URL / Dev Store | Narine + Ishkhan |
 | **Development Checklist (completed)** | ClickUp / Google Sheets | Asya |
 | **Third-Party Integration Documentation** | Google Docs | Narine |
+| **Iframe / Cross-Origin Integration Spec (per integration)** | Google Docs (template per Appendix B) | Narine |
 | **SEO Technical Implementation Report** | Google Docs / Sheets | Narine |
 | **Performance Optimization Report** | Google Docs | Ishkhan |
 | **Development Handoff to QA** | ClickUp + Slack | Asya |
@@ -91,20 +105,30 @@ for QA testing.
 | **Figma** | Design reference via Dev Mode |
 | **VS Code / IDE** | Code editing and development |
 | **GitHub / Version Control** | Code repository and version management |
-| **ClickUp** | Sprint planning, task tracking, bug logging |
+| **ClickUp** | Sprint planning, task tracking, bug logging, duplicate-ticket sweep |
 | **Slack** | Daily standups, blocker communication, team coordination |
 | **Google PageSpeed Insights** | Performance testing during development |
 | **BrowserStack / Device Lab** | Cross-browser and device testing |
 
 **HOW - PROCESS STEPS**
 
+> **0. Duplicate-Ticket Sweep (pre-sprint)**
+>
+> Before creating any new dev ticket, search ClickUp by SKU, endpoint
+> name, vendor name, and integration name for existing open duplicates.
+> If a matching open task exists, append to it rather than re-creating.
+> Evidence base: the BOSS Logics / Frederick Goldman integration was
+> ticketed twice with 8 comments each — both stuck. Add a sprint-planning
+> checklist item: "duplicate scan completed".
+>
 > **1. Development Sprint Planning**
 >
 > Break down the full build into development sprints (typically 1-2
 > weeks each). Prioritize: global elements first (header, footer,
 > navigation), then homepage, then interior pages, then specialized
 > features. Create ClickUp tasks for each page/feature with clear
-> acceptance criteria referencing Figma designs.
+> acceptance criteria referencing Figma designs. Confirm WIP per
+> developer is at or under the 20-task cap (see Escalation).
 >
 > **2. Build Global Elements**
 >
@@ -135,7 +159,9 @@ for QA testing.
 > Manager, Meta Pixel (Facebook), email marketing platform (Klaviyo,
 > Mailchimp, etc.), CRM connection, live chat or support widget, review
 > platform, and any custom API integrations. Document each integration
-> with account details and configuration notes.
+> with account details and configuration notes. **Iframe / cross-origin
+> embeds (Ring Builder, Diamond Search, Nivoda, MyDiamonds, BOSS Logics,
+> custom ring builders) follow the dedicated micro-SOP in Appendix B.**
 >
 > **6. Implement SEO Technical Requirements**
 >
@@ -187,10 +213,13 @@ for QA testing.
 | **Trigger** | **Timeframe** | **Escalation Action** | **Escalated To** |
 | Design implementation issue (cannot build as designed) | Immediately | Flag to design lead for design adjustment or alternative approach | Aida + Asya |
 | Third-party integration failure | 2 business days | Escalate to PM; contact vendor support | Asya + Rinaldo |
+| **Iframe / cross-origin integration fails to load or render** | Immediately | Engage Narine; verify CSP, vendor sandbox, fallback path per Appendix B | Narine + Asya |
 | Development behind schedule (\>2 days slippage) | End of sprint | Sprint retrospective; re-prioritize or add resources | Asya + Rinaldo |
 | Client requests changes during development | Immediately | Route to PM for Change Order evaluation | Rinaldo |
 | Performance targets not achievable | During optimization | Present tradeoffs to PM; get client input if needed | Asya + Rinaldo |
 | Critical bug blocking other development | Immediately | All hands on fix; notify PM of timeline impact | Asya |
+| **Per-developer WIP exceeds 20 concurrent open tasks** | Sprint planning | Stop creating new tickets for that developer; PM redistributes load | Asya |
+| **Any task exceeds 10 comments without resolution** | Immediately upon hitting threshold | Hand to Asya for scope review; consider Change Order or split into sub-tasks | Asya |
 
 **DEPENDENCIES - REQUIRED INPUTS**
 
@@ -202,6 +231,7 @@ for QA testing.
 | **Imported Product Catalog** | P5 - Inventory Management | Cannot build product pages without product data |
 | **Dev Store / Staging Environment** | P2 - Project Kickoff | Need platform access to begin development |
 | **Third-Party Account Credentials** | P1 - Client Onboarding / Client | Cannot integrate services without API keys and account access |
+| **Vendor Integration Spec (API docs, sandbox creds, rate limits, CSP)** | P1 / Vendor | Cannot begin iframe / third-party integrations without complete intake (see Appendix B) |
 
 **REVISION LIMITS & SCOPE CONTROL**
 
@@ -210,6 +240,10 @@ during dev phase; feature changes require Change Order
 
 Third-Party Integrations: Standard integrations included; custom API
 work beyond initial scope requires Change Order
+
+Iframe / Cross-Origin Integrations: One round of vendor-side spec
+clarification included per integration. Additional vendor escalations,
+SDK upgrades, or scope expansion require Change Order.
 
 Performance Optimization: Best-effort optimization included; advanced
 optimization (custom CDN, edge computing) scoped separately
@@ -239,6 +273,7 @@ before entering the formal testing phase.*
 | **10** | Third-party integration documentation created |  |  |
 | **11** | Staging URL shared with QA team |  |  |
 | **12** | Slack notification posted confirming development phase completion |  |  |
+| **13** | All iframe / third-party integrations validated in staging with vendor-signed acceptance (per Appendix B) |  |  |
 
 **Phase Gate Sign-Off**
 
@@ -250,6 +285,13 @@ before entering the formal testing phase.*
 | **Client Rep**         |                   |          |
 | **Next Phase**         | P7 - Testing & QA |          |
 | **Notes / Conditions** |                   |          |
+
+## Data Enrichment (ClickUp export, 2026-04-22)
+
+- **`development` is by far the top tag** (187 tasks). Dev volume is highest on `hawaiilabgrown.com` (54 In-Progress tasks — more than any other list) and `Steindiamonds.com` (22 In-Progress).
+- **Ishkhan is the dev-side bottleneck.** 196 total tasks, **122 open** (tied for 2nd-highest open WIP in the entire org). Juan FancyLab (220 total, 184 open) and Luis Grosso (198/154) also sit primarily in dev territory. Recommend a WIP limit per developer (e.g., max 20 concurrent open tasks) — Ishkhan is 6× that now.
+- **Third-party integration is the top comment-heavy theme.** `Integrate Frederick Goldman Inventory via BOSS Logics API - Artcarved & Triton` (breadiamonddirect.com) has appeared twice with 8 comments each — duplicate task evidence that the team is re-creating tickets when stuck. Add a "check for existing open duplicate by SKU/endpoint name" step to sprint planning.
+- **iframe-tag cluster.** 22 tasks tagged `iframe` — specific enough to warrant an **iframe-integration micro-SOP** (Diamond Search, Ring Builder, Nivoda, MyDiamonds use iframes heavily).
 
 **APPENDIX A: DEVELOPMENT SPECIFICATION & BUILD TRACKER**
 
@@ -584,3 +626,112 @@ PM Sign-Off for QA Handoff:
 *Once all pages are built, integrations are configured, and the
 developer self-check is complete, this phase gate can be evaluated for
 advancement to P7 — Testing & QA.*
+
+**APPENDIX B: IFRAME / THIRD-PARTY INTEGRATION MICRO-SOP**
+
+*Scope: any embedded third-party experience that runs in an iframe or
+loads cross-origin content into the storefront. This appendix is
+mandatory for all such integrations and supersedes the generic
+Step 5 process for these specific cases.*
+
+*Evidence base (per `data/analysis/03_sop_gap_and_recommendations.md` §B
+and the 2026-04-22 ClickUp export): RING BUILDER list = 56 tasks,
+DIAMOND SEARCH list = 6 tasks, `iframe` tag = 22 tasks. These
+integrations are the single largest source of multi-comment "sticky"
+tickets on the dev team. The duplicate BOSS Logics / Frederick Goldman
+tickets (8 comments each, twice) are a direct consequence of skipping
+this intake.*
+
+**B.1 — Named Integration Partners (in current rotation)**
+
+| Vendor | Integration Type | Typical Footprint | Primary Owner |
+|:---|:---|:---|:---|
+| **Nivoda** | Diamond catalog feed + search iframe | PDP + Diamond Search page | Narine |
+| **MyDiamonds** | Diamond search iframe | Dedicated search page | Narine |
+| **BOSS Logics** | Inventory API (Frederick Goldman / Artcarved / Triton) | Collection + PDP | Narine + Ishkhan |
+| **Custom Ring Builders** (per-client; e.g., breadiamonddirect, hawaiilabgrown) | Multi-step iframe configurator | Dedicated builder page | Ishkhan |
+| **Other vendor catalogs** | API or iframe | Varies | Narine |
+
+**B.2 — Standardized Vendor Intake (REQUIRED before any code is
+written)**
+
+The vendor must supply, in writing, all of the following. If any item is
+missing, the integration is blocked at intake — escalate to Asya / Rinaldo
+to chase the vendor. Do NOT begin development against a partial spec.
+
+|  |  |
+|:---|:---|
+| **Intake Item** | **What's Required** |
+| **API Documentation** | Public or NDA-protected URL; version pinned |
+| **Sandbox / Test Credentials** | Working test environment, not production |
+| **Production Credentials** | Delivered separately, after sandbox sign-off |
+| **Rate Limits** | Per-second / per-day caps; throttling behavior |
+| **CSP / Embedding Requirements** | Allowed parent origins, `frame-ancestors`, `X-Frame-Options` posture |
+| **Required HTTP Headers** | `Content-Security-Policy`, `Permissions-Policy`, `Referrer-Policy` |
+| **Webhook / Callback Spec** | If applicable: URLs we must expose, signing keys |
+| **Vendor Support Channel** | Email or Slack contact + SLA in business hours |
+| **Branding / Theming Hooks** | Whether iframe contents are themable; CSS variables exposed |
+| **Mobile / Responsive Behavior** | Documented breakpoints; expected min/max iframe dimensions |
+| **Failure / Timeout Behavior** | What the iframe does if the vendor backend is down |
+
+**B.3 — Sandbox-First Rule**
+
+Every integration MUST be proven end-to-end in a Shopify dev store
+before being touched in production. Sandbox proof = a recorded Loom or
+written acceptance note from Narine confirming the integration loads,
+renders, completes a full happy-path interaction, and degrades
+gracefully on simulated failure. Skipping the sandbox round is the
+documented root cause of multiple re-ticketed integrations.
+
+**B.4 — Cross-Origin / Iframe Embedding Checklist**
+
+Before marking an iframe integration done, verify each item:
+
+|  |  |  |
+|:---|:---|:---|
+| **\#** | **Check** | **Status** |
+| 1 | Vendor's allowed `frame-ancestors` includes our staging + production domains | [ ] |
+| 2 | Our storefront's `Content-Security-Policy` permits the vendor origin in `frame-src` and (if needed) `connect-src` / `script-src` | [ ] |
+| 3 | `X-Frame-Options` is not set in a way that conflicts with the vendor's embedding | [ ] |
+| 4 | Iframe is responsive at all standard breakpoints (320, 375, 768, 1024, 1440, 1920) | [ ] |
+| 5 | Iframe height adjusts dynamically (postMessage handler if vendor supports it) | [ ] |
+| 6 | Loading state is shown while iframe initializes | [ ] |
+| 7 | Fallback UI is shown if iframe fails to load within a defined timeout (default 8s) | [ ] |
+| 8 | Fallback includes a documented support path for the customer (email / phone / chat) | [ ] |
+| 9 | Iframe is keyboard-accessible and focus is managed correctly on entry/exit | [ ] |
+| 10 | Iframe's contents don't break the parent page's scroll position on mobile | [ ] |
+| 11 | All cookies / localStorage usage by the vendor is documented and cookie-banner-compliant | [ ] |
+| 12 | GA4 / GTM events fire for key iframe interactions where the vendor exposes them | [ ] |
+| 13 | Vendor sandbox sign-off recorded in Google Drive | [ ] |
+| 14 | Vendor production sign-off (post-deploy smoke test) recorded | [ ] |
+
+**B.5 — Ownership & Tagging**
+
+- Every iframe / third-party integration task in ClickUp MUST be tagged
+  `iframe`. Untagged integration tasks are bounced back at sprint
+  planning.
+- **Narine** is the integration / cross-origin owner; **Ishkhan** is the
+  build owner for ring builders and any custom front-end glue. Both are
+  jointly accountable to Asya.
+- The vendor name MUST appear in the ClickUp task title (e.g.,
+  `[Nivoda] PDP diamond search iframe — sandbox round 1`) so duplicate
+  searches succeed.
+
+**B.6 — Escalation**
+
+|  |  |  |
+|:---|:---|:---|
+| **Trigger** | **Action** | **Owner** |
+| Iframe fails to load in sandbox after 1 day | Re-engage vendor support; document the failure mode | Narine |
+| Any iframe / integration task exceeds **10 comments** without resolution | Escalate to Asya for scope review; consider splitting the task or issuing a Change Order | Asya |
+| Duplicate iframe ticket detected (same vendor + same surface area) | Merge into the older ticket; archive the duplicate; note the merge in the comment thread | Asya |
+| Vendor unresponsive for 3 business days | Escalate to PM (Rinaldo) for vendor-side leverage | Rinaldo |
+| CSP / browser policy change breaks an iframe in production | Treat as P0 incident; revert or hotfix within 4 hours | Ishkhan + Asya |
+
+**B.7 — Phase-Gate Coupling**
+
+Phase Gate item **#13** ("All iframe / third-party integrations
+validated in staging with vendor-signed acceptance") cannot be ticked
+unless Appendix B sections B.2 (intake), B.3 (sandbox), and B.4
+(checklist) are complete for every integration in scope. Sign-offs live
+in the project's Google Drive folder under `Integrations/<vendor>/`.

@@ -8,7 +8,16 @@ WEB DEVELOPMENT DEPARTMENT
 
 Standard Operating Procedure & Phase Gate Document
 
-v1.0 \| February 2026 \| Confidential
+v2.0 \| April 2026 \| Confidential
+
+**REVISION HISTORY / CHANGELOG**
+
+- **v2.0 (April 2026)** — Codified the "Client Approval > 30 days" escalation ladder (Day 7 / 14 / 21 / 30) per `data/analysis/03_sop_gap_and_recommendations.md` section C and `02_portfolio_health.md` red-list. Added the `Client Approval → Client Stall → Parked` ClickUp status flow and the `client-block` routing tag.
+- Added a new Phase Gate item (#13): "No open Client Approval task older than 30 days, or else `Client Stall` status applied."
+- Reinforced RACI ownership: Carlos Responsible for cadence reminders (Day 7, Day 14); Rinaldo Accountable for Day 21 / Day 30 escalation decisions.
+- Appended `## Data Enrichment (ClickUp export, 2026-04-22)` section porting evidence from `Fancy_Lab_Web_Dev_Phase_Gate_SOPs_v2.md` (lines 545–550).
+- **Rollout action:** apply v2 escalation retroactively to four red clients identified in `02_portfolio_health.md` — `breadiamonddirect.com` (8 Client Approval tasks, oldest 862d), `ian.club` (7 tasks, oldest 457d), `Select Dental` (14 Client Approval + 38 Backlog), `barclaysjewelers.com` (55 Open, 580d oldest).
+- Confirmed RACI alignment with observed practice: Carlos owns client-facing cadence end-to-end (184 tasks total per `03_sop_gap_and_recommendations.md` section A); Rinaldo retains accountability for park/unblock decisions.
 
 **PURPOSE & SCOPE**
 
@@ -38,6 +47,8 @@ formal launch authorization before proceeding to the launch phase.
 > \- Formal written sign-off / launch approval
 >
 > \- Known issue disclosure and documentation
+>
+> \- Stalled-approval escalation ladder (Day 7 / 14 / 21 / 30)
 
 **Scope Excludes**
 
@@ -56,10 +67,10 @@ formal launch authorization before proceeding to the launch phase.
 |  |  |  |
 |:---|:---|:---|
 | **Role** | **Person(s)** | **Responsibility** |
-| **Responsible** | Carlos | *Performs the work for this phase* |
-| **Accountable** | Rinaldo | *Ultimately answerable for completion* |
+| **Responsible** | Carlos | *Performs the work for this phase; owns Day 7 and Day 14 cadence reminders* |
+| **Accountable** | Rinaldo | *Ultimately answerable for completion; owns Day 21 escalation and Day 30 park/unblock decision* |
 | **Consulted** | Asya + Aida + Narine | *Provides input and approves deliverables* |
-| **Informed** | Harry | *Kept up to date on progress* |
+| **Informed** | Harry | *Kept up to date on progress; looped in at Day 21+ on at-risk accounts* |
 
 **WHAT - DELIVERABLES**
 
@@ -72,17 +83,18 @@ formal launch authorization before proceeding to the launch phase.
 | **Revision Implementation Report**    | ClickUp                 | Asya      |
 | **Known Issues Disclosure**           | Google Docs             | Asya      |
 | **Formal Client Sign-Off Document**   | PandaDoc / Google Docs  | Carlos    |
+| **Stall Escalation Brief (Day 21)**   | Google Docs / Slack DM  | Carlos → Rinaldo |
 
 **WHERE - TOOLS & PLATFORMS**
 
 |  |  |
 |:---|:---|
 | **Tool** | **Purpose in This Phase** |
-| **Google Meet** | Client walkthrough presentations |
-| **ClickUp** | Feedback tracking, revision task management |
+| **Google Meet** | Client walkthrough presentations; Day 14 unblock call |
+| **ClickUp** | Feedback tracking, revision task management, `Client Approval → Client Stall → Parked` status flow, `client-block` tag |
 | **PandaDoc / Google Docs** | Formal sign-off document |
-| **Slack** | Internal coordination on revisions |
-| **Email** | Client communication, staging access, review guides |
+| **Slack** | Internal coordination on revisions; Day 21 escalation thread |
+| **Email** | Client communication, staging access, review guides, Day 7/14 reminders |
 | **Loom (optional)** | Video walkthroughs of specific features or pages |
 
 **HOW - PROCESS STEPS**
@@ -102,7 +114,9 @@ formal launch authorization before proceeding to the launch phase.
 > Guide. Request they review on both desktop and mobile. Set a clear
 > deadline for feedback submission (typically 5 business days). Include
 > instructions on how to document feedback (page, section, description
-> of requested change).
+> of requested change). Set the ClickUp task status to `Client Approval`
+> and stamp the deliverable submission date — the escalation clock
+> starts here (see Step 10).
 >
 > **3. Conduct Client Walkthrough Meeting**
 >
@@ -156,6 +170,15 @@ formal launch authorization before proceeding to the launch phase.
 > Once sign-off is received, update ClickUp with launch-ready status.
 > Post in Slack: client approval received, any final notes or
 > conditions, and that the project is cleared for P9 - Launch.
+>
+> **10. Run the Stalled-Approval Cadence (NEW in v2)**
+>
+> Whenever a deliverable is sent to the client (Step 2 or Step 7) and
+> a `Client Approval` task is opened in ClickUp, Carlos runs the
+> escalation ladder defined in **Appendix B** without waiting for a
+> manual trigger. The ladder fires automatically off the task's
+> "deliverable submitted" date. Tag the task `client-block` the moment
+> any reminder is sent so reporting can roll up at-risk accounts.
 
 **COMMUNICATION - STAKEHOLDER UPDATES**
 
@@ -166,6 +189,10 @@ formal launch authorization before proceeding to the launch phase.
 | Client Walkthrough Meeting | 1-2 times (initial + post-revision) | Client + PM + Relevant Team | Google Meet |
 | Feedback Categorization Review | Once (after feedback received) | Client + PM | Email / Google Meet |
 | Revision Status Updates | As needed during revisions | Client | Email |
+| **Day 7 Reminder** | Once per stalled deliverable | Client | Email + ClickUp comment |
+| **Day 14 Unblock Offer** | Once per stalled deliverable | Client | Email + Google Meet invite |
+| **Day 21 Escalation Brief** | Once per stalled deliverable | Rinaldo (cc Harry) | Slack DM + Google Doc |
+| **Day 30 Stall Decision** | Once per stalled deliverable | Rinaldo + Harry + Carlos | Slack thread + ClickUp status change |
 | Launch Readiness Notification | Once (at phase close) | Full Team | Slack |
 
 **ESCALATION - BLOCKED PHASE PROTOCOL**
@@ -179,6 +206,7 @@ formal launch authorization before proceeding to the launch phase.
 | Client refuses to sign off | After 2 revision rounds | Schedule meeting to identify specific concerns; involve account lead | Rinaldo + Harry |
 | Scope creep disguised as revisions | During feedback categorization | Clearly communicate what is in-scope vs. Change Order territory | Rinaldo |
 | Client wants to delay launch indefinitely | 14 business days after sign-off request | Discuss project closure options and maintenance agreement | Harry + Rinaldo |
+| **Client Approval task aging > 30 calendar days** | **Day 30** | **Apply `Client Stall` status; if no executed unblock plan within 7 more days, move project to `PARKED` folder** | **Rinaldo (decision) + Carlos (execution)** |
 
 **DEPENDENCIES - REQUIRED INPUTS**
 
@@ -188,6 +216,7 @@ formal launch authorization before proceeding to the launch phase.
 | **QA Sign-Off Report** | P7 - Testing & QA | Cannot present to client without internal QA completion |
 | **Staging Site (functional and tested)** | P6 - Development + P7 - QA | Client needs a stable site to review |
 | **Original Signed Contract (revision limits)** | P0 - Discovery & Sales | Need to reference contracted revision rounds |
+| **Approval Authority Map** | P1 - Client Onboarding (gate item #5) | Without the correctly mapped approver, reminders go to the wrong person and the escalation ladder misfires |
 
 **REVISION LIMITS & SCOPE CONTROL**
 
@@ -225,6 +254,7 @@ approval.*
 | **10** | Launch Approval document signed |  |  |
 | **11** | ClickUp tasks updated to launch-ready status |  |  |
 | **12** | Slack notification posted confirming client approval and launch readiness |  |  |
+| **13** | **No open Client Approval task older than 30 days, or else `Client Stall` status applied and Day 30 decision logged** |  |  |
 
 **Phase Gate Sign-Off**
 
@@ -236,6 +266,12 @@ approval.*
 | **Client Rep**         |             |          |
 | **Next Phase**         | P9 - Launch |          |
 | **Notes / Conditions** |             |          |
+
+## Data Enrichment (ClickUp export, 2026-04-22)
+
+- **`client approval` status has 84 tasks**, unevenly distributed: `Select Dental` 14 · `Steindiamonds.com` 8 · `breadiamonddirect.com` 8 · `ian.club` 7 · `divinitymetals.com` 6 · `naimies.com` 6 · `OverstockCellars.com` 4 · `christopher-salon.com` 2 · others. The fact that 7/8 of `breadiamonddirect.com`'s non-completed tasks are in client approval but the list has **0% completion** is the single clearest bottleneck in the portfolio — clients are receiving approval packages but not returning sign-off.
+- **Oldest "client approval" items are 400+ days old.** This is a hard escalation trigger that v1 P8 didn't quantify — v2 codifies it as: "Client Approval > 30 days → PM escalation; > 90 days → Rinaldo decision on parking the project." See Appendix B for the operational ladder.
+- **v2 rollout action.** Apply the new escalation retroactively to the four red-list accounts cited in `data/analysis/02_portfolio_health.md`: `breadiamonddirect.com` (oldest 862d), `ian.club` (oldest 457d), `Select Dental` (14 Client Approval + 38 Backlog), `barclaysjewelers.com` (55 Open, 580d oldest). Carlos to triage each within 5 business days of v2 publication; Rinaldo to make the park/restart call by Day 30 of triage.
 
 **APPENDIX A: CLIENT REVIEW GUIDE & FORMAL SIGN-OFF FORM**
 
@@ -518,3 +554,60 @@ ________________________________</em></td>
 deploy the website to production. Once signed, the project advances to
 P9 — Launch. Any scope additions after sign-off require a separate
 Change Order.*
+
+**APPENDIX B: STALLED-APPROVAL ESCALATION LADDER (NEW IN v2)**
+
+*This appendix codifies the "Client Approval > 30 days" escalation path.
+The clock starts on the **deliverable submission date** stamped in
+ClickUp at Step 2 (initial staging access) or Step 7 (post-revision
+walkthrough). Days are calendar days.*
+
+**Evidence base.** Per `data/analysis/02_portfolio_health.md`, four red
+clients are stuck in client approval: `breadiamonddirect.com` (8 Client
+Approval tasks, oldest 862d), `ian.club` (7 tasks, oldest 457d),
+`Select Dental` (14 Client Approval + 38 Backlog), and
+`barclaysjewelers.com` (55 Open, 580d oldest). Per
+`data/analysis/03_sop_gap_and_recommendations.md` section C, oldest
+`Client Approval` items in the portfolio are 400+ days old. v1 had no
+quantified trigger; v2 fixes that.
+
+### B.1 Escalation Ladder
+
+| Day | Trigger | Owner | Action |
+|---:|:---|:---|:---|
+| **0** | Deliverable submitted (Step 2 or Step 7) | Carlos | Stamp `deliverable_submitted_date` on the ClickUp task; status = `Client Approval`. |
+| **7** | No client response | **Carlos** | Gentle reminder via email + ClickUp comment referencing the agreed review deadline. Add `client-block` tag if not already present. |
+| **14** | Still no client response | **Carlos** | Second reminder + offer to schedule a Google Meet to walk through blockers. Cc the secondary contact mapped in P1 (gate item #5). |
+| **21** | Still no client response | **Carlos → Rinaldo** | Carlos files a one-page **Stall Escalation Brief** (Google Doc) summarizing: deliverable, days outstanding, prior touchpoints, hypothesized blocker, and **cost of delay** (downstream phase impact, team capacity tied up). Posted in Slack DM to Rinaldo (Accountable per RACI). |
+| **30** | Still no client response | **Rinaldo (decision) + Carlos (execution)** | Apply ClickUp status `Client Stall`. Rinaldo decides on an unblock plan (executive call, contract amendment, scope cut). |
+| **30 + 7** | No executed unblock plan | Rinaldo + Carlos | Project moved to `PARKED` folder. Phase Gate item #13 fails; project does not advance to P9. |
+
+### B.2 ClickUp Status Flow
+
+```
+Client Approval  →  Client Stall  →  Parked
+       ↑                ↑               ↑
+   Day 0–29       Day 30 (auto)    Day 37 (manual,
+                                    Rinaldo approval)
+```
+
+### B.3 Tag Conventions
+
+- **`client-block`** — applied to any `Client Approval` task that has triggered Day 7+ on the ladder. Used to roll up at-risk accounts in PM dashboards.
+- The tag stays on the task until either sign-off is obtained (status → next phase) or the project is parked.
+
+### B.4 v2 Rollout Action — Retroactive Application
+
+The four red clients below are subject to immediate ladder application
+on v2 publication. Carlos owns triage; Rinaldo owns the park/restart
+decision per RACI.
+
+| Client | Open Client Approval tasks | Oldest open (days) | Initial action |
+|:---|---:|---:|:---|
+| `breadiamonddirect.com` | 8 | 862 | Skip to Day 21 brief; Rinaldo decision needed within 7 days |
+| `ian.club` | 7 | 457 | Skip to Day 21 brief; Rinaldo decision needed within 7 days |
+| `Select Dental` | 14 (+38 Backlog) | 78 | Day 14 unblock call; if no response, Day 21 brief |
+| `barclaysjewelers.com` | 55 Open | 580 | Skip to Day 30 `Client Stall` status; confirm "active vs. abandoned" with Rinaldo |
+
+*All four cases default to `PARKED` if no executed unblock plan within
+7 days of `Client Stall` status, per Phase Gate item #13.*

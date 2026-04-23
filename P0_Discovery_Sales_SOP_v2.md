@@ -8,13 +8,23 @@ WEB DEVELOPMENT DEPARTMENT
 
 Standard Operating Procedure & Phase Gate Document
 
-v1.0 \| February 2026 \| Confidential
+v2.0 \| April 2026 \| Confidential
+
+**REVISION HISTORY**
+
+v1.0 (Feb 2026) → v2.0 (Apr 2026):
+
+- Rebranded from "EVO SEM" to "FANCY LAB" in Purpose & Scope (per `CLAUDE.md` conventions; v1 still referenced the legacy entity name).
+- **Fixed ClickUp drift in step 8 / gate item #8** — the ClickUp project list is opened during P1 Onboarding, not P0 Sales. Step 8 and gate item #8 now reference the artifacts actually created during sales (CRM / PandaDoc opportunity record); a note flags that ClickUp list creation is owned by P1. Less invasive than moving the step out of this file (Option (b) in spawn brief). Per `data/analysis/03_sop_gap_and_recommendations.md` §C item 1 and §D item 9.
+- **Made the proposal-stall escalation auditable** by introducing a `proposal-archived` ClickUp tag and a weekly Sales pipeline review step in the Escalation table. Per `data/analysis/03_sop_gap_and_recommendations.md` §D item 9 follow-up note and the §Data Enrichment "Risk — proposal stall" item in the merged rollup.
+- Added `## Data Enrichment (ClickUp export, 2026-04-22)` section after the Phase Gate sign-off; ports the rollup's stats (34 signed contracts, 34 deposits) and named client examples as evidence base for P0 throughput.
+- Updated Appendix A internal cross-reference from `P0_..._v1.md` to `P0_..._v2.md`.
 
 **PURPOSE & SCOPE**
 
 This SOP defines the standard process for the initial sales engagement,
 project scoping, proposal delivery, and payment processing for all new
-web development projects at EVO SEM. It ensures that every project
+web development projects at FANCY LAB. It ensures that every project
 begins with a clear agreement on scope, deliverables, timelines, and
 costs before any work commences.
 
@@ -50,6 +60,9 @@ onboarding.
 > \- Third-party tool procurement or setup
 >
 > \- Client onboarding activities (covered in P1)
+>
+> \- ClickUp project list creation (owned by P1 - Client Onboarding;
+> see step 8 note below)
 
 **WHO - RACI MATRIX**
 
@@ -71,6 +84,7 @@ onboarding.
 | **Proposal Document** | PandaDoc | Harry + Rinaldo |
 | **Signed Contract** | PandaDoc | Harry + Rinaldo |
 | **Deposit Invoice + Payment Confirmation** | Accounting System | Harry + Rinaldo |
+| **CRM / PandaDoc Opportunity Record** | PandaDoc + CRM | Harry + Rinaldo |
 | **Welcome Email** | Email | Harry + Rinaldo |
 
 **WHERE - TOOLS & PLATFORMS**
@@ -80,9 +94,9 @@ onboarding.
 | **Tool**         | **Purpose in This Phase**                               |
 | **Google Meet**  | Discovery calls and client meetings                     |
 | **Google Drive** | Meeting notes, project brief storage                    |
-| **PandaDoc**     | Proposal creation, contract signing, payment processing |
+| **PandaDoc**     | Proposal creation, contract signing, payment processing; opportunity record of truth for P0 |
 | **Slack**        | Internal team notification when deal is closed          |
-| **ClickUp**      | Initial project record creation                         |
+| **ClickUp**      | Sales-pipeline tracking only in P0 (opportunity card in the Sales list); project list / project workspace are created in P1 - Client Onboarding |
 
 **HOW - PROCESS STEPS**
 
@@ -127,11 +141,18 @@ onboarding.
 > steps (onboarding), key contacts, and what to prepare for the
 > onboarding meeting.
 >
-> **8. Notify Internal Team**
+> **8. Record the Opportunity in CRM / PandaDoc and Notify Internal Team**
 >
-> Post in the designated Slack channel: client name, project type,
-> timeline, assigned team, and link to project brief. Mark the Sales &
-> Billing task as completed in ClickUp.
+> Confirm the opportunity record is complete in PandaDoc (signed
+> contract, deposit confirmation attached) and the corresponding card in
+> the ClickUp **Sales** list is moved to "Closed-Won". Post in the
+> designated Slack channel: client name, project type, timeline,
+> assigned team, and link to project brief.
+>
+> *Note: the project's ClickUp list / workspace is created during P1 -
+> Client Onboarding, not here. P0's ClickUp footprint is limited to the
+> Sales pipeline opportunity card. Do not create the project list during
+> P0 — Carlos opens it as the first action of P1.*
 
 **COMMUNICATION - STAKEHOLDER UPDATES**
 
@@ -141,6 +162,7 @@ onboarding.
 | Discovery Call | Once (at phase start) | Client + Sales Lead | Google Meet |
 | Proposal Delivery | Once | Client Decision Maker | PandaDoc / Email |
 | Contract Follow-up | As needed (max 3 follow-ups) | Client | Email / Phone |
+| Sales Pipeline Review | Weekly | Harry + Rinaldo | ClickUp Sales list |
 | Internal Notification | Once (at phase close) | Full Project Team | Slack |
 
 **ESCALATION - BLOCKED PHASE PROTOCOL**
@@ -148,10 +170,17 @@ onboarding.
 |  |  |  |  |
 |:---|:---|:---|:---|
 | **Trigger** | **Timeframe** | **Escalation Action** | **Escalated To** |
-| Client unresponsive to proposal | 5 business days | Send follow-up email with gentle reminder | Harry / Rinaldo |
-| Client unresponsive after follow-up | 10 business days | Final outreach call; if no response, archive opportunity | Harry |
+| Client unresponsive to proposal | 5 business days | Send follow-up email with gentle reminder; tag the ClickUp opportunity card `proposal-stalled` | Harry / Rinaldo |
+| Client unresponsive after follow-up | 10 business days | Final outreach call; if no response, archive opportunity by moving the ClickUp card to status "Archived" and applying tag `proposal-archived` | Harry |
 | Contract negotiation stalled | 7 business days | Schedule call to address concerns directly | Rinaldo |
 | Payment not received after signing | 3 business days | Send payment reminder; hold project start | Harry + Rinaldo |
+| Weekly Sales pipeline review | Every Monday | Audit ClickUp Sales list: any opportunity with `proposal-stalled` ≥10 business days that has not been moved to `proposal-archived` is escalated for archival decision | Harry + Rinaldo |
+
+*The `proposal-archived` tag is the auditable signal that the 10-day
+unresponsive rule was actually enforced. The Monday Sales review is the
+control that catches missed archivals — this closes the v1 gap where
+"archive opportunity" had no enforcement mechanism (per
+`data/analysis/03_sop_gap_and_recommendations.md` §D item 9).*
 
 **DEPENDENCIES - REQUIRED INPUTS**
 
@@ -184,13 +213,13 @@ until deposit is confirmed.*
 | **1** | Discovery Meeting completed and notes documented in Drive |  |  |
 | **2** | Project Brief / Strategy document created and stored |  |  |
 | **3** | Proposal sent to client via PandaDoc |  |  |
-| **4** | Client has signed the contract |  |  |
-| **5** | Deposit payment received and confirmed |  |  |
+| **4** | Client has signed the contract (PandaDoc `Client Signed Contract` checklist item ticked) |  |  |
+| **5** | Deposit payment received and confirmed (PandaDoc `Client Paid Deposit` checklist item ticked) |  |  |
 | **6** | Welcome Email sent to client with next steps |  |  |
 | **7** | Internal team notified via Slack with project details |  |  |
-| **8** | ClickUp project record created |  |  |
-| **9** | Task marked as completed in ClickUp |  |  |
-| **10** | Project Brief Template (Appendix A) fully completed |  |  |
+| **8** | Opportunity record complete in CRM / PandaDoc and ClickUp Sales-list card moved to "Closed-Won" *(Note: project ClickUp list is created in P1, not here)* |  |  |
+| **9** | Sales-list card status set to "Closed-Won" in ClickUp |  |  |
+| **10** | Project Brief Template (Appendix A of `P0_..._v2.md`) fully completed |  |  |
 
 **Phase Gate Sign-Off**
 
@@ -202,6 +231,40 @@ until deposit is confirmed.*
 | **Client Rep**         |                        |          |
 | **Next Phase**         | P1 - Client Onboarding |          |
 | **Notes / Conditions** |                        |          |
+
+## Data Enrichment (ClickUp export, 2026-04-22)
+
+*Sourced from the ClickUp data analysis at `data/analysis/` (see
+`03_sop_gap_and_recommendations.md` and `Fancy_Lab_Web_Dev_Phase_Gate_SOPs_v2.md`
+lines 93–99). Numbers reflect observed activity across the export window.*
+
+- **Signal of phase completion in the export.** The checklist items
+  `Client Signed Contract` (34 occurrences) and `Client Paid Deposit`
+  (34 occurrences) appear across onboarding tasks in client lists
+  including `Steindiamonds.com`, `hawaiilabgrown.com`, `anglodiamond.com`,
+  and `christopher-salon.com`. Read at face value, ~34 projects have
+  cleared the P0 gate in the observed window. These two checklist items
+  are the reliable downstream evidence that gate items #4 and #5 were
+  satisfied — use them as the audit trail when reconciling P0 throughput.
+- **Gap vs. SOP — addressed in v2.** v1 listed "ClickUp project record
+  created" at step 8, but the dataset shows the project's ClickUp list is
+  typically opened during onboarding, not at contract signing. v2 rewrites
+  step 8 and gate item #8 to reference the CRM / PandaDoc opportunity
+  record (the actual P0 artifact) and explicitly notes that ClickUp list
+  creation is owned by P1.
+- **Risk — proposal stall, addressed in v2.** v1's escalation said
+  "Client unresponsive after 10 business days → archive opportunity",
+  but nothing in the dataset confirmed archival was happening. v2
+  introduces the `proposal-archived` ClickUp tag and a Monday Sales
+  pipeline review as the control. Going forward the count of cards with
+  `proposal-archived` should be tracked against the count of cards with
+  `proposal-stalled` to confirm the rule is being enforced.
+- **Throughput baseline.** 34 signed contracts / 34 deposits is the
+  observed P0 completion volume in the dataset window; future revisions
+  of this SOP should compare against this baseline to flag pipeline
+  contraction or expansion.
+
+---
 
 **APPENDIX A: PROJECT BRIEF TEMPLATE**
 
@@ -629,7 +692,7 @@ project?</em></td>
 season)</em></td>
 </tr>
 <tr>
-<td colspan="2"><strong>12. INTERNAL NOTES (EVO SEM TEAM
+<td colspan="2"><strong>12. INTERNAL NOTES (FANCY LAB TEAM
 ONLY)</strong></td>
 </tr>
 <tr>

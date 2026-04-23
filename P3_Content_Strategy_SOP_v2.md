@@ -8,7 +8,15 @@ WEB DEVELOPMENT DEPARTMENT
 
 Standard Operating Procedure & Phase Gate Document
 
-v1.0 \| February 2026 \| Confidential
+v2.0 \| April 2026 \| Confidential
+
+**REVISION HISTORY**
+
+- v2.0 (April 2026): Appended `Data Enrichment (ClickUp export, 2026-04-22)` section porting the P3 evidence base from `Fancy_Lab_Web_Dev_Phase_Gate_SOPs_v2.md` (lines 258–264). No process, RACI, gate, or appendix content was changed — `data/analysis/03_sop_gap_and_recommendations.md` contains no P3-specific recommendations, so this is a minimal-change revision.
+- Follow-ups noted (not actioned in this revision, surfaced from adjacent recommendations in the gap analysis):
+  - Tag-taxonomy addendum is owned by P2, but P3 will be the primary beneficiary — once `content` / `copy` / `seo` tags are codified, P3 task volume becomes measurable (today only 27 of 2,304 tasks carry `seo`).
+  - The "SEO & Migration Requirements" dependency row currently points at P0 — confirm during the next P0 revision that the Project Brief actually captures redirect-map scope so P3 inherits a usable input.
+  - Cross-phase Aging Policy (gap analysis section D, item 7) will eventually require P3 to flag any content-review task open >180 days; revisit in v3 once the policy is published.
 
 **PURPOSE & SCOPE**
 
@@ -234,6 +242,12 @@ content to work with — designs should not begin with placeholder text.*
 | **Client Rep**         |                        |          |
 | **Next Phase**         | P4 - Branding & Design |          |
 | **Notes / Conditions** |                        |          |
+
+## Data Enrichment (ClickUp export, 2026-04-22)
+
+- **The dataset barely surfaces P3 signal.** Only **27 tasks** are tagged `seo` across all 2,304 rows (1.2%). Content-authoring tasks exist (160 tasks begin with "design", 55 with "update", 81 with "add") but they're not tagged with a content/copy identifier. **Action:** add `content` and `copy` tags and require them on P3 tasks, so content-phase volume becomes measurable.
+- **Aida = de-facto content + design owner.** Because both P3 and P4 list Aida as Responsible, her 123-open load (highest non-PM WIP) is a structural bottleneck. Consider co-owning P3 with a content editor or splitting "copywriting" from "SEO/content ops."
+- **Comment-heavy P3 red flags.** `Update the design of PDP` (20 comments, 1800loosediamonds.com), `Update design of Collection page` (18 comments) — threads with >15 comments almost always indicate unresolved content/design scope. Triage rule: any task with >10 comments gets PM review within 48 h.
 
 **APPENDIX A: CONTENT STRATEGY BRIEF & SEO PLANNING WORKSHEET**
 

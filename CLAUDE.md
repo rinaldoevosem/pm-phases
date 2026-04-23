@@ -10,19 +10,19 @@ Not a codebase. It's a set of Standard Operating Procedure documents for Fancy L
 
 The **filenames** are the source of truth for phase numbers. Current lineup:
 
-- `P0_Discovery_Sales_SOP_v1.md`
-- `P1_Client_Onboarding_SOP_v1.md`
-- `P2_Project_Kickoff_SOP_v1.md`
-- `P3_Content_Strategy_SOP_v1.md`
-- `P4_Branding_Design_SOP_v2.md`
-- `P5_Inventory_Management_SOP_v1.md`
-- `P6_Development_SOP_v1.md`
-- `P7_Testing_QA_SOP_v3.md`
-- `P8_Client_Approval_SOP_v1.md`
-- `P9_Launch_SOP_v1.md`
-- `P10_Post_Launch_SOP_v1.md`
+- `P0_Discovery_Sales_SOP_v2.md`
+- `P1_Client_Onboarding_SOP_v2.md`
+- `P2_Project_Kickoff_SOP_v2.md`
+- `P3_Content_Strategy_SOP_v2.md`
+- `P4_Branding_Design_SOP_v3.md`
+- `P5_Inventory_Management_SOP_v2.md`
+- `P6_Development_SOP_v2.md`
+- `P7_Testing_QA_SOP_v4.md`
+- `P8_Client_Approval_SOP_v2.md`
+- `P9_Launch_SOP_v2.md`
+- `P10_Post_Launch_SOP_v2.md`
 
-The `_vN` suffix marks the current version of each SOP (most are v1; P4 is v2; P7 is v3).
+The `_vN` suffix marks the current version of each SOP (most are v2; P4 is v3; P7 is v4). All phases were enriched in April 2026 with findings from the ClickUp data analysis in `data/analysis/` — each current file has a Revision History block at the top and a `## Data Enrichment` section after the phase gate.
 
 ## The consolidated reference doc is stale — do not trust it for phase numbers
 

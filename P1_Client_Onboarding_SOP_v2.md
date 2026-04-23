@@ -8,7 +8,16 @@ WEB DEVELOPMENT DEPARTMENT
 
 Standard Operating Procedure & Phase Gate Document
 
-v1.0 \| February 2026 \| Confidential
+v2.0 \| April 2026 \| Confidential
+
+**REVISION HISTORY**
+
+- v2.0 (April 2026) — Reinforced Gate Item #5 ("Approval Authority Mapped") as a HARD BLOCKING gate with explicit sub-criteria (named decision-maker, introductory email sent, named backup approver) per `data/analysis/03_sop_gap_and_recommendations.md` §C item 4 and the stalled-approval evidence in `data/analysis/02_portfolio_health.md` (e.g., breadiamonddirect.com 862d, ian.club 457d).
+- v2.0 — Added explicit step for **opening the ClickUp project list during P1** (previously implied; per `03_sop_gap_and_recommendations.md` §C item 1 — moves out of P0). New Process Step 11a; new Gate Item #25.
+- v2.0 — Confirmed Carlos as Responsible + Accountable for P1 end-to-end (184 tasks; majority of client-facing comments per `data/analysis/03_sop_gap_and_recommendations.md` §A) and tightened RACI language.
+- v2.0 — Expanded Process Step 4 (Establish Communication Expectations) with the Approval Authority sub-protocol, and added a new sub-section to Appendix A capturing decision-maker, backup approver, and introduction-email confirmation.
+- v2.0 — Re-emphasized credential capture (Gate items #11–#16) per the access-verification drift observed in client-list comments (`§ Data Enrichment` in `Fancy_Lab_Web_Dev_Phase_Gate_SOPs_v2.md`).
+- v2.0 — Appended `Data Enrichment (ClickUp export, 2026-04-22)` section after Phase Gate sign-off; preserves named-client evidence and counts.
 
 **PURPOSE & SCOPE**
 
@@ -16,10 +25,10 @@ This SOP defines the standard process for transitioning a signed client
 from the sales handoff into an active, work-ready project state at Fancy
 Lab. It ensures all operational logistics are established —
 communication cadence, brand asset collection, credential verification,
-design-readiness inputs, and team alignment — so that no ambiguity,
-missing information, or unmet expectation blocks the project once work
-begins. This phase is the bridge between the commercial agreement (P0)
-and the technical kickoff (P2).
+design-readiness inputs, approval-authority mapping, and team alignment
+— so that no ambiguity, missing information, or unmet expectation blocks
+the project once work begins. This phase is the bridge between the
+commercial agreement (P0) and the technical kickoff (P2).
 
 **Phase Objective**
 
@@ -42,6 +51,9 @@ needed to begin high-quality work immediately in P2.
 > \- Stakeholder mapping — who approves design, content, technical, and
 > launch decisions
 >
+> \- Approval-authority sub-protocol — named decision-maker, named
+> backup approver, formal introduction email
+>
 > \- Feedback process setup — how will the client provide feedback
 > (Figma, email, Loom, etc.)
 >
@@ -62,7 +74,7 @@ needed to begin high-quality work immediately in P2.
 > \- Client expectations and working style documentation
 >
 > \- Internal team readiness preparation (Slack channel, Drive folder,
-> ClickUp board, team assignment)
+> ClickUp project list opened, team assignment)
 >
 > \- Project Brief review and confirmation with client
 >
@@ -73,8 +85,10 @@ needed to begin high-quality work immediately in P2.
 > \- Project scoping, pricing, or proposal changes (return to P0 for
 > Change Order)
 >
-> \- Technical project setup — ClickUp workspace, Figma project, dev
-> store (covered in P2)
+> \- Technical project setup of Figma project files and dev store
+> (covered in P2). Note: ClickUp project list is opened in P1 (this
+> phase); detailed board configuration, sprint structure, and roadmap
+> happen in P2.
 >
 > \- Design or development work of any kind
 >
@@ -84,13 +98,15 @@ needed to begin high-quality work immediately in P2.
 
 **WHO - RACI MATRIX**
 
-|                 |               |                                            |
-|:----------------|:--------------|:-------------------------------------------|
-| **Role**        | **Person(s)** | **Responsibility**                         |
-| **Responsible** | Carlos        | *Performs the work for this phase*         |
-| **Accountable** | Carlos        | *Ultimately answerable for completion*     |
-| **Consulted**   | Rinaldo       | *Provides input and approves deliverables* |
-| **Informed**    | Harry         | *Kept up to date on progress*              |
+|                 |               |                                                                |
+|:----------------|:--------------|:---------------------------------------------------------------|
+| **Role**        | **Person(s)** | **Responsibility**                                             |
+| **Responsible** | Carlos        | *Owns and performs all P1 activities end-to-end (184 tasks)*   |
+| **Accountable** | Carlos        | *Ultimately answerable for P1 completion and gate sign-off*    |
+| **Consulted**   | Rinaldo       | *Provides input, approves deliverables, signs off Phase Gate*  |
+| **Informed**    | Harry         | *Kept up to date on progress and risk flags*                   |
+
+*RACI confirmation: per `data/analysis/03_sop_gap_and_recommendations.md` §A, Carlos owns client onboarding end-to-end with 184 total tasks and authors the majority of client-facing comments. He is the single accountable owner for this phase — there is no shared accountability with Rinaldo or Harry.*
 
 **WHAT - DELIVERABLES**
 
@@ -104,8 +120,10 @@ needed to begin high-quality work immediately in P2.
 | **Brand Asset Package (organized in Drive)** | Google Drive Folder | Carlos |
 | **Access & Credential Verification Log** | Google Docs / Sheets | Carlos |
 | **Communication Cadence Agreement** | Email (confirmed by client) | Carlos |
+| **Approval Authority Map (decision-maker + backup + intro email)** | Google Docs (in Intake Form §2) + Email thread on file | Carlos |
 | **Content Readiness Assessment** | Google Sheets | Carlos |
 | **Existing Site Audit Summary (if migration)** | Google Docs / Sheets | Carlos |
+| **ClickUp Project List (opened, named, client added as guest if applicable)** | ClickUp | Carlos |
 | **Internal Team Brief & Handoff** | Slack + Drive | Carlos |
 | **Project Timeline Confirmation Email** | Email | Carlos |
 
@@ -118,8 +136,9 @@ needed to begin high-quality work immediately in P2.
 | **Google Drive** | Asset storage, document sharing, meeting recordings, organized project folder |
 | **Google Slides** | Onboarding presentation deck |
 | **Google Sheets** | Content readiness tracker, access credential log, audit data |
-| **Email** | Welcome email, communication cadence confirmation, timeline, follow-ups |
+| **Email** | Welcome email, communication cadence confirmation, approval-authority introduction email, timeline, follow-ups |
 | **Slack** | Internal team notification, project channel creation |
+| **ClickUp** | Project list opened in this phase (record of work; detailed configuration occurs in P2) |
 | **Google Analytics** | Existing site traffic audit (migration projects) |
 | **Google Search Console** | Existing site SEO data audit (migration projects) |
 | **Google PageSpeed Insights** | Baseline performance audit of existing site (migration projects) |
@@ -159,15 +178,47 @@ needed to begin high-quality work immediately in P2.
 > milestone dates. Record the meeting and share the recording within 24
 > hours.
 >
-> **4. Establish Communication Expectations**
+> **4. Establish Communication Expectations AND Map Approval Authority
+> (Hard Gate Sub-Protocol)**
 >
 > During or immediately after the meeting, formally agree on: primary
 > day-to-day communication channel, urgent issue channel, client
 > response SLA (default: 3 business days), regular check-in cadence and
-> format, who consolidates feedback if multiple stakeholders, approval
-> authority for each area (design, content, technical, launch). Document
-> in the Onboarding Intake Form and send a confirmation email to the
-> client summarizing the agreed communication framework.
+> format, who consolidates feedback if multiple stakeholders.
+>
+> Then execute the **Approval Authority Sub-Protocol** — this is a
+> hard-blocking gate item (#5) and may not be skipped:
+>
+> > **4a. Name the Decision-Maker.** Identify by full name, role/title,
+> > and email the single individual on the client side with authority to
+> > approve deliverables for each area: design, content, technical,
+> > launch. One name per area; "the team" or "we'll decide" is not
+> > acceptable. If the client refuses to name a single approver per
+> > area, escalate to Rinaldo before proceeding.
+> >
+> > **4b. Name the Backup Approver.** Identify the named alternate who
+> > can sign off if the primary decision-maker is unreachable for >5
+> > business days. Backup must be a distinct person from the primary, in
+> > writing.
+> >
+> > **4c. Send the Approval-Authority Introduction Email.** Within 48
+> > hours of the onboarding meeting, send a formal email TO the named
+> > primary decision-maker (and CC backup + Rinaldo) confirming their
+> > role, listing the deliverables they will be asked to sign off on,
+> > and the SLA for their decisions. The decision-maker must reply
+> > confirming acknowledgment. Save the thread to the project Drive
+> > folder. **Without a confirmed reply, Gate Item #5 cannot be marked
+> > complete.**
+>
+> Document everything in the Onboarding Intake Form (§2) and send the
+> confirmation email to the client summarizing the agreed communication
+> framework AND the approval map.
+>
+> *Rationale: Client-Approval-state tasks aging 400+ days
+> (breadiamonddirect.com 862d, ian.club 457d, Select Dental, Select
+> Dental Backlog) trace directly to approval-authority being skipped or
+> miswired during onboarding. Per the gap analysis, this step is now
+> blocking.*
 >
 > **5. Collect and Verify Brand Assets**
 >
@@ -212,7 +263,11 @@ needed to begin high-quality work immediately in P2.
 > Manager (container ID, access granted), payment gateway (Stripe/PayPal
 > connected, test mode available), email marketing platform (API key,
 > list IDs), all third-party app accounts. For each: confirm access
-> works, document credentials securely, note any pending items.
+> works, document credentials securely, note any pending items. Re-test
+> every credential at the end of P1 — observed access drift in client
+> lists (`add residential liftgate`, `Bank Wants the Following`, broken
+> link fixes) suggests credentials captured early can break before P6
+> begins.
 >
 > **9. Audit Existing Site Data (Migrations Only)**
 >
@@ -234,17 +289,32 @@ needed to begin high-quality work immediately in P2.
 > willingness. This information helps the team tailor their approach and
 > avoid relationship pitfalls.
 >
-> **11. Prepare Internal Team**
+> **11. Open the ClickUp Project List**
+>
+> Open (do not yet fully configure) the ClickUp project list for this
+> client during P1. Required actions: create the list under the correct
+> Space/Folder, name it per the client convention (typically the client
+> domain — e.g., `clientdomain.com`), assign Carlos as list owner, add
+> the assigned PM/team as members, and apply the standard project list
+> template stub. Detailed sprint configuration, custom fields, roadmap,
+> and full task population happen in P2 — but the list itself must
+> exist by the end of P1 so onboarding artifacts and intake findings
+> have a home. *Note: this step formerly lived in P0 step 8; per
+> `data/analysis/03_sop_gap_and_recommendations.md` §C item 1 it has
+> moved here to match observed practice.*
+>
+> **12. Prepare Internal Team**
 >
 > Before closing P1: create the project Slack channel and add all team
 > members, organize the Google Drive project folder with proper
 > subfolders (Brand, Content, Credentials, Reference, Deliverables),
-> prepare the ClickUp board with project template and initial
-> assignments, brief the team via Slack with: project summary, client
-> communication style notes, key deadlines, design direction summary,
-> risk flags, and links to all project resources.
+> confirm the ClickUp project list (opened in step 11) has the assigned
+> team and template stub, brief the team via Slack with: project
+> summary, client communication style notes, named decision-maker AND
+> backup approver, key deadlines, design direction summary, risk flags,
+> and links to all project resources.
 >
-> **12. Review Project Brief with Client and Finalize**
+> **13. Review Project Brief with Client and Finalize**
 >
 > Walk through the P0 Project Brief with the client to confirm every
 > assumption is still accurate. Cross-reference with information
@@ -253,12 +323,13 @@ needed to begin high-quality work immediately in P2.
 > Scope changes are routed back to P0 for a Change Order before
 > proceeding.
 >
-> **13. Send Project Timeline Confirmation and Close Phase**
+> **14. Send Project Timeline Confirmation and Close Phase**
 >
 > Send a formal email to the client confirming: final project timeline
-> with milestone dates, confirmed communication cadence, next steps (P2
-> Kickoff), what the client should expect to happen next and by when,
-> and the Fancy Lab team contact information. Internally, post the phase
+> with milestone dates, confirmed communication cadence, confirmed
+> approval authority (named primary + backup), next steps (P2 Kickoff),
+> what the client should expect to happen next and by when, and the
+> Fancy Lab team contact information. Internally, post the phase
 > completion notification in Slack and mark P1 as complete in ClickUp.
 
 **COMMUNICATION - STAKEHOLDER UPDATES**
@@ -269,6 +340,7 @@ needed to begin high-quality work immediately in P2.
 | Welcome Email + Prep Checklist | Once (within 24hrs of deposit) | Client | Email |
 | Onboarding Meeting | Once (within 1 week) | Client + Fancy Lab Team | Google Meet (recorded) |
 | Communication Cadence Confirmation | Once (after meeting) | Client | Email |
+| Approval-Authority Introduction Email | Once (within 48hrs of onboarding meeting) | Named Decision-Maker (TO) + Backup + Rinaldo (CC) | Email (reply confirmation required) |
 | Asset & Credential Follow-up | As needed (max 3 reminders at 3/5/10 days) | Client | Email |
 | Content Readiness Summary | Once (shared with client + team) | Client + Design Lead + PM | Email + Google Sheets |
 | Project Timeline Confirmation | Once (at phase close) | Client | Email |
@@ -279,6 +351,8 @@ needed to begin high-quality work immediately in P2.
 |  |  |  |  |
 |:---|:---|:---|:---|
 | **Trigger** | **Timeframe** | **Escalation Action** | **Escalated To** |
+| Client refuses to name single decision-maker per area, OR refuses to name a backup | During onboarding meeting | Pause P1 sign-off; escalate to Rinaldo for direct conversation; do not advance to P2 until resolved | Rinaldo |
+| Decision-maker does not reply to Approval-Authority Introduction Email | 5 business days after send | Re-send with timeline-impact statement; copy Rinaldo; if no reply by day 10, escalate to a phone call | Carlos → Rinaldo |
 | Client not providing assets or credentials | 3 business days after initial request | Send specific missing items checklist with impact statement on timeline | Carlos |
 | Assets/credentials still missing after first follow-up | 5 business days | Second follow-up; copy PM on email; note potential timeline impact | Carlos + Rinaldo |
 | Assets/credentials still missing after second follow-up | 10 business days | Phone call to client; formally notify of timeline delay; document impact | Rinaldo |
@@ -296,6 +370,7 @@ needed to begin high-quality work immediately in P2.
 | **Deposit Payment Confirmed** | P0 — Discovery & Sales | Cannot send welcome email or schedule meetings until deposit clears |
 | **Completed Project Brief (Appendix A from P0)** | P0 — Discovery & Sales | Cannot review assumptions or prepare design-specific questions without completed brief |
 | **Internal Team Assignment** | PM (Rinaldo) | Must know who is on the team before onboarding meeting and Slack channel creation |
+| **CRM record (client + contacts)** | P0 — Discovery & Sales | Required so the ClickUp project list opened in step 11 can be tied to the correct client record |
 
 **REVISION LIMITS & SCOPE CONTROL**
 
@@ -309,6 +384,11 @@ client notification
 Communication Cadence: Agreed upon once; changes require mutual
 agreement documented in email
 
+Approval Authority: Agreed once and confirmed by the named
+decision-maker via email reply. A change of decision-maker mid-project
+requires a new Approval-Authority Introduction Email and PM
+acknowledgment in Slack — it is not a casual update.
+
 *Any additional revisions beyond the limits above require a Change Order
 approved by the Project Lead and communicated to the client with
 associated timeline and cost impact.*
@@ -317,9 +397,13 @@ associated timeline and cost impact.*
 
 *ALL items below must be completed before the project can advance to P2
 — Project Kickoff. Missing client information, unverified credentials,
-or incomplete communication agreements will delay kickoff. The client
-must be informed of any delays caused by outstanding items on their
-side.*
+unconfirmed approval authority, or incomplete communication agreements
+will delay kickoff. The client must be informed of any delays caused by
+outstanding items on their side.*
+
+*Items marked **[HARD BLOCK]** cannot be waived under any circumstance —
+historical evidence (see Data Enrichment section) shows skipping these
+produces multi-hundred-day stalls in later phases.*
 
 |  |  |  |  |
 |:---|:---|:---|:---|
@@ -328,7 +412,7 @@ side.*
 | **2** | Onboarding meeting conducted and recorded |  |  |
 | **3** | Onboarding presentation delivered to client |  |  |
 | **4** | Communication cadence and SLAs agreed and documented |  |  |
-| **5** | Approval authority mapped (design, content, technical, launch) |  |  |
+| **5** | **[HARD BLOCK] Approval authority mapped — (a) named primary decision-maker per area (design, content, technical, launch); (b) Approval-Authority Introduction Email sent and replied-to by primary; (c) named backup approver on file** |  |  |
 | **6** | Feedback process agreed (format, consolidation, turnaround) |  |  |
 | **7** | Client contact information collected (primary + secondary + decision maker) |  |  |
 | **8** | Brand assets received, verified, and organized in Drive (logos, colors, fonts, photography) |  |  |
@@ -344,10 +428,11 @@ side.*
 | **18** | Client expectations and working style documented |  |  |
 | **19** | Internal Slack channel created with all team members |  |  |
 | **20** | Google Drive project folder organized with all assets |  |  |
-| **21** | Internal team briefed with full project context |  |  |
+| **21** | Internal team briefed with full project context (incl. named approver + backup) |  |  |
 | **22** | Project Brief reviewed with client — confirmed or updated |  |  |
 | **23** | Project Timeline Confirmation Email sent to client |  |  |
 | **24** | Onboarding Intake Form (Appendix A) fully completed |  |  |
+| **25** | ClickUp project list opened, named per convention, team assigned, template stub applied (full configuration handled in P2) |  |  |
 
 **Phase Gate Sign-Off**
 
@@ -359,6 +444,54 @@ side.*
 | **Client Rep**         |                      |          |
 | **Next Phase**         | P2 - Project Kickoff |          |
 | **Notes / Conditions** |                      |          |
+
+## Data Enrichment (ClickUp export, 2026-04-22)
+
+*Findings ported from `Fancy_Lab_Web_Dev_Phase_Gate_SOPs_v2.md` and the
+`data/analysis/` pack. Preserve specific counts and named clients — they
+are the evidence base for the v2 changes above.*
+
+- **Carlos's load is consistent with him owning P1.** 184 total tasks
+  assigned, 59 still open — a healthy active-vs-closed ratio. He also
+  authors a large share of the onboarding-related comments. RACI
+  reflects this single-owner reality (no shared accountability).
+- **Recurring onboarding checklist fingerprint** (observed in ClickUp
+  checklists, occurring ~34–39× each): `Client Paid Deposit`, `Client
+  Signed Contract`, `Setup Launch Meeting`, `Setup Marketing Success
+  Call`, `Ascend Proposals to Marketing`, `Weekly Support Follow Ups`,
+  `Mark Task as Completed and notify on Slack`. Several of these (e.g.,
+  `Setup Launch Meeting`, `Ascend Proposals to Marketing`, `Weekly
+  Support Follow Ups`) sit across the P1/P9/P10 seams — they're being
+  tracked in onboarding-style lists rather than launch/post-launch
+  ones. Consider splitting this mega-checklist into three phase-scoped
+  templates (follow-up SOP work).
+- **Gap — access verification drift.** Many client lists have stuck
+  tasks referring to `add residential liftgate`, `Bank Wants the
+  Following`, `https://…` link fixes that imply credentials were never
+  fully captured upfront; re-enforce gate items #11–#16 (registrar,
+  hosting, GA, GSC, payment, email). Process Step 8 in v2 now requires
+  a re-test at end of P1.
+- **Approval-authority skipping is the primary cause of red-status
+  client stalls.** Per `data/analysis/02_portfolio_health.md`:
+  - `breadiamonddirect.com` — 32 tasks, 0 % done, oldest open **862
+    days**, 8 in Client Approval state. Approval-authority was
+    miswired or never confirmed.
+  - `ian.club` — 28 tasks, 7.1 % done, oldest open **457 days**, 7 in
+    Client Approval state.
+  - `Select Dental` — 60 tasks, 10 % done, 14 in Client Approval state.
+  - `barclaysjewelers.com` — 65 tasks, 1.5 % done, oldest open 580
+    days.
+  These four lists alone account for ~36 stuck Client Approval tasks.
+  v2's hard-blocking Gate Item #5 (named decision-maker + backup +
+  confirmed introduction email) is the upstream control to prevent
+  this pattern from recurring on new projects.
+- **ClickUp project list creation now lives here, not in P0.** The data
+  shows project lists are opened during onboarding in practice (Carlos
+  creates them as part of P1 work, not the sales handoff). P0 v2 drops
+  the corresponding gate item; this SOP picks it up at Process Step 11
+  and Gate Item #25.
+
+---
 
 **APPENDIX A: CLIENT ONBOARDING INTAKE FORM**
 
@@ -474,10 +607,52 @@ calls and feedback?</em></td>
 client will be unavailable</em></td>
 </tr>
 <tr>
-<td><strong>Approval Authority Map</strong></td>
-<td><em>Who approves design? Who approves content? Who approves
-technical decisions? Who approves final launch? (List name per
-area)</em></td>
+<td colspan="2"><strong>2A. APPROVAL AUTHORITY MAP — HARD GATE
+(Section 4 / Gate Item #5)</strong></td>
+</tr>
+<tr>
+<td><strong>Design Approver — Primary</strong></td>
+<td><em>Full name / Title / Email — single individual with authority to
+approve design deliverables</em></td>
+</tr>
+<tr>
+<td><strong>Design Approver — Backup</strong></td>
+<td><em>Full name / Title / Email — distinct person from primary</em></td>
+</tr>
+<tr>
+<td><strong>Content Approver — Primary</strong></td>
+<td><em>Full name / Title / Email</em></td>
+</tr>
+<tr>
+<td><strong>Content Approver — Backup</strong></td>
+<td><em>Full name / Title / Email — distinct person from primary</em></td>
+</tr>
+<tr>
+<td><strong>Technical Approver — Primary</strong></td>
+<td><em>Full name / Title / Email</em></td>
+</tr>
+<tr>
+<td><strong>Technical Approver — Backup</strong></td>
+<td><em>Full name / Title / Email — distinct person from primary</em></td>
+</tr>
+<tr>
+<td><strong>Launch Approver — Primary</strong></td>
+<td><em>Full name / Title / Email — final go/no-go authority</em></td>
+</tr>
+<tr>
+<td><strong>Launch Approver — Backup</strong></td>
+<td><em>Full name / Title / Email — distinct person from primary</em></td>
+</tr>
+<tr>
+<td><strong>Approval-Authority Introduction Email Sent?</strong></td>
+<td><em>Yes / No — Date sent: ___ / Reply received from primary
+decision-maker: Yes / No / Date: ___ / Drive link to email
+thread: ___</em></td>
+</tr>
+<tr>
+<td><strong>Decision SLA Confirmed by Approver</strong></td>
+<td><em>Number of business days approver committed to (default: 3
+business days)</em></td>
 </tr>
 <tr>
 <td><strong>Stakeholder Feedback Process</strong></td>
@@ -759,6 +934,11 @@ List IDs: ___</em></td>
 Credentials shared? / Integration instructions?</em></td>
 </tr>
 <tr>
+<td><strong>End-of-P1 Credential Re-Test Completed?</strong></td>
+<td><em>Yes / No — Date: ___ / All access points re-verified before
+phase close (mitigates access drift)</em></td>
+</tr>
+<tr>
 <td colspan="2"><strong>7. EXISTING SITE AUDIT DATA (MIGRATIONS
 ONLY)</strong></td>
 </tr>
@@ -906,9 +1086,10 @@ kickoff: [ ]</em></td>
 Credentials [ ] Reference [ ] Deliverables [ ]</em></td>
 </tr>
 <tr>
-<td><strong>ClickUp Board Ready?</strong></td>
-<td><em>Board URL: ___ / Template applied? [ ] / Team assigned? [
-]</em></td>
+<td><strong>ClickUp Project List Opened?</strong></td>
+<td><em>List URL: ___ / Naming convention applied (typically client
+domain): [ ] / Carlos set as list owner: [ ] / Team assigned: [ ] /
+Template stub applied: [ ] (Full configuration occurs in P2)</em></td>
 </tr>
 <tr>
 <td><strong>Risk Notes from Onboarding</strong></td>
@@ -926,9 +1107,12 @@ expand scope? Document here for PM awareness.</em></td>
 **Onboarding Completion Sign-Off**
 
 By signing below, the onboarding lead confirms that all required client
-information, assets, and credentials have been collected, all
-communication expectations have been documented and agreed upon with the
-client, and the project is ready to advance to P2 — Project Kickoff.
+information, assets, and credentials have been collected, the approval
+authority has been mapped (named primary + named backup) and confirmed
+by the primary decision-maker via email reply, all communication
+expectations have been documented and agreed upon with the client, the
+ClickUp project list has been opened, and the project is ready to
+advance to P2 — Project Kickoff.
 
 Onboarding Completed By:
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date:
@@ -944,4 +1128,5 @@ Client Acknowledgment:
 
 *NOTE: If any section above has items marked as 'Pending' or 'TBD',
 document the expected resolution date and responsible party. The Phase
-Gate cannot be passed until all critical items are resolved.*
+Gate cannot be passed until all critical items are resolved. Gate Item
+#5 (Approval Authority) is a hard block — no exceptions.*

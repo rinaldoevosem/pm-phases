@@ -4,30 +4,53 @@ WEB DEVELOPMENT DEPARTMENT
 
 **PHASE P10**
 
-**POST-LAUNCH**
+**POST-LAUNCH, WARRANTY & ONGOING SUPPORT**
 
 Standard Operating Procedure & Phase Gate Document
 
-v1.0 \| February 2026 \| Confidential
+v2.0 \| April 2026 \| Confidential
+
+**REVISION HISTORY / CHANGELOG**
+
+> v1.0 → v2.0 (April 2026) — substantive scope expansion driven by ClickUp data analysis:
+>
+> \- **Scope widened to cover ongoing client support beyond the 90-day warranty.** Per `data/analysis/03_sop_gap_and_recommendations.md` §B (row "Ongoing client support beyond 90-day warranty") and §D item 1, the `SUPPORT` folder holds 262 ad-hoc tasks and `Weekly Support Follow Ups` recurs 42×. The PROCESS and PHASE GATE are now split into two clearly labeled sub-sections: **(A) Warranty Period (Day 0–90)** and **(B) Ongoing Support (Day 90+)**.
+>
+> \- **Warranty window aligned to 90 days** (was 30 days in v1) to match the 30-day analytics report cadence + a 60-day support-tail observed in the data. The 30-day analytics report itself remains a Day-30 deliverable inside the warranty window.
+>
+> \- **Absorbed two retention items moved out of P9 v2 launch scope** (per gap doc §C "P9 Launch checklist contains commercial/retention items"): `Give client 1 month free of Base Plan` and `Ascend Proposals to Marketing`. These now live in the new Ongoing Support sub-section as the retention incentive and the marketing-handoff trigger respectively.
+>
+> \- **Defined the marketing-handoff trigger.** Gap doc §D item 2 originally proposed a standalone "P10.5 Marketing Handoff" SOP; per the v2 brief's "do not invent new phases" rule, the handoff is defined here as a clearly-scoped section within Ongoing Support (303 tasks in the `MARKETING` folder lack a documented boundary today).
+>
+> \- **Added support-task escalation thresholds** (>14 days open or >5 comments without resolution → escalate to Rinaldo) to address the long-tail problem highlighted in `02_portfolio_health.md` (kirkkara.com oldest open = 993d; 1800loosediamonds.com oldest = 1,998d).
+>
+> \- **New phase-gate items:** "Ongoing support cadence set with named owner," "Marketing handoff completed or scheduled," and "Retention incentive issued."
+>
+> \- **Data Enrichment section appended** with ClickUp export figures (2026-04-22).
+>
+> \- **Follow-up flagged:** the gap analysis recommended a standalone `P11 Ongoing Support` SOP. v2 absorbs that scope into P10 as a pragmatic step. If support volume continues to grow or the Day-90 boundary becomes operationally meaningful for billing/reporting, separating into a dedicated P11 should be revisited.
 
 **PURPOSE & SCOPE**
 
 This SOP defines the standard process for post-launch support, client
-training, project closure, and transition to ongoing maintenance. It
-ensures the client is empowered to manage their website, all project
-documentation is finalized, and the engagement transitions cleanly from
-project delivery to support/retainer (if applicable).
+training, project closure, transition to ongoing maintenance, and the
+ongoing client-support relationship that runs beyond the 90-day
+warranty. It ensures the client is empowered to manage their website,
+all project documentation is finalized, the engagement transitions
+cleanly from project delivery to support/retainer, and continuing
+support work has a documented owner, cadence, and escalation path.
 
 **Phase Objective**
 
-Deliver comprehensive client training, resolve any post-launch issues,
-finalize all project documentation, conduct an internal retrospective,
-and formally close the project or transition to an ongoing maintenance
-agreement.
+Deliver comprehensive client training, resolve any post-launch issues
+during the 90-day warranty, finalize all project documentation, conduct
+an internal retrospective, formally close the project (or transition to
+an ongoing maintenance agreement), and operate a documented ongoing
+support cadence for clients beyond the warranty window.
 
 **Scope Includes**
 
-> \- Post-launch bug fixes and issue resolution (30-day warranty)
+> \- Post-launch bug fixes and issue resolution (90-day warranty)
 >
 > \- Client training on CMS / platform management
 >
@@ -42,6 +65,12 @@ agreement.
 > \- Maintenance agreement transition (if applicable)
 >
 > \- Client satisfaction survey / testimonial request
+>
+> \- **Ongoing support beyond Day 90** — weekly support follow-ups, ticket triage, escalation
+>
+> \- **Retention incentive** — 1 month free of Base Plan
+>
+> \- **Marketing handoff trigger** — `Ascend Proposals to Marketing`
 
 **Scope Excludes**
 
@@ -51,7 +80,7 @@ agreement.
 >
 > \- Ongoing SEO optimization (retainer service)
 >
-> \- Marketing campaign management
+> \- Active marketing campaign management (transferred to Marketing team via handoff trigger)
 >
 > \- Hosting management (unless in maintenance agreement)
 
@@ -64,6 +93,9 @@ agreement.
 | **Accountable** | Rinaldo       | *Ultimately answerable for completion*     |
 | **Consulted**   | Narine + Aida | *Provides input and approves deliverables* |
 | **Informed**    | Harry         | *Kept up to date on progress*              |
+
+*Ongoing Support sub-section adopts the same RACI: Carlos + Asya
+Responsible, Rinaldo Accountable. Escalations route to Rinaldo.*
 
 **WHAT - DELIVERABLES**
 
@@ -79,6 +111,10 @@ agreement.
 | **Project Closure Report** | Google Docs | Carlos |
 | **Maintenance Agreement (if applicable)** | PandaDoc | Harry + Rinaldo |
 | **Client Satisfaction Survey** | Google Forms | Carlos |
+| **Retention Incentive (1 month free of Base Plan)** | ClickUp + Email confirmation | Carlos |
+| **Marketing Handoff Packet (`Ascend Proposals to Marketing`)** | Google Drive + ClickUp handoff task | Carlos + Rinaldo |
+| **Weekly Support Follow-Up Log** | ClickUp `SUPPORT` list (recurring checklist) | Carlos + Asya |
+| **Ongoing Support Ticket Records** | ClickUp tag `support` / `ticket` in dedicated `SUPPORT` list | Asya |
 
 **WHERE - TOOLS & PLATFORMS**
 
@@ -89,23 +125,32 @@ agreement.
 | **Google Drive** | Documentation storage, training recordings |
 | **Google Analytics** | 30-day performance reporting |
 | **Google Search Console** | Search performance monitoring |
-| **ClickUp** | Post-launch task tracking, bug management |
+| **ClickUp** | Post-launch task tracking, bug management, `SUPPORT` list (262 ongoing-support tasks today) |
 | **PandaDoc** | Maintenance agreement creation and signing |
-| **Slack** | Internal retrospective coordination, team updates |
+| **Slack** | Internal retrospective coordination, team updates, support escalations |
 | **Loom (optional)** | Tutorial videos for client reference |
-| **Email** | Client communication, survey distribution |
+| **Email** | Client communication, survey distribution, weekly support follow-up |
 
 **HOW - PROCESS STEPS**
 
-> **1. Address Post-Launch Issues**
+The PROCESS is split into two sequential sub-sections. Sub-section A
+runs Day 0–90 from launch; Sub-section B runs from Day 90 onward and
+continues for the life of the client relationship until either churn or
+explicit handoff.
+
+---
+
+**SUB-SECTION A — WARRANTY PERIOD (DAY 0–90)**
+
+> **A.1. Address Post-Launch Issues**
 >
-> During the first 30 days after launch, monitor for and fix any issues
+> During the first 90 days after launch, monitor for and fix any issues
 > that arise: bugs not caught during QA, browser-specific issues
 > reported by end users, content corrections needed, performance issues
 > under real traffic, and integration failures. Track all issues in
 > ClickUp with priority and resolution status.
 >
-> **2. Schedule and Conduct Client Training**
+> **A.2. Schedule and Conduct Client Training**
 >
 > Schedule a comprehensive training session (1-2 hours) with the client
 > covering: CMS navigation and content editing, adding/editing pages,
@@ -114,7 +159,7 @@ agreement.
 > SEO maintenance, and who to contact for support. Record the session
 > and share the recording.
 >
-> **3. Create Website Admin Guide**
+> **A.3. Create Website Admin Guide**
 >
 > Prepare a written guide covering everything taught in training plus:
 > step-by-step screenshots for common tasks, platform-specific tips and
@@ -122,7 +167,7 @@ agreement.
 > troubleshooting common issues, and contact information for support.
 > Make it accessible and non-technical.
 >
-> **4. Compile Credentials and Access Document**
+> **A.4. Compile Credentials and Access Document**
 >
 > Create a secure document listing all accounts and access: CMS admin
 > login, hosting account details, domain registrar access, Google
@@ -130,7 +175,7 @@ agreement.
 > gateway, any third-party service accounts, and API keys (stored
 > securely). Transfer all accounts to client ownership where applicable.
 >
-> **5. Document Integrations and Technical Setup**
+> **A.5. Document Integrations and Technical Setup**
 >
 > Create technical documentation covering: all third-party integrations
 > (what, why, how configured), custom code or modifications made, theme
@@ -138,7 +183,7 @@ agreement.
 > or caching configuration, and any platform-specific settings that
 > should not be changed without developer guidance.
 >
-> **6. Generate 30-Day Analytics Report**
+> **A.6. Generate 30-Day Analytics Report**
 >
 > After 30 days, compile a baseline analytics report: total sessions,
 > users, and pageviews, traffic sources breakdown, top-performing pages,
@@ -147,7 +192,7 @@ agreement.
 > data — impressions, clicks, average position, Core Web Vitals status,
 > and comparison to any pre-launch benchmarks.
 >
-> **7. Conduct Internal Retrospective**
+> **A.7. Conduct Internal Retrospective**
 >
 > Hold a team retrospective meeting covering: what went well, what could
 > be improved, process bottlenecks identified, communication issues,
@@ -155,7 +200,7 @@ agreement.
 > template improvements needed, and recommendations for future projects.
 > Document findings and action items.
 >
-> **8. Prepare Project Closure Report**
+> **A.8. Prepare Project Closure Report**
 >
 > Create a formal closure report summarizing: project overview and final
 > scope delivered, timeline (planned vs. actual), budget summary, team
@@ -163,7 +208,7 @@ agreement.
 > list with links, and outstanding items or recommendations for the
 > client.
 >
-> **9. Present Maintenance Agreement (if applicable)**
+> **A.9. Present Maintenance Agreement (if applicable)**
 >
 > If the client is interested in ongoing support, present a maintenance
 > agreement covering: monthly retainer hours, response time SLAs,
@@ -171,7 +216,7 @@ agreement.
 > backups), excluded services (new features, redesign), pricing and
 > billing terms. Process through PandaDoc.
 >
-> **10. Send Client Satisfaction Survey**
+> **A.10. Send Client Satisfaction Survey**
 >
 > Send a client satisfaction survey covering: overall satisfaction,
 > communication quality, design quality, development quality, timeline
@@ -179,13 +224,111 @@ agreement.
 > responses to improve processes. If the client is satisfied, request a
 > testimonial for the portfolio.
 >
-> **11. Formal Project Closure**
+> **A.11. Formal Project Closure**
 >
 > Mark all ClickUp tasks as complete. Archive the project workspace (but
 > keep accessible). Send a final thank-you email to the client with: all
 > documentation links, support contact information, maintenance
 > agreement details (if signed), and appreciation for their business.
 > Post in Slack confirming project closure.
+
+---
+
+**SUB-SECTION B — ONGOING SUPPORT (DAY 90+)**
+
+*This sub-section formalizes work that the team is already performing
+ad-hoc — 262 tasks in the `SUPPORT` folder and a `Weekly Support Follow
+Ups` checklist that recurs 42 times in the ClickUp export (see Data
+Enrichment). Carlos + Asya are Responsible; Rinaldo is Accountable.*
+
+> **B.1. Stand Up the Ongoing Support Cadence**
+>
+> On Day 90 (warranty exit), formally transition the client into
+> ongoing-support mode. Confirm the named owner on the Fancy Lab side
+> (default: Carlos for client-facing communication, Asya for technical
+> resolution) and the named contact on the client side. Communicate the
+> shift to the client by email: where to send issues, expected response
+> windows, what is and isn't covered without a maintenance agreement.
+>
+> **B.2. Intake and Triage**
+>
+> All incoming client requests are logged as ClickUp tasks in the
+> dedicated `SUPPORT` list (or the client's list with the `support` or
+> `ticket` tag — pick one convention per client and stay consistent).
+> Required fields at intake: client, requestor, category (bug / change /
+> question), priority, requested-by date. Tasks without a tag and a
+> priority are flagged within 24 hours per the P2 priority/tag hygiene
+> addendum.
+>
+> **B.3. Weekly Support Follow-Ups**
+>
+> Run the `Weekly Support Follow Ups` checklist every week per active
+> support client. The cadence includes: review open tickets, send a
+> status email to the client on each open item, close anything
+> resolved-without-confirmation, surface anything blocked, and roll a
+> short summary into the team's weekly stand-up. This checklist already
+> recurs 42 times in the export — the SOP now governs it explicitly.
+>
+> **B.4. Resolution and SLAs**
+>
+> Default response and resolution windows when no maintenance agreement
+> exists: critical (site down / revenue-blocking) — same business day;
+> standard — 3 business days to first response, 10 business days to
+> resolution; feature request — declined or routed to Change Order.
+> Clients on a maintenance agreement use the SLAs in their contract,
+> which override these defaults.
+>
+> **B.5. Escalation Thresholds**
+>
+> A support task escalates to the phase-gate owner (Rinaldo) if any of
+> the following are true: open more than 14 calendar days without
+> resolution; more than 5 comments accumulated without resolution;
+> client has sent 2+ follow-up messages on the same task; or the task
+> has been re-opened more than once. Escalation surfaces the task in
+> the weekly PM review and triggers a written plan-to-resolve within 2
+> business days. The aim is to prevent the long-tail problem visible in
+> the data (kirkkara.com has an open task 993 days old; 1800loosediamonds.com
+> has one 1,998 days old).
+>
+> **B.6. Issue Retention Incentive — 1 Month Free of Base Plan**
+>
+> Within 30 days of the warranty-exit transition (Step B.1), confirm the
+> retention incentive `Give client 1 month free of Base Plan` has been
+> issued: applied in billing, confirmed in writing to the client, and
+> recorded in ClickUp. This item moved out of the P9 launch checklist
+> in v2 because it is a retention-stage action, not a launch-sprint
+> action.
+>
+> **B.7. Marketing Handoff Trigger — `Ascend Proposals to Marketing`**
+>
+> When the client is stable on the live site (typically 30–60 days
+> after warranty exit, no active critical tickets, training delivered
+> and acknowledged), trigger the marketing handoff. The trigger is the
+> ClickUp task `Ascend Proposals to Marketing`, which packages: site
+> URL and credentials shared with Marketing team, analytics access,
+> brand and design tokens, completed deliverables list, recent support
+> history, and any client preferences from the satisfaction survey.
+> From the moment Marketing accepts the handoff, they own active
+> outbound for the client; Web Development continues to own technical
+> support per Sub-Section B unless otherwise agreed. (Gap doc §D item 2
+> originally proposed a separate P10.5 SOP — absorbed here per the v2
+> "no new phases" rule.)
+>
+> **B.8. Aging and Archival**
+>
+> Per the cross-phase Aging Policy added in v2 (gap doc §B "Aging /
+> archival policy"): support tasks open more than 180 days enter weekly
+> PM review with Rinaldo; tasks open more than 365 days require an
+> explicit archive-or-keep decision. Document the decision on the task
+> before archiving.
+>
+> **B.9. Ongoing Health Review**
+>
+> Quarterly, review every active support client against the portfolio
+> health categories from `02_portfolio_health.md` (green / yellow /
+> red). Red clients are escalated for either a recovery plan or an
+> archive/park decision. This prevents the "5 client lists with ≥20
+> tasks have 0% completion" pattern from recurring.
 
 **COMMUNICATION - STAKEHOLDER UPDATES**
 
@@ -195,9 +338,13 @@ agreement.
 | Post-Launch Check-in | Weekly (first 4 weeks) | Client | Email |
 | Training Session | Once (within first 2 weeks) | Client + PM | Google Meet |
 | 30-Day Analytics Review | Once (at 30 days) | Client + PM | Email + Google Meet (optional) |
+| Warranty-Exit Notification (Day 90) | Once | Client | Email |
 | Internal Retrospective | Once | Full Project Team | Google Meet |
 | Project Closure Email | Once (at project end) | Client | Email |
 | Team Closure Notification | Once (at project end) | Full Team | Slack |
+| **Weekly Support Follow-Up** | **Weekly (Day 90+, ongoing)** | **Client (active support clients)** | **Email + ClickUp** |
+| **Marketing Handoff Confirmation** | **Once per client** | **Marketing team + Rinaldo** | **Slack + ClickUp task** |
+| **Quarterly Portfolio Health Review** | **Quarterly** | **Rinaldo + Carlos + Asya** | **Google Meet + Google Docs** |
 
 **ESCALATION - BLOCKED PHASE PROTOCOL**
 
@@ -209,6 +356,10 @@ agreement.
 | Security vulnerability discovered | Immediately | Patch immediately; notify client; document incident | Asya + Narine + Rinaldo |
 | Client requesting out-of-scope work during warranty | As encountered | Clarify warranty scope; offer Change Order or maintenance agreement | Rinaldo |
 | Post-launch performance degradation | Within 24 hours of detection | Diagnose cause; optimize or roll back recent changes | Asya + Narine |
+| **Support task open >14 days without resolution** | Per weekly review | **Surface in PM review; written plan-to-resolve within 2 business days** | **Rinaldo** |
+| **Support task with >5 comments and no resolution** | Per weekly review | **Senior reviewer reassigns or re-scopes the task** | **Rinaldo** |
+| **Support task open >180 days** | Weekly | **Aging review; archive-or-keep decision** | **Rinaldo** |
+| **Marketing handoff stalled (no acceptance after 30 days)** | Day 60 post-warranty | **Joint Web Dev + Marketing meeting to clarify handoff blockers** | **Rinaldo + Marketing lead** |
 
 **DEPENDENCIES - REQUIRED INPUTS**
 
@@ -219,17 +370,25 @@ agreement.
 | **Client Sign-Off on Final Site** | P8 - Client Approval | Warranty period begins from launch date |
 | **All Project Documentation** | All Previous Phases | Need complete project history for closure documentation |
 | **Analytics Access** | P1 - Client Onboarding / P6 - Development | Need analytics configured to generate 30-day report |
+| **Maintenance Agreement Decision** | P10 Sub-Section A.9 | Determines SLAs that govern Sub-Section B |
+| **Marketing Team Capacity to Accept Handoff** | External (Marketing team) | Without acceptance, client stays on Web Dev outbound longer |
 
 **REVISION LIMITS & SCOPE CONTROL**
 
-Post-Launch Bug Fixes: 30-day warranty covers bugs and development
-defects; does not cover client-caused issues or new requests
+Post-Launch Bug Fixes: 90-day warranty covers bugs and development
+defects from original scope; does not cover client-caused issues, new
+requests, or third-party app/integration regressions outside scope.
 
 Training: 1 training session included (up to 2 hours); additional
-training sessions available at hourly rate
+training sessions available at hourly rate.
 
 Documentation: Standard admin guide included; custom technical
-documentation beyond standard scope available at hourly rate
+documentation beyond standard scope available at hourly rate.
+
+Ongoing Support (Day 90+): Without a maintenance agreement, support is
+best-effort against the SLAs in Step B.4. With a maintenance
+agreement, the contract SLAs govern. Net-new feature work always
+requires a Change Order.
 
 *Any additional revisions beyond the limits above require a Change Order
 approved by the Project Lead and communicated to the client with
@@ -237,45 +396,74 @@ associated timeline and cost impact.*
 
 **PHASE GATE - COMPLETION CHECKLIST**
 
-*ALL items below must be completed to formally close the project.
-Project closure ensures all deliverables are handed off, documentation
-is complete, and the client relationship transitions to
-support/maintenance.*
+*ALL items in Sub-Section A must be completed to formally close the
+project. Sub-Section B items establish the ongoing-support steady
+state; they recur indefinitely while the client remains in support.*
+
+**Sub-Section A — Warranty Period (Day 0–90) Completion**
 
 |  |  |  |  |
 |:---|:---|:---|:---|
 | **\#** | **Gate Requirement** | **Status** | **Date** |
-| **1** | All post-launch bugs resolved within warranty period |  |  |
-| **2** | Client training session conducted and recorded |  |  |
-| **3** | Website Admin Guide delivered to client |  |  |
-| **4** | Credentials and access document completed and shared securely |  |  |
-| **5** | Integration documentation completed |  |  |
-| **6** | 30-day analytics baseline report delivered |  |  |
-| **7** | Internal retrospective conducted and documented |  |  |
-| **8** | Project Closure Report completed |  |  |
-| **9** | Maintenance agreement presented (if applicable) |  |  |
-| **10** | Client satisfaction survey sent and (ideally) received |  |  |
-| **11** | All ClickUp project tasks marked complete |  |  |
-| **12** | Project workspace archived |  |  |
-| **13** | Final thank-you email sent to client |  |  |
-| **14** | Slack notification posted confirming project closure |  |  |
+| **A1** | All post-launch bugs resolved within warranty period |  |  |
+| **A2** | Client training session conducted and recorded |  |  |
+| **A3** | Website Admin Guide delivered to client |  |  |
+| **A4** | Credentials and access document completed and shared securely |  |  |
+| **A5** | Integration documentation completed |  |  |
+| **A6** | 30-day analytics baseline report delivered |  |  |
+| **A7** | Internal retrospective conducted and documented |  |  |
+| **A8** | Project Closure Report completed |  |  |
+| **A9** | Maintenance agreement presented (if applicable) |  |  |
+| **A10** | Client satisfaction survey sent and (ideally) received |  |  |
+| **A11** | All ClickUp project tasks marked complete |  |  |
+| **A12** | Project workspace archived |  |  |
+| **A13** | Final thank-you email sent to client |  |  |
+| **A14** | Slack notification posted confirming project closure |  |  |
+
+**Sub-Section B — Ongoing Support (Day 90+) Standing Gate**
+
+*These items must be true at the warranty-exit transition. Items B3–B5
+are continuously enforced for as long as the client remains an active
+support client.*
+
+|  |  |  |  |
+|:---|:---|:---|:---|
+| **\#** | **Gate Requirement** | **Status** | **Date** |
+| **B1** | Ongoing support cadence set with named owner (Fancy Lab + client side) |  |  |
+| **B2** | Warranty-exit notification email sent to client |  |  |
+| **B3** | `Weekly Support Follow Ups` checklist instantiated and recurring |  |  |
+| **B4** | Support intake convention documented (`SUPPORT` list and `support` / `ticket` tag) |  |  |
+| **B5** | Escalation thresholds (>14 days, >5 comments) configured for ClickUp review |  |  |
+| **B6** | Retention incentive issued (`Give client 1 month free of Base Plan`) |  |  |
+| **B7** | Marketing handoff either completed or scheduled (`Ascend Proposals to Marketing`) |  |  |
+| **B8** | Aging policy applied (no untouched support task >180 days without review) |  |  |
 
 **Phase Gate Sign-Off**
 
-|                        |                                        |          |
-|:-----------------------|:---------------------------------------|:---------|
-| **Field**              | **Details**                            | **Date** |
-| **Project Name**       |                                        |          |
-| **Approved By**        |                                        |          |
-| **Client Rep**         |                                        |          |
-| **Next Phase**         | Project Closed / Maintenance Agreement |          |
-| **Notes / Conditions** |                                        |          |
+|                        |                                                                       |          |
+|:-----------------------|:----------------------------------------------------------------------|:---------|
+| **Field**              | **Details**                                                           | **Date** |
+| **Project Name**       |                                                                       |          |
+| **Approved By**        |                                                                       |          |
+| **Client Rep**         |                                                                       |          |
+| **Next Phase**         | Project Closed / Maintenance Agreement / Ongoing Support (Sub-Section B) |          |
+| **Notes / Conditions** |                                                                       |          |
+
+## Data Enrichment (ClickUp export, 2026-04-22)
+
+- **P10 v1 was only a small slice of actual post-launch reality.** The `SUPPORT` folder in ClickUp has **262 tasks**, and the checklist item `Weekly Support Follow Ups` recurs **42×** — i.e., the team is doing ongoing support that extends well beyond P10 v1's 30-day warranty concept. v2 absorbs this scope into Sub-Section B.
+- **`MARKETING` folder has 303 tasks** — these look like post-launch marketing work (the handoff the launch checklist calls `Ascend Proposals to Marketing`) and previously had no SOP defining the boundary between Web Development and Marketing. v2 defines the trigger and handoff packet in Step B.7.
+- **MAGENTO folder (3 tasks) exists** but no Magento work appears in the SOPs — either a dead folder or a one-off that should be merged into SUPPORT. Flag for triage in the next portfolio review.
+- **Oldest open tasks in the export are post-launch remediation.** `1800loosediamonds.com` has tasks open since 2020 ("Each product should be its own sku," 1,998 days). These clearly exceeded P10 v1 scope; the new aging policy in Step B.8 + escalation thresholds in Step B.5 are designed to prevent this pattern from recurring.
+- **Two retention items moved here from P9 v2 launch:** `Give client 1 month free of Base Plan` (39× in launch checklist) and `Ascend Proposals to Marketing` (42×). They are retention/handoff actions, not launch-sprint actions, and they were distorting launch-phase metrics where they previously lived.
+
+---
 
 **APPENDIX A: PROJECT CLOSURE & CLIENT HANDOFF PACKAGE**
 
 *This comprehensive handoff package documents everything the client
 needs to independently manage their website, all credentials and access
-information, the 30-day warranty terms, and the formal project closure.
+information, the 90-day warranty terms, and the formal project closure.
 It also captures the internal retrospective for team improvement.*
 
 *Prerequisites: P9 Launch — 48-hour monitoring complete with no critical
@@ -288,12 +476,12 @@ issues. All post-launch bugs from monitoring period resolved.*
 </colgroup>
 <tbody>
 <tr>
-<td colspan="2"><strong>1. 30-DAY POST-LAUNCH WARRANTY
+<td colspan="2"><strong>1. 90-DAY POST-LAUNCH WARRANTY
 TRACKER</strong></td>
 </tr>
 <tr>
 <td><strong>Warranty Start Date</strong></td>
-<td><em>Launch date: ___ / Warranty expires: ___</em></td>
+<td><em>Launch date: ___ / Warranty expires (Day 90): ___</em></td>
 </tr>
 <tr>
 <td><strong>Warranty Scope</strong></td>
@@ -650,6 +838,45 @@ followed: [ ]</em></td>
 <td><em>Sent to client: [ ] / Includes: Thank you, warranty info,
 maintenance info, support contact / Date: ___</em></td>
 </tr>
+<tr>
+<td colspan="2"><strong>9. ONGOING SUPPORT TRANSITION (DAY 90+)</strong></td>
+</tr>
+<tr>
+<td><strong>Warranty Exit Date</strong></td>
+<td><em>Day 90 from launch: ___ / Notification email sent: [ ]</em></td>
+</tr>
+<tr>
+<td><strong>Support Owner (Fancy Lab)</strong></td>
+<td><em>Client-facing: ___ (default Carlos) / Technical: ___ (default Asya) / Accountable: Rinaldo</em></td>
+</tr>
+<tr>
+<td><strong>Support Owner (Client)</strong></td>
+<td><em>Name: ___ / Email: ___</em></td>
+</tr>
+<tr>
+<td><strong>Intake Convention</strong></td>
+<td><em>Dedicated SUPPORT list: [ ] / Tag in client list — `support` [ ] / `ticket` [ ]</em></td>
+</tr>
+<tr>
+<td><strong>Weekly Support Follow-Up</strong></td>
+<td><em>Recurring checklist instantiated: [ ] / Cadence: weekly / First run date: ___</em></td>
+</tr>
+<tr>
+<td><strong>Retention Incentive Issued</strong></td>
+<td><em>1 month free of Base Plan applied: [ ] / Confirmed to client (date): ___</em></td>
+</tr>
+<tr>
+<td><strong>Marketing Handoff</strong></td>
+<td><em>`Ascend Proposals to Marketing` task: created [ ] / accepted by Marketing [ ] / handoff date: ___</em></td>
+</tr>
+<tr>
+<td><strong>Escalation Thresholds Configured</strong></td>
+<td><em>>14 days: [ ] / >5 comments: [ ] / Surfaces in PM weekly review: [ ]</em></td>
+</tr>
+<tr>
+<td><strong>Aging Policy Acknowledged</strong></td>
+<td><em>>180 days → weekly PM review: [ ] / >365 days → archive-or-keep decision: [ ]</em></td>
+</tr>
 </tbody>
 </table>
 
@@ -657,7 +884,9 @@ maintenance info, support contact / Date: ___</em></td>
 
 By signing below, both parties confirm that all project deliverables
 have been completed, all access and credentials have been transferred,
-and the project is formally closed.
+and the project is formally closed (warranty period). Ongoing support,
+if any, continues per Sub-Section B and is governed by either the
+maintenance agreement or the default SLAs in Step B.4.
 
 Project Manager:
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date:
@@ -672,4 +901,5 @@ Client Representative:
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 *This project is now formally closed. Thank you for choosing Fancy Lab.
-We look forward to a continued partnership!*
+We look forward to a continued partnership through our ongoing support
+relationship.*

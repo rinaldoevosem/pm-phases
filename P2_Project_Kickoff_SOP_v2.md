@@ -8,7 +8,16 @@ WEB DEVELOPMENT DEPARTMENT
 
 Standard Operating Procedure & Phase Gate Document
 
-v1.0 \| February 2026 \| Confidential
+v2.0 \| April 2026 \| Confidential
+
+**REVISION HISTORY**
+
+- v2.0 (April 2026): Added Priority Hygiene Addendum — every kickoff-created ClickUp task must have a priority set at creation; ClickUp automation flags any task >24h old with no priority. Driven by `data/analysis/03_sop_gap_and_recommendations.md` §B finding that 62.4% of tasks have no priority set.
+- v2.0 (April 2026): Added Tag Taxonomy Addendum — defined a canonical 14-tag taxonomy and made tag assignment a kickoff process step; ClickUp automation flags untagged tasks >24h. Driven by §B finding that only 10 distinct tags exist across 2,304 tasks.
+- v2.0 (April 2026): Added two new Phase Gate items (#11 priority set on every kickoff-created task; #12 canonical tag taxonomy documented in ClickUp and socialized).
+- v2.0 (April 2026): Added Step 1.5 "Define / Apply Tag Taxonomy" as part of ClickUp setup, per `Fancy_Lab_Web_Dev_Phase_Gate_SOPs_v2.md` § Data Enrichment recommendation.
+- v2.0 (April 2026): Appended "Data Enrichment (ClickUp export, 2026-04-22)" section preserving the workspace-level statistics that motivated these additions.
+- v2.0 (April 2026): Noted forward-looking recommendation to maintain an "ops lists" registry alongside client lists (DAILY STAND UP, EOD Report, Inventory Management, DIAMOND SEARCH, RING BUILDER, TICKETS, etc.).
 
 **PURPOSE & SCOPE**
 
@@ -41,6 +50,10 @@ on deliverables, timeline, and responsibilities.
 > \- Team role assignment and task delegation in ClickUp
 >
 > \- Client communication of approved roadmap and next steps
+>
+> \- Canonical tag taxonomy definition and rollout (new in v2)
+>
+> \- Priority-at-creation discipline for all kickoff tasks (new in v2)
 
 **Scope Excludes**
 
@@ -75,6 +88,7 @@ on deliverables, timeline, and responsibilities.
 | **Platform/Shopify Dev Store**      | Shopify / CMS             | Asya        |
 | **Project Requirements Document**   | Google Docs / ClickUp Doc | Asya + Aida |
 | **Project Roadmap with Milestones** | ClickUp / Google Docs     | Asya        |
+| **Canonical Tag Taxonomy Doc**      | ClickUp Doc               | Asya        |
 | **Kickoff Email to Client**         | Email                     | Asya        |
 | **Internal Kickoff Summary**        | Slack                     | Asya        |
 
@@ -83,12 +97,12 @@ on deliverables, timeline, and responsibilities.
 |  |  |
 |:---|:---|
 | **Tool** | **Purpose in This Phase** |
-| **ClickUp** | Project management, task creation, roadmap, milestone tracking |
+| **ClickUp** | Project management, task creation, roadmap, milestone tracking, tag taxonomy enforcement, priority-hygiene automations |
 | **Figma** | Design project file setup, wireframe structure |
 | **Shopify / WordPress / Custom CMS** | Development store or staging environment setup |
 | **Google Drive** | Requirements document, shared reference files |
 | **Google Meet** | Internal kickoff meeting, client requirements review |
-| **Slack** | Internal team notifications, daily coordination |
+| **Slack** | Internal team notifications, daily coordination, automation alerts (untagged / unprioritized tasks) |
 | **Email** | Client communication of roadmap and next steps |
 
 **HOW - PROCESS STEPS**
@@ -100,6 +114,34 @@ on deliverables, timeline, and responsibilities.
 > QA, Launch). Assign team members to their respective lists. Configure
 > custom fields: client name, project type, platform, target launch
 > date.
+>
+> **1.5. Define / Apply Canonical Tag Taxonomy (new in v2)**
+>
+> Apply the Fancy Lab canonical tag taxonomy to the project workspace.
+> The canonical list (15 tags) is:
+>
+> - `qa` — testing, regression, Pastel-tracked issues
+> - `iframe` — third-party embeds (Ring Builder, Diamond Search,
+>   Nivoda, MyDiamonds, BOSS Logics)
+> - `inventory` — product / catalog / vendor-feed work
+> - `seo` — on-page SEO, redirects, schema, metadata
+> - `design` — Figma design or design-system work
+> - `dev` — implementation, theme code, custom code
+> - `client-block` — paused awaiting client input or approval
+> - `vendor-block` — paused awaiting third-party / vendor response
+> - `support` — post-launch / warranty / ongoing support work
+> - `marketing` — marketing-handoff scope (Ascend, ads, etc.)
+> - `bug` — defect against shipped / approved behavior
+> - `feature` — net-new functionality
+> - `content` — copy, image direction, content map
+> - `launch-blocker` — must resolve before P9 launch
+> - `change-order` — work added via approved change order (scope-creep
+>   tracking)
+>
+> Document this list in a ClickUp Doc pinned at the workspace root.
+> Socialize in Slack at the internal kickoff (Step 6) so every team
+> member knows the list exists and where to find it. Tags MUST be
+> applied at task creation; multi-tag is allowed and encouraged.
 >
 > **2. Set Up Figma Project File**
 >
@@ -133,12 +175,39 @@ on deliverables, timeline, and responsibilities.
 > date. Assign dates based on the agreed timeline from P0. Include
 > buffer time for revisions.
 >
+> **5.5. Apply Priority + Tag Hygiene to All Kickoff Tasks (new in
+> v2)**
+>
+> Every task created in ClickUp during kickoff (and from this phase
+> forward) MUST have:
+>
+> - A priority set at creation: Urgent / High / Normal / Low. "Normal"
+>   is the default for routine work; "Urgent" is reserved for
+>   launch-blockers or client-block items. No task ships from kickoff
+>   in an unprioritized state.
+> - At least one tag from the canonical taxonomy defined in Step 1.5.
+>
+> Configure two ClickUp automations on the workspace:
+>
+> 1. **Missing-priority alert.** If a task has been in any list for
+>    \>24 hours with priority unset, post to `#proj-[clientname]` Slack
+>    and assign a "needs-priority" subtask to the task creator.
+> 2. **Untagged-task alert.** If a task has been in any list for \>24
+>    hours with zero tags, post to `#proj-[clientname]` Slack and
+>    assign a "needs-tag" subtask to the task creator.
+>
+> Asya owns the audit; the kickoff cannot pass the gate while the
+> automations are unconfigured or while any kickoff-created task
+> remains unprioritized or untagged.
+>
 > **6. Internal Kickoff Meeting**
 >
 > Conduct an internal team meeting to review: project scope and
 > requirements, roadmap and milestones, individual responsibilities,
 > client communication expectations, potential risks or blockers, and
-> dependencies between phases. Document action items.
+> dependencies between phases. Walk the team through the canonical tag
+> taxonomy (Step 1.5) and the priority-at-creation rule (Step 5.5).
+> Document action items.
 >
 > **7. Client Requirements Review**
 >
@@ -158,8 +227,8 @@ on deliverables, timeline, and responsibilities.
 >
 > Update ClickUp with all finalized information. Post in Slack with:
 > project name, confirmed timeline, team assignments, links to all
-> project resources (ClickUp, Figma, dev store, Drive folder). Mark P2
-> as complete.
+> project resources (ClickUp, Figma, dev store, Drive folder), and a
+> link to the canonical tag taxonomy doc. Mark P2 as complete.
 
 **COMMUNICATION - STAKEHOLDER UPDATES**
 
@@ -170,6 +239,8 @@ on deliverables, timeline, and responsibilities.
 | Client Requirements Review | Once (may require follow-up) | Client + PM | Google Meet / Email |
 | Kickoff Confirmation Email | Once | Client | Email |
 | Team Notification | Once (at phase close) | Full Project Team | Slack |
+| Tag Taxonomy Socialization | Once at kickoff + on every onboarding | Full Project Team | Slack + ClickUp Doc |
+| Priority/Tag Automation Alerts | Continuous (\>24h breach) | Task creator + PM | Slack |
 | Requirements Follow-up | As needed (max 2 rounds) | Client | Email |
 
 **ESCALATION - BLOCKED PHASE PROTOCOL**
@@ -182,6 +253,7 @@ on deliverables, timeline, and responsibilities.
 | Scope creep identified in requirements | Immediately | Flag to PM; route to P0 for Change Order if needed | Rinaldo + Carlos |
 | Platform/tool access issues | 2 business days | Escalate to tech lead for resolution | Asya |
 | Team availability conflict | Immediately | Re-assign or adjust roadmap; notify client if timeline affected | Rinaldo |
+| Untagged or unprioritized tasks accumulating | \>24h breach reported by automation | PM reviews, assigns owner, fixes within 1 business day | Asya |
 
 **DEPENDENCIES - REQUIRED INPUTS**
 
@@ -203,6 +275,10 @@ feedback; further changes require formal Change Order
 
 Tool Setup: Standard templates used; custom configurations require PM
 approval
+
+Tag Taxonomy: The canonical list is workspace-wide. Project-specific
+additions require PM approval and must be added to the master ClickUp
+Doc so other projects inherit them.
 
 *Any additional revisions beyond the limits above require a Change Order
 approved by the Project Lead and communicated to the client with
@@ -228,6 +304,8 @@ requirements are approved.*
 | **8** | Kickoff Confirmation Email sent to client |  |  |
 | **9** | All team members assigned and notified in Slack |  |  |
 | **10** | All project links documented (ClickUp, Figma, Dev Store, Drive) |  |  |
+| **11** | Every kickoff-created task has priority set (Urgent / High / Normal / Low); missing-priority automation configured |  |  |
+| **12** | Canonical tag taxonomy documented in ClickUp and socialized to team; untagged-task automation configured |  |  |
 
 **Phase Gate Sign-Off**
 
@@ -239,6 +317,13 @@ requirements are approved.*
 | **Client Rep**         |                                     |          |
 | **Next Phase**         | P3 - Content Strategy & Copywriting |          |
 | **Notes / Conditions** |                                     |          |
+
+## Data Enrichment (ClickUp export, 2026-04-22)
+
+- **84 ClickUp lists** in the workspace, mostly client domains — consistent with "one list per project." A handful are cross-client ops: `DAILY STAND UP` (15), `EOD Report` (5), `Inventory Management` (34), `DIAMOND SEARCH` (6), `RING BUILDER` (56), `TICKETS` (10), `Kirk Kara Tickets Tracking` (10). These are legitimate but **not named in the P2 SOP** — recommend an explicit "ops lists" registry maintained alongside client lists.
+- **Tag hygiene is poor at kickoff.** Only 10 distinct tags are in use across 2,304 tasks (top: `development` 187 · `inventory` 30 · `qa` 29 · `seo` 27 · `design` 23 · `iframe` 22). Step 1.5 ("Define / Apply Canonical Tag Taxonomy") is the v2 remediation — standardized tags at kickoff would unlock cross-phase analytics later.
+- **Asya is already central to this phase in practice** — 131 tasks, 53 open; Aida 246 tasks, 123 open. Aida's 123-open load suggests Aida is the upstream bottleneck (P3 + P4); see Part II for the remediation suggestion.
+- **Priority hygiene baseline.** 62.4% of all tasks across the workspace have no priority set. The Step 5.5 priority-at-creation rule plus the missing-priority automation are the v2 remediation; the gate item #11 is the enforcement point.
 
 **APPENDIX A: PROJECT KICKOFF & INFRASTRUCTURE SETUP CHECKLIST**
 
@@ -284,7 +369,19 @@ Phase Gate Status [ ] Blocker Flag</em></td>
 <tr>
 <td><strong>Automations Enabled</strong></td>
 <td><em>[ ] Task creation → Slack notification [ ] Status change → PM
-alert [ ] Overdue → Escalation [ ] Phase gate → Review trigger</em></td>
+alert [ ] Overdue → Escalation [ ] Phase gate → Review trigger [ ]
+Missing-priority &gt;24h → Slack alert (v2) [ ] Untagged-task &gt;24h →
+Slack alert (v2)</em></td>
+</tr>
+<tr>
+<td><strong>Canonical Tag Taxonomy Applied</strong></td>
+<td><em>[ ] 15-tag canonical list loaded into workspace [ ] Pinned
+ClickUp Doc created [ ] Team socialized in Slack (v2)</em></td>
+</tr>
+<tr>
+<td><strong>Priority-at-Creation Rule Acknowledged</strong></td>
+<td><em>[ ] All kickoff-created tasks have priority set (Urgent / High /
+Normal / Low) — Asya audit complete (v2)</em></td>
 </tr>
 <tr>
 <td><strong>Team Members Assigned</strong></td>
@@ -347,7 +444,8 @@ verified? [ ]</em></td>
 <tr>
 <td><strong>Slack–ClickUp Integration</strong></td>
 <td><em>ClickUp notifications flowing to Slack channel? [ ] / Which
-events? ___</em></td>
+events? ___ / Includes priority + tag automation alerts (v2)? [
+]</em></td>
 </tr>
 <tr>
 <td><strong>Calendar Invites Sent</strong></td>
@@ -438,7 +536,8 @@ ANALYSIS</strong></td>
 <tr>
 <td><strong>P0 Brief → Requirements Mapping</strong></td>
 <td><em>All Project Brief items translated to specific ClickUp tasks? [
-] / Total tasks created: ___</em></td>
+] / Total tasks created: ___ / All tasks have priority + at least one
+canonical tag (v2)? [ ]</em></td>
 </tr>
 <tr>
 <td><strong>Feature Feasibility Check</strong></td>
@@ -490,7 +589,7 @@ ___–___ / P8: ___–___ / P9: ___</em></td>
 <tr>
 <td><strong>Critical Path Items</strong></td>
 <td><em>List any tasks/phases that have zero float and directly impact
-launch date: ___</em></td>
+launch date: ___ / Tagged `launch-blocker` (v2)? [ ]</em></td>
 </tr>
 <tr>
 <td><strong>Buffer Days Built In</strong></td>
@@ -522,6 +621,12 @@ approval by ___ / Final approval by ___</em></td>
 <td><strong>Brief Walkthrough Completed</strong></td>
 <td><em>Project scope, client expectations, and brand direction reviewed
 with team? [ ]</em></td>
+</tr>
+<tr>
+<td><strong>Tag Taxonomy + Priority Rule Walkthrough (v2)</strong></td>
+<td><em>15-tag canonical list and priority-at-creation rule reviewed?
+[ ] / Team confirmed they know where the ClickUp Doc lives? [
+]</em></td>
 </tr>
 <tr>
 <td><strong>Role Assignments Confirmed</strong></td>

@@ -8,7 +8,44 @@ WEB DEVELOPMENT DEPARTMENT
 
 Standard Operating Procedure & Phase Gate Document
 
-v1.0 \| February 2026 \| Confidential
+v4.0 \| April 2026 \| Confidential
+
+**REVISION HISTORY**
+
+> v3 → v4 (April 2026)
+>
+> \- Upgraded design-token verification from a soft check to a **HARD
+> PHASE GATE**: QA cannot sign off until a Design-Token Compliance
+> Report is produced showing zero deviations from the Figma token set,
+> or each deviation is explicitly signed off by Aida (per
+> `data/analysis/03_sop_gap_and_recommendations.md` §C item 3 — high
+> comment density on design-update tasks such as "Update the design of
+> PDP" with 20 comments indicates partial enforcement under v3).
+> Codified in PROCESS step 3, a new Deliverable, ESCALATION row, and
+> new gate item #3a.
+>
+> \- Defined the **Design-Token Compliance Report format** (automated
+> Figma-variable diff + Manuk-signed acknowledgment + per-deviation
+> Aida sign-off block) and added it to the Appendix as Section 3a.
+>
+> \- Strengthened RACI to make explicit that **Manuk owns QA
+> end-to-end** with single-name responsibility (per
+> `data/analysis/03_sop_gap_and_recommendations.md` §A — Manuk holds
+> 155 QA-side tasks; the `qa` tag aligns). Aida added as a named
+> Approver for design-token deviation exceptions.
+>
+> \- Added a **Bug-Fix SLA**: any bug sitting in `Review` status >5
+> business days auto-escalates to Asya (per `§ Data Enrichment` —
+> 42 Review-status tasks on `hawaiilabgrown.com` and 7 on `ian.club`
+> are stalled re-QA items). New ESCALATION row + sign-off prompt.
+>
+> \- Added a `qa`-tag enforcement note: every QA task must carry the
+> `qa` tag at creation (data shows the tag only used on 29/155 QA
+> tasks; QA work is identified by list position, which breaks
+> cross-list reporting).
+>
+> \- Appended new section **Data Enrichment (ClickUp export,
+> 2026-04-22)** with the evidence base from the rollup doc.
 
 **PURPOSE & SCOPE**
 
@@ -26,9 +63,9 @@ presented to the client for final approval.
 Deliver a thoroughly tested, bug-free website that meets all design
 specifications, functional requirements, performance benchmarks, and
 accessibility standards — ready for client review with confidence.
-Pre-QA developer self-review, design token verification, and systematic
-link audits are used to reduce QA cycle time and catch preventable
-issues before they reach QA.
+Pre-QA developer self-review, design token verification (hard gate as
+of v4), and systematic link audits are used to reduce QA cycle time and
+catch preventable issues before they reach QA.
 
 **Scope Includes**
 
@@ -36,6 +73,9 @@ issues before they reach QA.
 > handoff)
 >
 > \- Spacing & Layout verification against design tokens
+>
+> \- **Design-Token Compliance Report (hard gate, v4)** — automated
+> diff vs. Figma variables, with per-deviation Aida sign-off
 >
 > \- Navigation & link audit — all links, menus, anchors, breadcrumbs
 >
@@ -92,6 +132,9 @@ issues before they reach QA.
 > \- Bug documentation and tracking via Pastel + ClickUp
 >
 > \- Regression testing after fixes
+>
+> \- Bug-fix SLA enforcement (Review-status bugs >5 business days
+> escalate to Asya)
 
 **Scope Excludes**
 
@@ -110,10 +153,11 @@ issues before they reach QA.
 |  |  |  |
 |:---|:---|:---|
 | **Role** | **Person(s)** | **Responsibility** |
-| **Responsible** | Manuk | *Performs the work for this phase* |
-| **Accountable** | Asya | *Ultimately answerable for completion* |
-| **Consulted** | Narine + Ishkhan + Aida | *Provides input and approves deliverables* |
-| **Informed** | Rinaldo + Harry | *Kept up to date on progress* |
+| **Responsible (QA end-to-end)** | Manuk | *Owns QA execution single-handedly: test plan, all audit checklists, bug logging in Pastel + ClickUp, regression cycles, and the QA Sign-Off Report. Per data, Manuk holds 155 QA-side tasks across the portfolio.* |
+| **Accountable** | Asya | *Ultimately answerable for completion; receives Bug-Fix SLA escalations and signs the phase gate.* |
+| **Approved By (design-token deviations)** | Aida | *Sole approver of any design-token deviation that ships. Without Aida's per-deviation sign-off, the Design-Token Compliance Report cannot show "approved exceptions" and the phase gate is blocked.* |
+| **Consulted** | Narine + Ishkhan | *Receive bug reports, perform fixes, re-submit for QA. Consulted on Pre-QA self-review failures and link-audit failures.* |
+| **Informed** | Rinaldo + Harry | *Kept up to date on progress; receive escalations on stalled Review-status bugs and missed performance targets.* |
 
 **WHAT - DELIVERABLES**
 
@@ -123,11 +167,13 @@ issues before they reach QA.
 | **Pre-QA Developer Self-Review Checklist (completed)** | ClickUp Subtask | Narine / Ishkhan |
 | **QA Test Plan** | Google Docs / ClickUp | Manuk |
 | **Link Map & Audit Report** | Google Sheets | Manuk |
-| **Bug Report Log** | Pastel + ClickUp | Manuk |
+| **Bug Report Log** | Pastel + ClickUp (every task tagged `qa`) | Manuk |
+| **Design-Token Compliance Report (HARD GATE)** | Google Sheets (auto-diff export) + Manuk sign + per-deviation Aida sign block | Manuk (compile) / Aida (per-deviation approval) |
 | **Visual QA Comparison Report (Figma overlay)** | Pastel / Google Docs | Manuk |
 | **Cross-Browser Test Results** | Google Sheets | Manuk |
 | **Performance Test Results** | Google Docs / Sheets | Manuk |
 | **SEO Validation Checklist** | Google Sheets | Manuk |
+| **Bug-Fix SLA Log** | ClickUp (Review-status age tracker) | Manuk |
 | **QA Sign-Off Report** | Google Docs | Asya |
 
 **WHERE - TOOLS & PLATFORMS**
@@ -136,15 +182,15 @@ issues before they reach QA.
 |:---|:---|
 | **Tool** | **Purpose in This Phase** |
 | **Pastel** | Visual QA commenting, screenshot annotation, bug documentation on live pages |
-| **ClickUp** | Bug tracking, QA task management, pre-QA checklist subtask, test case tracking |
-| **Figma** | Design reference for visual QA comparison, design token extraction |
+| **ClickUp** | Bug tracking, QA task management, pre-QA checklist subtask, test case tracking, Bug-Fix SLA timer (Review-status age) |
+| **Figma** | Design reference for visual QA comparison; **source of truth for the design-token set used in the Compliance Report diff** |
 | **BrowserStack / LambdaTest** | Cross-browser and device testing |
 | **PixelPerfect (browser extension)** | Figma overlay comparison for design fidelity checks |
 | **Google PageSpeed Insights / Lighthouse** | Performance and accessibility testing |
 | **Google Search Console** | SEO validation, indexing verification |
 | **Screaming Frog / Sitebulb** | Technical SEO audit, broken link detection, full site link crawl |
 | **WAVE / axe DevTools** | Accessibility testing |
-| **Slack** | Bug communication, QA status updates |
+| **Slack** | Bug communication, QA status updates, Bug-Fix SLA escalations |
 
 **HOW - PROCESS STEPS**
 
@@ -158,7 +204,9 @@ issues before they reach QA.
 > text content matches source, Shopify metafields rendering, section
 > schemas configured, collection filters working, variant swatches
 > updating images, and breadcrumbs present. The checklist must be
-> submitted as a completed ClickUp subtask before QA starts.
+> submitted as a completed ClickUp subtask before QA starts. The QA
+> ClickUp task that opens the cycle must carry the `qa` tag at
+> creation.
 >
 > **2. Create QA Test Plan**
 >
@@ -170,7 +218,8 @@ issues before they reach QA.
 > link map document mapping every menu item, CTA, and internal link to
 > its destination URL. Share the plan with the development team.
 >
-> **3. Spacing & Layout Audit**
+> **3. Spacing & Layout Audit + Design-Token Compliance Report (HARD
+> GATE)**
 >
 > Verify: consistent spacing between sections using design tokens (not
 > arbitrary values), elements aligned to Figma grid (check margins and
@@ -180,6 +229,30 @@ issues before they reach QA.
 > responsive spacing adjustments applied correctly across breakpoints.
 > Use the design token system from P4 UI Kit as the single source of
 > truth.
+>
+> **HARD GATE — Design-Token Compliance Report.** QA cannot sign off
+> on this phase until Manuk produces a Design-Token Compliance Report
+> (template in Appendix Section 3a) showing **zero deviations** from
+> the Figma token set, OR each deviation listed is explicitly signed
+> off by Aida (per P4 authoring RACI). The report format is:
+>
+> > a. **Automated diff vs. Figma variables.** Pull the canonical
+> > token set from the project's Figma file (variables panel — colors,
+> > spacing, radii, typography scale, shadows). Pull the implemented
+> > token values from the Shopify theme/CSS. Produce a side-by-side
+> > diff in a Google Sheets export with one row per token. Flag every
+> > divergence (missing, renamed, or value-mismatched).
+> >
+> > b. **Manuk-signed acknowledgment.** Manuk signs the report
+> > confirming the diff was generated against the current Figma file
+> > version (record the Figma version timestamp).
+> >
+> > c. **Per-deviation Aida sign-off.** For every flagged divergence
+> > the team intends to ship as-is, Aida signs the corresponding row
+> > with rationale (design intent change, technical constraint, etc.).
+> > Unsigned deviations BLOCK the phase gate — they must be either
+> > fixed by Narine/Ishkhan or signed off by Aida; Manuk cannot
+> > self-approve, Asya cannot override.
 >
 > **4. Navigation & Link Audit**
 >
@@ -223,7 +296,8 @@ issues before they reach QA.
 > format correct (SVG, correct resolution), and acceptance criteria
 > within 2px tolerance of Figma spec. Compare the implementation against
 > the UI Kit typography scale (desktop and mobile) and color scheme
-> tokens.
+> tokens. Any divergence found here that is also a token divergence
+> must be reflected in the Design-Token Compliance Report (step 3).
 >
 > **8. Section & Component Management Check**
 >
@@ -321,7 +395,7 @@ issues before they reach QA.
 > layout breaks on language change, translations render correctly,
 > RTL/CJK text handled properly.
 >
-> **19. Bug Fixing Cycle**
+> **19. Bug Fixing Cycle (with SLA)**
 >
 > Developers fix reported bugs prioritized as: Critical (site-breaking),
 > High (major feature broken), Medium (visual or minor functional), Low
@@ -329,13 +403,24 @@ issues before they reach QA.
 > regression testing on fixed items plus surrounding functionality.
 > Repeat until all Critical and High bugs are resolved.
 >
+> **Bug-Fix SLA (v4).** Any bug sitting in `Review` status for more
+> than 5 business days auto-escalates to Asya for triage (per `§ Data
+> Enrichment` evidence: 42 Review-status tasks on `hawaiilabgrown.com`
+> and 7 on `ian.club` were stalled re-QA items). Manuk maintains a
+> Bug-Fix SLA Log in ClickUp showing age-in-status for every
+> Review-status item; entries crossing the 5-day threshold get a
+> Slack ping to Asya plus a `sla-breach` tag.
+>
 > **20. QA Sign-Off**
 >
-> Once all Critical and High bugs are resolved and Medium/Low issues are
-> documented (with client disclosure plan): compile the QA Sign-Off
-> Report summarizing test results by issue category, remaining known
-> issues, and performance benchmarks. Get PM sign-off. Notify the team
-> that the site is ready for client review.
+> Once all Critical and High bugs are resolved, Medium/Low issues are
+> documented (with client disclosure plan), and the **Design-Token
+> Compliance Report shows zero open deviations (or each deviation
+> Aida-signed)**: compile the QA Sign-Off Report summarizing test
+> results by issue category, remaining known issues, performance
+> benchmarks, the Design-Token Compliance Report status, and the
+> Bug-Fix SLA Log. Get PM sign-off. Notify the team that the site is
+> ready for client review.
 
 **COMMUNICATION - STAKEHOLDER UPDATES**
 
@@ -345,6 +430,8 @@ issues before they reach QA.
 | Pre-QA Checklist Verification | Once (before QA starts) | QA Lead + Dev Team | ClickUp |
 | QA Kickoff | Once | QA + Dev Team + PM | Slack / Google Meet |
 | Daily Bug Report | Daily (during QA) | Dev Team + PM | Slack + ClickUp + Pastel |
+| Design-Token Compliance Report | Once per QA round (before sign-off) | Aida + Asya + Dev Team | Google Sheets + Slack |
+| Bug-Fix SLA Breach Alert | On 5-day Review-status threshold | Asya + Dev Team | Slack + ClickUp tag `sla-breach` |
 | Fix Verification | After each fix cycle | QA + Dev Team | ClickUp + Slack |
 | QA Status Update | Daily | PM | Slack |
 | QA Sign-Off | Once (at phase close) | PM + Full Team | Google Docs + Slack |
@@ -356,10 +443,12 @@ issues before they reach QA.
 | **Trigger** | **Timeframe** | **Escalation Action** | **Escalated To** |
 | Critical bug found | Immediately | Alert dev team and PM; prioritize fix above all other tasks | Asya + Narine/Ishkhan |
 | Bug fix introduces new issues (regression) | Immediately | Revert fix; reassess approach with dev team | Asya |
+| **Design-token deviation without Aida sign-off** | Before QA sign-off | **Phase gate BLOCKED. Either fix the deviation or obtain Aida's per-row sign-off in the Compliance Report. Asya cannot override.** | **Aida + Asya** |
 | Design implementation significantly off (\>10 issues per page) | During visual QA | Schedule design-dev alignment meeting; verify design tokens are being used | Aida + Asya |
 | Pre-QA developer checklist not completed | Before QA starts | Return build to developer; QA will not begin until checklist is submitted | Asya + Rinaldo |
 | Excessive spacing & layout issues on a page | During QA | Halt QA on that page; developer must implement design token system before continuing | Asya + Narine/Ishkhan |
 | Navigation link audit shows widespread broken or wrong links | During QA | Return to developer for systematic link fix before continuing other QA | Asya + Narine/Ishkhan |
+| **Bug stuck in Review status \>5 business days (SLA breach)** | At day 5 | Auto-escalate to Asya; tag `sla-breach`; Slack ping; Asya triages owner & priority | Asya |
 | Performance targets not met after optimization | After performance testing | Present tradeoffs to PM; get client input | Rinaldo + Asya |
 | QA timeline exceeding allocated time | 3+ days over estimate | Assess remaining scope; prioritize critical items | Rinaldo |
 | Third-party integration failing in QA | 2 business days | Contact vendor support; assess workaround | Asya + Narine |
@@ -371,7 +460,8 @@ issues before they reach QA.
 | **Dependency** | **Source Phase** | **Impact if Missing** |
 | **Feature-Complete Development Build** | P6 - Development | Cannot begin QA on incomplete features |
 | **Pre-QA Developer Self-Review Checklist (completed)** | P6 - Development | QA will not start without completed self-review checklist |
-| **Figma Designs + UI Kit (for visual comparison)** | P4 - Branding & Design | Need final designs, UI Kit (color tokens, typography scale, button states) as reference for visual QA |
+| **Figma Designs + UI Kit + Token Set (for visual comparison and Compliance Report diff)** | P4 - Branding & Design | Need final designs, UI Kit (color tokens, typography scale, button states), and the Figma variables panel as the canonical token set for the Design-Token Compliance Report |
+| **Aida availability for deviation sign-off** | P4 - Branding & Design | Without Aida available to sign per-deviation rows, the Design-Token Compliance Report cannot close and the phase gate is blocked |
 | **SEO Requirements (for validation)** | P3 - Content Strategy | Need meta data and SEO specs to validate against |
 | **Product Catalog (for e-commerce testing)** | P5 - Inventory Management | Need products imported to test purchase flow |
 | **Link Map Document** | P4/P6 - Design/Development | Need link map matching every menu item, CTA, and internal link to its destination URL |
@@ -390,6 +480,14 @@ time; advanced optimization scoped separately
 Pre-QA Checklist Failure: Developer must pass self-review checklist
 before each QA round; failures delay QA start
 
+Design-Token Deviations: Each unfixed deviation must carry Aida's
+sign-off per row of the Compliance Report; otherwise it is treated as
+a defect, not an exception, and blocks sign-off.
+
+Bug-Fix SLA: Bugs in `Review` >5 business days auto-escalate to Asya;
+the bug remains in Review until re-tested — the SLA tracks dev
+turnaround, not QA backlog.
+
 *Any additional revisions beyond the limits above require a Change Order
 approved by the Project Lead and communicated to the client with
 associated timeline and cost impact.*
@@ -405,7 +503,8 @@ before the client reviews it.*
 | **\#** | **Gate Requirement** | **Status** | **Date** |
 | **1** | Pre-QA Developer Self-Review Checklist completed and submitted in ClickUp |  |  |
 | **2** | QA Test Plan created and shared with team |  |  |
-| **3** | Spacing & Layout audit completed (design token compliance verified) |  |  |
+| **3** | Spacing & Layout audit completed |  |  |
+| **3a** | **HARD GATE — Design-Token Compliance Report attached, zero open deviations (or each deviation sign-off'd by Aida per row)** |  |  |
 | **4** | Navigation & Link audit completed (all links verified against link map) |  |  |
 | **5** | Buttons & CTAs audit completed (states, visibility, sizing, functionality) |  |  |
 | **6** | Shopify-specific audit completed (sections, metafields, schema, Liquid) |  |  |
@@ -423,8 +522,9 @@ before the client reviews it.*
 | **18** | Footer, header, and multi-language checks completed |  |  |
 | **19** | All Critical and High priority bugs resolved |  |  |
 | **20** | Regression testing completed after bug fixes |  |  |
+| **20a** | **Bug-Fix SLA Log attached; zero items currently breaching the 5-business-day Review threshold (or all breaches Asya-acknowledged)** |  |  |
 | **21** | QA Sign-Off Report completed and PM-approved |  |  |
-| **22** | ClickUp QA tasks marked as complete |  |  |
+| **22** | ClickUp QA tasks marked as complete (all carry the `qa` tag) |  |  |
 | **23** | Slack notification posted confirming QA phase completion |  |  |
 
 **Phase Gate Sign-Off**
@@ -433,18 +533,47 @@ before the client reviews it.*
 |:-----------------------|:---------------------|:---------|
 | **Field**              | **Details**          | **Date** |
 | **Project Name**       |                      |          |
-| **Approved By**        |                      |          |
+| **QA Lead (Manuk)**    |                      |          |
+| **Design Approver (Aida — token deviations)** |   |          |
+| **Approved By (Asya)** |                      |          |
 | **Client Rep**         |                      |          |
 | **Next Phase**         | P8 - Client Approval |          |
 | **Notes / Conditions** |                      |          |
+
+## Data Enrichment (ClickUp export, 2026-04-22)
+
+- **QA templating already exists in the data.** 31 tasks contain the
+  checklist items `Create Pastel Dashboard`, `Client training and
+  tutorial on how to use Pastel`, `Product Detail Checklist`,
+  `Product Collection Checklist`, `Header & Navigation Checklist`,
+  `Footer Checklist`, `Homepage Checklist`, `Additional Pages
+  Checklist`, `Shopping Cart and Checkout checklist`, `Transactional
+  E-mails checklist`. These exactly match this SOP. **P7 is the most
+  faithfully executed SOP in the portfolio** — treat it as the
+  reference model.
+- **Manuk owns QA in practice.** 155 tasks total, 54 open — healthy
+  ratio. The `qa` tag is used on only 29 tasks; narrower than
+  expected, suggests QA work is mostly identified by *list position*
+  (inside dev lists) rather than tagged. v4 enforces the `qa` tag at
+  task creation (gate item #22) so cross-list reporting works.
+- **Bug-fix cycle (step 19) is the typical stall point.** 42
+  Review-status tasks on `hawaiilabgrown.com` and 7 Review-status
+  tasks on `ian.club` are effectively "waiting on bug fix to re-QA."
+  v4 codifies the SLA: bugs in Review > 5 business days auto-escalate
+  to Asya (gate item #20a, ESCALATION row, sign-off prompt).
+- **Design-token enforcement was partial under v3.** High comment
+  density on design-update tasks such as `Update the design of PDP`
+  (20 comments) is the evidence that "should be verified" did not
+  hold up in practice. v4 promotes design-token compliance to a hard
+  gate (#3a) with Aida as the sole exception-approver.
 
 **APPENDIX A: QA TEST PLAN & BUG REPORT TEMPLATE**
 
 *This comprehensive test plan incorporates lessons learned from past
 FancyLab projects. It includes a mandatory Pre-QA Developer Self-Review
 Checklist, issue-category-specific audit checklists targeting the most
-common recurring problems, and systematic testing across all
-dimensions.*
+common recurring problems, the v4 Design-Token Compliance Report
+(Section 3a), and systematic testing across all dimensions.*
 
 *Prerequisites: P6 Development must be complete — all pages built,
 integrations configured, and the Pre-QA Developer Self-Review Checklist
@@ -560,8 +689,8 @@ Edge (latest) [ ] Safari iOS [ ] Chrome Android</em></td>
 </tr>
 <tr>
 <td><strong>QA Lead Assigned</strong></td>
-<td><em>Name: ___ / Start date: ___ / Estimated QA duration: ___
-days</em></td>
+<td><em>Name: Manuk (default per RACI) / Start date: ___ / Estimated QA
+duration: ___ days</em></td>
 </tr>
 <tr>
 <td><strong>Link Map Document</strong></td>
@@ -574,7 +703,8 @@ mapped: [ ] / All internal links mapped: [ ]</em></td>
 <tr>
 <td><strong>Design Token Compliance</strong></td>
 <td><em>Spacing values from design token system (not arbitrary): [ ] /
-Token system documented: [ ]</em></td>
+Token system documented: [ ] / Compliance Report (Section 3a) generated:
+[ ]</em></td>
 </tr>
 <tr>
 <td><strong>Section Spacing Consistency</strong></td>
@@ -611,6 +741,53 @@ Mobile adjustments: [ ] / Not same values across all breakpoints: [
 <td><strong>Homepage Spacing</strong></td>
 <td><em>All homepage sections verified: [ ] / Issue count: ___ / Notes:
 ___</em></td>
+</tr>
+<tr>
+<td colspan="2"><strong>3a. DESIGN-TOKEN COMPLIANCE REPORT (HARD GATE —
+v4)</strong></td>
+</tr>
+<tr>
+<td><strong>Figma File Version</strong></td>
+<td><em>Figma file URL: ___ / Variables panel snapshot timestamp: ___ /
+Confirmed current with P4: [ ]</em></td>
+</tr>
+<tr>
+<td><strong>Implemented Token Source</strong></td>
+<td><em>Theme/CSS export source: ___ / Branch / commit: ___ /
+Date: ___</em></td>
+</tr>
+<tr>
+<td><strong>Diff Method</strong></td>
+<td><em>Automated side-by-side diff (Google Sheets export): [ ] / One
+row per token (color / spacing / radius / typography / shadow): [ ]
+/ Diff file URL: ___</em></td>
+</tr>
+<tr>
+<td><strong>Diff Summary</strong></td>
+<td><em>Total tokens: ___ / Matching: ___ / Missing in code: ___ /
+Renamed: ___ / Value-mismatched: ___</em></td>
+</tr>
+<tr>
+<td><strong>Manuk Sign — Diff Acknowledgment</strong></td>
+<td><em>Diff was generated against the current Figma file version
+recorded above: [ ] / Manuk signature: ___ / Date: ___</em></td>
+</tr>
+<tr>
+<td><strong>Per-Deviation Aida Sign-Off (one row per deviation
+shipped)</strong></td>
+<td><em>Deviation 1: token = ___ / Figma value = ___ / Code value = ___
+/ Rationale = ___ / Aida signed: [ ] / Date: ___ /// Deviation 2: ___
+/// Deviation 3: ___ /// Add rows as needed.</em></td>
+</tr>
+<tr>
+<td><strong>Open (Unsigned) Deviations</strong></td>
+<td><em>Count must be ZERO before phase gate item #3a can be checked:
+___ / If non-zero, route back to Narine/Ishkhan for fix or Aida for
+sign-off.</em></td>
+</tr>
+<tr>
+<td><strong>Final Status</strong></td>
+<td><em>PASS (zero open) / BLOCKED (open deviations remain): ___</em></td>
 </tr>
 <tr>
 <td colspan="2"><strong>4. NAVIGATION &amp; LINK AUDIT</strong></td>
@@ -1090,6 +1267,11 @@ BUG)</strong></td>
 <td><em>Format: QA-[number] (e.g., QA-001)</em></td>
 </tr>
 <tr>
+<td><strong>ClickUp Tag</strong></td>
+<td><em>Must include `qa` tag at creation: [ ] / Additional tags (e.g.,
+`sla-breach` once SLA crossed): ___</em></td>
+</tr>
+<tr>
 <td><strong>Issue Category</strong></td>
 <td><em>Spacing / Navigation / Buttons / Shopify / Design Fidelity /
 Section / Animation / Typography / Color / Forms / Product / Image /
@@ -1136,9 +1318,10 @@ ___</em></td>
 <td><em>Developer: ___ / Priority: ___ / Due: ___</em></td>
 </tr>
 <tr>
-<td><strong>Resolution Status</strong></td>
-<td><em>Open / In Progress / Fixed / Verified / Won't Fix — Notes:
-___</em></td>
+<td><strong>Resolution Status (with Review-age tracker)</strong></td>
+<td><em>Open / In Progress / Fixed / In Review (entered Review on: ___
+/ days in Review: ___ / SLA = 5 business days) / Verified / Won't Fix
+— Notes: ___</em></td>
 </tr>
 </tbody>
 </table>
@@ -1147,7 +1330,19 @@ Pre-QA Developer Self-Review Verified By:
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date:
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-QA Testing Completed By:
+QA Testing Completed By (Manuk):
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date:
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Design-Token Compliance Report Acknowledged By (Manuk):
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date:
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Per-Deviation Sign-Off (Aida — required for any shipped deviation):
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date:
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Bug-Fix SLA Log Reviewed By (Manuk; escalations acknowledged by Asya):
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date:
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
@@ -1160,5 +1355,7 @@ PM Approval for Client Review:
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 *Once all critical and major bugs are resolved, performance targets are
-met, and the QA sign-off is complete, this phase gate can be evaluated
-for advancement to P8 — Client Approval.*
+met, the Design-Token Compliance Report shows zero open deviations (or
+all deviations Aida-signed), the Bug-Fix SLA Log shows zero unaddressed
+breaches, and the QA sign-off is complete, this phase gate can be
+evaluated for advancement to P8 — Client Approval.*

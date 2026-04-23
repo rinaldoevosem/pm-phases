@@ -8,7 +8,25 @@ WEB DEVELOPMENT DEPARTMENT
 
 Standard Operating Procedure & Phase Gate Document
 
-v1.0 \| February 2026 \| Confidential
+v3.0 \| April 2026 \| Confidential
+
+**REVISION HISTORY**
+
+> \- **v3.0 (April 2026):** Minimal-change version bump to align with the
+> portfolio-wide v2 enrichment pass. Added a **Data Enrichment**
+> section porting ClickUp export figures (per
+> `Fancy_Lab_Web_Dev_Phase_Gate_SOPs_v2.md` lines 312–318 and
+> `data/analysis/03_sop_gap_and_recommendations.md`). No process
+> steps, RACI, deliverables, or phase-gate items were changed. The gap
+> analysis raised no P4-specific corrections; the design-token
+> enforcement concern in gap doc §C is being hardened in **P7_v4** (QA
+> enforcement) rather than here (authoring).
+>
+> \- **v2.0 (February 2026):** Introduced the multi-scheme color system
+> (Base + Primary BTN + Secondary BTN tokens), expanded the UI Kit to
+> cover separate Desktop/Mobile typography scales, button states per
+> scheme, and the Page Width / Container Width layout system. Added
+> Section Component documentation and Figma Dev Mode handoff steps.
 
 **PURPOSE & SCOPE**
 
@@ -372,6 +390,31 @@ writing by the client.*
 | **Client Rep** |  |  |
 | **Next Phase** | P5 - Inventory Management (if applicable) or P6 - Development |  |
 | **Notes / Conditions** |  |  |
+
+## Data Enrichment (ClickUp export, 2026-04-22)
+
+*Source: portfolio-wide ClickUp export analyzed in
+`data/analysis/03_sop_gap_and_recommendations.md` and the rollup at
+`Fancy_Lab_Web_Dev_Phase_Gate_SOPs_v2.md` lines 312–318. Figures
+preserved verbatim from the analysis pack.*
+
+- **Design volume is material.** 160 tasks begin with the word
+  "design"; 23 tasks carry the `design` tag explicitly. Biggest design
+  spikes (by task count in client lists): `Steindiamonds.com` (182
+  total), `hawaiilabgrown.com` (162), `christopher-salon.com` (130),
+  `erikarecords.com` (98). Each of those projects has >50 Figma-linked
+  artifacts in the comments/attachments.
+- **Design-review bottleneck is real.** 42 tasks sit in `Review`
+  status on `hawaiilabgrown.com` alone — this is the single largest
+  pile of Review-status work in the portfolio. Consider a time-boxed
+  "Design Review Friday" cadence or a second reviewer for Aida.
+- **SOP already addresses design-token discipline** (P4 v2). The
+  dataset validates why: `Update the design of PDP`
+  (1800loosediamonds) and `Update design of Collection page` both
+  collected 15–20 comments — exactly the class of issue token/spec
+  discipline prevents. Enforcement of token compliance at QA time is
+  being hardened in **P7_v4** (per gap doc §C); P4 authoring practice
+  remains as documented here.
 
 **APPENDIX A: DESIGN BRIEF & VISUAL DIRECTION WORKSHEET**
 
